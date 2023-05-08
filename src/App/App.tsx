@@ -4,7 +4,9 @@ import { Animator } from '@arwes/react-animator';
 import { FrameSVGUnderline } from '@arwes/react-frames';
 import { Text } from '@arwes/react-text';
 
-import recipes from "../recipes";
+// import { decks } from "../data/decks";
+// import { players } from "../data/players";
+// import { events } from "../data/events";
 
 // import Player from "../Player";
 // import PlayersList from "../PlayersList";
@@ -111,14 +113,14 @@ const App = (): JSX.Element => {
   const tags = useMemo(() => {
     const newTags: string[] = [];
 
-    Object.values(recipes).forEach((r) =>
-      r.tags.forEach((t) => {
-        const tWords = t
-          .split(" ")
-          .map((w) => `${w[0].toUpperCase()}${w.slice(1)}`);
-        newTags.push(tWords.join(" "));
-      })
-    );
+    // Object.values(recipes).forEach((r) =>
+    //   r.tags.forEach((t) => {
+    //     const tWords = t
+    //       .split(" ")
+    //       .map((w) => `${w[0].toUpperCase()}${w.slice(1)}`);
+    //     newTags.push(tWords.join(" "));
+    //   })
+    // );
 
     return new Set<string>(newTags.sort());
   }, []);
