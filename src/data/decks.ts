@@ -1,4 +1,4 @@
-import type { DeckId, EventId } from "./index.types"
+import type { DeckId, EventId } from "./index.types";
 
 interface CardInDeck {
   amount: number;
@@ -14,7 +14,7 @@ interface Deck {
   side: CardInDeck[];
 }
 
-interface Decks {
+export interface Decks {
   [index: string]: Deck;
 }
 
@@ -23,9 +23,7 @@ export const decks: Decks = {
     pilot: "Sadie Braun",
     name: "Scam!",
     archtype: "scam",
-    events: [
-      "05-05-2023-FNM-with-Style"
-    ],
+    events: ["05-05-2023-FNM-with-Style"],
     main: [
       {
         amount: 3,
@@ -163,9 +161,7 @@ export const decks: Decks = {
     pilot: "Sean Hamilton",
     name: "Rhinos",
     archtype: "rhinos",
-    events: [
-      "05-05-2023-FNM-with-Style"
-    ],
+    events: ["05-05-2023-FNM-with-Style"],
     main: [
       {
         amount: 4,
@@ -282,7 +278,7 @@ export const decks: Decks = {
       {
         amount: 4,
         name: "Violent Outburst"
-      },
+      }
     ],
     side: [
       {
@@ -308,16 +304,14 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Solitude"
-      },
+      }
     ]
   },
   "05-05-2023-Gruul-Shamans-Golo-Stillger": {
     pilot: "Golo Stillger",
     name: "Gruul Shamans",
     archtype: "gruul shamans",
-    events: [
-      "05-05-2023-FNM-with-Style"
-    ],
+    events: ["05-05-2023-FNM-with-Style"],
     main: [
       {
         amount: 3,
@@ -447,9 +441,7 @@ export const decks: Decks = {
     pilot: "David Amadu",
     name: "Grixis Midrange",
     archtype: "grixis midrange",
-    events: [
-      "05-05-2023-FNM-with-Style"
-    ],
+    events: ["05-05-2023-FNM-with-Style"],
     main: [
       {
         amount: 1,
@@ -566,7 +558,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Mountain"
-      },
+      }
     ],
     side: [
       {
@@ -616,7 +608,7 @@ export const decks: Decks = {
       {
         amount: 1,
         name: "Ashiok, Dream Render"
-      },
+      }
     ]
-  },
+  }
 };

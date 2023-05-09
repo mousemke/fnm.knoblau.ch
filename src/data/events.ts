@@ -1,4 +1,4 @@
-import type { DeckId, EventId } from "./index.types"
+import type { DeckId, EventId } from "./index.types";
 
 interface EventResult {
   [name: string]: number;
@@ -6,25 +6,27 @@ interface EventResult {
 
 interface EventRound {
   results: EventResult[];
-  notes?: string
+  notes?: string;
 }
 
 interface EventObject {
   name: string;
+  location: string;
   date: string;
   players: {
     [name: string]: DeckId;
-  }
+  };
   rounds: EventRound[];
 }
 
-interface Events {
-  [date: EventId]: EventObject
-};
+export interface Events {
+  [date: EventId]: EventObject;
+}
 
 export const events: Events = {
   "05-05-2023-FNM-with-Style": {
     name: "FNM with Style",
+    location: "Cafe Style",
     date: "05-05-2023",
     players: {
       "Sadie Braun": "05-05-2023-Scam!-Sadie-Braun",
@@ -37,7 +39,7 @@ export const events: Events = {
         results: [
           {
             "Sadie Braun": 0,
-            "Sean Hamilton": 2,
+            "Sean Hamilton": 2
           },
           {
             "Golo Stillger": 0,
@@ -49,7 +51,7 @@ export const events: Events = {
         results: [
           {
             "Golo Stillger": 2,
-            "Sadie Braun": 1,
+            "Sadie Braun": 1
           },
           {
             "Sean Hamilton": 2,
@@ -72,4 +74,3 @@ export const events: Events = {
     ]
   }
 };
-
