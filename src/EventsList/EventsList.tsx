@@ -18,7 +18,7 @@ const EventsList = (props: EventsListProps): JSX.Element => {
     <StyledWindow className={classes.wrapperWindow}>
       <h2>Events</h2>
       {Object.values(events).map((event, i) => {
-        const onClick = () => setModal("event", event);
+        const onClick = () => setModal("event", null, event, null);
 
         return (
           <RowLink key={i} onClick={onClick}>

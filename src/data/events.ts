@@ -9,7 +9,8 @@ interface EventRound {
   notes?: string;
 }
 
-interface EventObject {
+export interface EventObject {
+  slug: string,
   name: string;
   location: string;
   date: string;
@@ -25,6 +26,7 @@ export interface Events {
 
 export const events: Events = {
   "05-05-2023-FNM-with-Style": {
+    slug: "05-05-2023-FNM-with-Style",
     name: "FNM with Style",
     location: "Cafe Style",
     date: "05-05-2023",

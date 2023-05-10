@@ -1,22 +1,17 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Puffs } from "@arwes/react-bgs";
 import { Animator } from "@arwes/react-animator";
 import StyledWindow from "../common/StyledWindow";
 import EventsList from "../EventsList";
 import PlayersList from "../PlayersList";
 import DecksList from "../DecksList";
+import SingleDeck from "../Deck";
 
 import { decks } from "../data/decks";
 import { players } from "../data/players";
 import { events } from "../data/events";
 
-console.log({
-  decks,
-  players,
-  events
-});
-
-import type { Player, EventObject, Deck } from "../data";
+import type { Data, Deck, DeckId, Player, EventId, EventObject } from "../data";
 
 import useStyles from "./App.styles";
 
@@ -25,27 +20,14 @@ import useStyles from "./App.styles";
  * @param param parameter to set in the query string
  * @param slug value to set in the query string
  */
-// const setQueryParam = (param: string, slug = "") => {
-//   const { pathname, search } = window.location;
+const setQueryParam = (param: string, slug = "") => {
+  const { pathname } = window.location;
 
-//   let newQuery: string;
-//   const paramRegex = new RegExp(`\\??\\&?${param}=[\\w\\d-]+`);
-//   const query = search.replace(paramRegex, "");
+  const newQuery = slug ? `?type=${param}&slug=${slug}` : "";
+  const newPath = `${pathname}${newQuery}`;
 
-//   if (query.length === 0) {
-//     newQuery = slug ? `?${param}=${slug}` : "";
-//   } else {
-//     newQuery = slug ? `${query}&${param}=${slug}` : query;
-//   }
-
-//   const newPath = `${pathname}${newQuery}`;
-
-//   if (param !== "r") {
-//     window.history.replaceState(null, document.title, newPath);
-//   } else {
-//     window.history.pushState({ slug }, document.title, newPath);
-//   }
-// };
+  window.history.pushState({ type: param, slug }, document.title, newPath);
+};
 
 /**
  * The main control app. Controls which view is visible as well as having the states and setters
@@ -56,22 +38,31 @@ const App = (): JSX.Element => {
   const [activePlayer, setActivePlayer] = useState<Player | null>(null);
   const [activeEvent, setActiveEvent] = useState<EventObject | null>(null);
 
-  const setModal = (modalType: string | null, modalData: Player | Deck | EventObject | null) => {
+  const data: Data = useMemo(() => ({
+    decks,
+    players,
+    events
+  }), [decks, players, events]);
+
+  console.log(data);
+
+  const setModal = (modalType: string | null, deck: Deck | null, event: EventObject | null, player: Player | null) => {
+    setActiveDeck(null);
+    setActivePlayer(null);
+    setActiveEvent(null);
+
     switch (modalType) {
       case "deck":
-        setActiveDeck(modalData);
-        setActivePlayer(null);
-        setActiveEvent(null);
+        setActiveDeck(deck);
+        setQueryParam("deck", deck?.slug);
         break;
       case "player":
-        setActiveDeck(null);
-        setActivePlayer(modalData);
-        setActiveEvent(null);
+        setActivePlayer(player);
+        setQueryParam("player", player?.slug);
         break;
       case "event":
-        setActiveDeck(null);
-        setActivePlayer(null);
-        setActiveEvent(modalData);
+        setActiveEvent(event);
+        setQueryParam("event", event?.slug);
         break;
     }
 
@@ -81,72 +72,55 @@ const App = (): JSX.Element => {
   const classes = useStyles();
 
   /**
-   * controls going to a recipe and setting the browser history
-   */
-  // const gotoRecipe = useCallback((slug: string) => {
-  //   setQueryParam("r", slug);
-  //   // setActiveRecipe(recipes[slug]);
-  // }, []);
-
-  /**
    * catches the browser back event and sets the slug as the active recipe
    */
-  // const onBack = useCallback(
-  //   (e: PopStateEvent) => setActiveRecipe(e.state?.slug ? recipes[e.state?.slug] : null),
-  //   []
-  // );
+  const onBack = useCallback(
+    (e: PopStateEvent) =>
+    {
+      const type = e.state?.type;
+      const slug = e.state?.slug;
+
+      setModal(
+        type || null,
+        type === "deck" ? decks[slug] : null,
+        type === "event" ? events[slug] : null,
+        type === "player" ? players[slug] : null
+      );
+    },
+    []
+  );
 
   /**
    * on load, this takes query params, parses them, and sets appropriate states
    */
-  // useEffect(() => {
-  //   const query: { [param: string]: string } = {};
+  useEffect(() => {
+    const query: { [param: string]: string } = {};
 
-  //   window.location.search
-  //     .slice(1)
-  //     .split("&")
-  //     .forEach((q) => {
-  //       const paramPair = q.split("=");
-  //       const [key, value] = paramPair;
-  //       query[key] = value;
-  //     });
+    window.location.search
+      .slice(1)
+      .split("&")
+      .forEach((q) => {
+        const paramPair = q.split("=");
+        const [key, value] = paramPair;
+        query[key] = value;
+      });
 
-  //   if (query.t) {
-  //     setActiveTag(query.t);
-  //   }
+    const type = query?.type;
+    const slug = query?.slug;
 
-  //   if (query.f) {
-  //     setFilter(query.f);
-  //   }
+    setModal(
+      type || null,
+      type === "deck" ? decks[slug as DeckId] : null,
+      type === "event" ? events[slug as EventId] : null,
+      type === "player" ? players[slug] : null
+    );
 
-  //   if (query.r) {
-  // setActiveRecipe(recipes[query.r]);
-  // }
+    window.addEventListener("popstate", onBack);
 
-  // window.addEventListener("popstate", onBack);
-
-  // return () => {
-  //   window.removeEventListener("popstate", onBack);
-  // };
-  // }, []);
-
-  /**
-   * initial tags
-   */
-  // const tags = useMemo(() => {
-  //   const newTags: string[] = [];
-
-  // Object.values(recipes).forEach((r) =>
-  //   r.tags.forEach((t) => {
-  //     const tWords = t
-  //       .split(" ")
-  //       .map((w) => `${w[0].toUpperCase()}${w.slice(1)}`);
-  //     newTags.push(tWords.join(" "));
-  //   })
-  // );
-
-  //   return new Set<string>(newTags.sort());
-  // }, []);
+    return () => {
+      window.removeEventListener("popstate", onBack);
+    };
+  }, []);
 
   return (
     <>
@@ -169,13 +143,13 @@ const App = (): JSX.Element => {
         </>
       )}
       {activeModal === "event" && (
-        <span>event</span>
+        <span>{JSON.stringify(activeEvent)}</span>
       )}
       {activeModal === "deck" && (
-        <span>deck</span>
+        <SingleDeck setModal={setModal} activeDeck={activeDeck}/>
       )}
       {activeModal === "player" && (
-        <span>player</span>
+        <span>{JSON.stringify(activePlayer)}</span>
       )}
     </>
   );

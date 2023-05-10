@@ -12,6 +12,7 @@ export interface Deck {
   name: string;
   pilot: string;
   side: CardInDeck[];
+  slug: string;
 }
 
 export interface Decks {
@@ -20,6 +21,7 @@ export interface Decks {
 
 export const decks: Decks = {
   "05-05-2023-Scam!-Sadie-Braun": {
+    slug: "05-05-2023-Scam!-Sadie-Braun",
     pilot: "Sadie Braun",
     name: "Scam!",
     archtype: "scam",
@@ -158,6 +160,7 @@ export const decks: Decks = {
     ]
   },
   "05-05-2023-Rhinos-Sean-Hamilton": {
+    slug: "05-05-2023-Rhinos-Sean-Hamilton",
     pilot: "Sean Hamilton",
     name: "Rhinos",
     archtype: "rhinos",
@@ -308,6 +311,7 @@ export const decks: Decks = {
     ]
   },
   "05-05-2023-Gruul-Shamans-Golo-Stillger": {
+    slug: "05-05-2023-Gruul-Shamans-Golo-Stillger",
     pilot: "Golo Stillger",
     name: "Gruul Shamans",
     archtype: "gruul shamans",
@@ -438,6 +442,7 @@ export const decks: Decks = {
     ]
   },
   "05-05-2023-Grixis-Midrange-David-Amadu": {
+    slug: "05-05-2023-Grixis-Midrange-David-Amadu",
     pilot: "David Amadu",
     name: "Grixis Midrange",
     archtype: "grixis midrange",
