@@ -1,6 +1,6 @@
 import type { DeckId, EventId } from "./index.types";
 
-interface Player {
+export interface Player {
   events: EventId[];
   decks: DeckId[];
 }

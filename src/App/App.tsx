@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useState } from "react";
 import { Puffs } from "@arwes/react-bgs";
 import { Animator } from "@arwes/react-animator";
 import StyledWindow from "../common/StyledWindow";
@@ -15,6 +15,8 @@ console.log({
   players,
   events
 });
+
+import type { Player, EventObject, Deck } from "../data";
 
 import useStyles from "./App.styles";
 
@@ -49,10 +51,32 @@ import useStyles from "./App.styles";
  * The main control app. Controls which view is visible as well as having the states and setters
  */
 const App = (): JSX.Element => {
-  // const [activeRecipe, setActiveRecipe] = useState<Recipe | null>(null);
-  // const [multiplier, setMultiplier] = useState<number>(1);
-  // const [activeTag, setActiveTag] = useState<string | null>(null);
-  // const [filter, setFilter] = useState<string | null>(null);
+  const [activeModal, setActiveModal] = useState<string | null>(null);
+  const [activeDeck, setActiveDeck] = useState<Deck | null>(null);
+  const [activePlayer, setActivePlayer] = useState<Player | null>(null);
+  const [activeEvent, setActiveEvent] = useState<EventObject | null>(null);
+
+  const setModal = (modalType: string | null, modalData: Player | Deck | EventObject | null) => {
+    switch (modalType) {
+      case "deck":
+        setActiveDeck(modalData);
+        setActivePlayer(null);
+        setActiveEvent(null);
+        break;
+      case "player":
+        setActiveDeck(null);
+        setActivePlayer(modalData);
+        setActiveEvent(null);
+        break;
+      case "event":
+        setActiveDeck(null);
+        setActivePlayer(null);
+        setActiveEvent(modalData);
+        break;
+    }
+
+    setActiveModal(modalType);
+  }
 
   const classes = useStyles();
 
@@ -137,13 +161,22 @@ const App = (): JSX.Element => {
           <b>fnm.knoblau.ch</b>
         </h3>
       </StyledWindow>
-      {true ? (
+      {activeModal === null && (
         <>
-          <EventsList events={events} />
-          <DecksList decks={decks} />
-          <PlayersList players={players} />
+          <EventsList setModal={setModal} events={events} />
+          <DecksList setModal={setModal} decks={decks} />
+          <PlayersList setModal={setModal} players={players} />
         </>
-      ) : null}
+      )}
+      {activeModal === "event" && (
+        <span>event</span>
+      )}
+      {activeModal === "deck" && (
+        <span>deck</span>
+      )}
+      {activeModal === "player" && (
+        <span>player</span>
+      )}
     </>
   );
 };

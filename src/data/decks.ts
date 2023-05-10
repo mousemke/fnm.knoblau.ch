@@ -5,7 +5,7 @@ interface CardInDeck {
   name: string;
 }
 
-interface Deck {
+export interface Deck {
   archtype: string;
   events: EventId[];
   main: CardInDeck[];

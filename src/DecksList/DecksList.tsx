@@ -10,7 +10,7 @@ import type { DecksListProps } from "./DecksList.types";
  * The list of all decks
  */
 const DecksList = (props: DecksListProps): JSX.Element => {
-  const { decks } = props;
+  const { decks, setModal } = props;
 
   const classes = useStyles();
 
@@ -18,10 +18,13 @@ const DecksList = (props: DecksListProps): JSX.Element => {
     <StyledWindow className={classes.wrapperWindow}>
       <h2>Decks</h2>
       {Object.values(decks).map((deck, i) => {
+        const onClick = () => setModal("deck", deck);
+
         const deckEventCount = deck.events.length;
 
+
         return (
-          <RowLink key={i}>
+          <RowLink key={i} onClick={onClick}>
             <h3>{deck.name}</h3>
             <span>by {deck.pilot}</span>
             <span>

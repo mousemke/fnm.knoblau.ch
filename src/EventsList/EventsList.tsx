@@ -10,21 +10,25 @@ import type { EventsListProps } from "./EventsList.types";
  * The list of all events
  */
 const EventsList = (props: EventsListProps): JSX.Element => {
-  const { events } = props;
+  const { events, setModal } = props;
 
   const classes = useStyles();
 
   return (
     <StyledWindow className={classes.wrapperWindow}>
       <h2>Events</h2>
-      {Object.values(events).map((event, i) => (
-        <RowLink key={i}>
-          <h3>{event.name}</h3>
-          <span>{new Date(event.date).toDateString()}</span>
-          <span>at {event.location}</span>
-          <span>{Object.keys(event.players).length} players</span>
-        </RowLink>
-      ))}
+      {Object.values(events).map((event, i) => {
+        const onClick = () => setModal("event", event);
+
+        return (
+          <RowLink key={i} onClick={onClick}>
+            <h3>{event.name}</h3>
+            <span>{new Date(event.date).toDateString()}</span>
+            <span>at {event.location}</span>
+            <span>{Object.keys(event.players).length} players</span>
+          </RowLink>
+        );
+      })}
     </StyledWindow>
   );
 };
