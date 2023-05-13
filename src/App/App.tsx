@@ -6,6 +6,8 @@ import EventsList from "../EventsList";
 import PlayersList from "../PlayersList";
 import DecksList from "../DecksList";
 import SingleDeck from "../SingleDeck";
+import SinglePlayer from "../SinglePlayer";
+import SingleEvent from "../SingleEvent";
 
 import { decks } from "../data/decks";
 import { players } from "../data/players";
@@ -48,7 +50,11 @@ const App = (): JSX.Element => {
   );
 
   const setModal = useCallback(
-    (modalType: string | null, slug: string | null, popstateEvent?: boolean) => {
+    (
+      modalType: string | null,
+      slug: string | null,
+      popstateEvent?: boolean
+    ) => {
       setActiveDeck(null);
       setActivePlayer(null);
       setActiveEvent(null);
@@ -80,16 +86,19 @@ const App = (): JSX.Element => {
   /**
    * catches the browser navigation event and sets the slug
    */
-  const onNavigate = useCallback((e: PopStateEvent) => {
-    const type = e.state?.type;
-    const slug = e.state?.slug;
+  const onNavigate = useCallback(
+    (e: PopStateEvent) => {
+      const type = e.state?.type;
+      const slug = e.state?.slug;
 
-    if (type && slug) {
-      setModal(type, slug, true);
-    } else {
-      setModal(null, null, true);
-    }
-  }, [setModal]);
+      if (type && slug) {
+        setModal(type, slug, true);
+      } else {
+        setModal(null, null, true);
+      }
+    },
+    [setModal]
+  );
 
   /**
    * on load, this takes query params, parses them, and sets appropriate states
@@ -131,15 +140,23 @@ const App = (): JSX.Element => {
       {activeModal === null && (
         <>
           <EventsList setModal={setModal} events={events} />
-          <DecksList setModal={setModal} decks={decks} />
+          <DecksList setModal={setModal} data={data} />
           <PlayersList setModal={setModal} players={players} />
         </>
       )}
-      {activeModal === "event" && <span>{JSON.stringify(activeEvent)}</span>}
+      {activeModal === "event" && (
+        <SingleEvent data={data} setModal={setModal} activeEvent={activeEvent} />
+      )}
       {activeModal === "deck" && (
         <SingleDeck data={data} setModal={setModal} activeDeck={activeDeck} />
       )}
-      {activeModal === "player" && <span>{JSON.stringify(activePlayer)}</span>}
+      {activeModal === "player" && (
+        <SinglePlayer
+          data={data}
+          setModal={setModal}
+          activePlayer={activePlayer}
+        />
+      )}
     </>
   );
 };

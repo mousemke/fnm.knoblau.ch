@@ -5,5 +5,5 @@ export interface RowLinkProps {
   className?: string;
   href?: string;
   onClick?: () => void;
-  target?: string
+  target?: string;
 }

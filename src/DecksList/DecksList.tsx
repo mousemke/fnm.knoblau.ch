@@ -1,7 +1,6 @@
 import React from "react";
 import StyledWindow from "../common/StyledWindow";
 import RowLink from "../common/RowLink";
-
 import useStyles from "./DecksList.styles";
 
 import type { DecksListProps } from "./DecksList.types";
@@ -10,7 +9,8 @@ import type { DecksListProps } from "./DecksList.types";
  * The list of all decks
  */
 const DecksList = (props: DecksListProps): JSX.Element => {
-  const { decks, setModal } = props;
+  const { data, setModal } = props;
+  const decks = data.decks;
 
   const classes = useStyles();
 
@@ -25,7 +25,7 @@ const DecksList = (props: DecksListProps): JSX.Element => {
         return (
           <RowLink key={i} onClick={onClick}>
             <h3>{deck.name}</h3>
-            <span>by {deck.pilot}</span>
+            <span>by {data.players[deck.pilotSlug].name}</span>
             <span>
               {deckEventCount} Event{deckEventCount !== 1 ? "s" : ""}
             </span>

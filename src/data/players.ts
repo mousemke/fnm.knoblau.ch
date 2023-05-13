@@ -16,24 +16,24 @@ export const players: Players = {
     name: "Sadie Braun",
     slug: "Sadie-Braun",
     events: ["05-05-2023-FNM-with-Style"],
-    decks: ["05-05-2023-Scam!-Sadie-Braun"]
+    decks: ["Scam!-Sadie-Braun"]
   },
   "Sean-Hamilton": {
     name: "Sean Hamilton",
     slug: "Sean-Hamilton",
     events: ["05-05-2023-FNM-with-Style"],
-    decks: ["05-05-2023-Rhinos-Sean-Hamilton"]
+    decks: ["Rhinos-Sean-Hamilton"]
   },
   "Golo-Stillger": {
     name: "Golo Stillger",
     slug: "Golo-Stillger",
     events: ["05-05-2023-FNM-with-Style"],
-    decks: ["05-05-2023-Gruul-Shamans-Golo-Stillger"]
+    decks: ["Gruul-Shamans-Golo-Stillger"]
   },
   "David-Amadu": {
     name: "David Amadu",
     slug: "David-Amadu",
     events: ["05-05-2023-FNM-with-Style"],
-    decks: ["05-05-2023-Grixis-Midrange-David-Amadu"]
+    decks: ["Grixis-Midrange-David-Amadu"]
   }
 };

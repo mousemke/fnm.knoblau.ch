@@ -16,8 +16,8 @@ const useStyles = createUseStyles(
       },
       "&:active": {
         backgroundColor: "rgba(36, 184, 235, 15%)"
-      },
-    },
+      }
+    }
   },
   {
     name: "RowLink"

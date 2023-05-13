@@ -10,19 +10,19 @@ export interface Deck {
   events: EventId[];
   main: CardInDeck[];
   name: string;
-  pilot: string;
+  pilotSlug: string;
   side: CardInDeck[];
   slug: string;
 }
 
 export interface Decks {
-  [index: string]: Deck;
+  [index: DeckId]: Deck;
 }
 
 export const decks: Decks = {
-  "05-05-2023-Scam!-Sadie-Braun": {
-    slug: "05-05-2023-Scam!-Sadie-Braun",
-    pilot: "Sadie-Braun",
+  "Scam!-Sadie-Braun": {
+    slug: "Scam!-Sadie-Braun",
+    pilotSlug: "Sadie-Braun",
     name: "Scam!",
     archtype: "scam",
     events: ["05-05-2023-FNM-with-Style"],
@@ -159,9 +159,9 @@ export const decks: Decks = {
       }
     ]
   },
-  "05-05-2023-Rhinos-Sean-Hamilton": {
-    slug: "05-05-2023-Rhinos-Sean-Hamilton",
-    pilot: "Sean-Hamilton",
+  "Rhinos-Sean-Hamilton": {
+    slug: "Rhinos-Sean-Hamilton",
+    pilotSlug: "Sean-Hamilton",
     name: "Rhinos",
     archtype: "rhinos",
     events: ["05-05-2023-FNM-with-Style"],
@@ -290,9 +290,9 @@ export const decks: Decks = {
       }
     ]
   },
-  "05-05-2023-Gruul-Shamans-Golo-Stillger": {
-    slug: "05-05-2023-Gruul-Shamans-Golo-Stillger",
-    pilot: "Golo-Stillger",
+  "Gruul-Shamans-Golo-Stillger": {
+    slug: "Gruul-Shamans-Golo-Stillger",
+    pilotSlug: "Golo-Stillger",
     name: "Gruul Shamans",
     archtype: "gruul shamans",
     events: ["05-05-2023-FNM-with-Style"],
@@ -421,9 +421,9 @@ export const decks: Decks = {
       }
     ]
   },
-  "05-05-2023-Grixis-Midrange-David-Amadu": {
-    slug: "05-05-2023-Grixis-Midrange-David-Amadu",
-    pilot: "David-Amadu",
+  "Grixis-Midrange-David-Amadu": {
+    slug: "Grixis-Midrange-David-Amadu",
+    pilotSlug: "David-Amadu",
     name: "Grixis Midrange",
     archtype: "grixis midrange",
     events: ["05-05-2023-FNM-with-Style"],

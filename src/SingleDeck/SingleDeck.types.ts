@@ -1,4 +1,4 @@
-import type { Deck, Player, EventObject, Data } from "../data";
+import type { Deck, Data } from "../data";
 
 export interface SingleDeckProps {
   activeDeck: Deck | null;

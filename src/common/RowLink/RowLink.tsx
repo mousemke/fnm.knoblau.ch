@@ -22,11 +22,7 @@ const RowLink = (props: RowLinkProps): JSX.Element => {
     target
   };
 
-  return (
-    <a {...options}>
-      {children}
-    </a>
-  );
+  return <a {...options}>{children}</a>;
 };
 
 export default RowLink;
