@@ -1,6 +1,6 @@
-import type { Events, Player, Deck, EventObject } from "../data";
+import type { Events } from "../data";
 
 export interface EventsListProps {
   events: Events;
-  setModal: (modalType: string | null, deck: Deck | null, event: EventObject | null, player: Player | null) => void;
+  setModal: (modalType: string | null, slug: string | null) => void;
 }

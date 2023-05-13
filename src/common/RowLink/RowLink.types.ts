@@ -1,7 +1,9 @@
 import React from "react";
 
 export interface RowLinkProps {
-  children: React.ReactNode[];
+  children: React.ReactNode;
   className?: string;
-  onClick: () => void;
+  href?: string;
+  onClick?: () => void;
+  target?: string
 }

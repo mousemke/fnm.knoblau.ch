@@ -22,7 +22,7 @@ export interface Decks {
 export const decks: Decks = {
   "05-05-2023-Scam!-Sadie-Braun": {
     slug: "05-05-2023-Scam!-Sadie-Braun",
-    pilot: "Sadie Braun",
+    pilot: "Sadie-Braun",
     name: "Scam!",
     archtype: "scam",
     events: ["05-05-2023-FNM-with-Style"],
@@ -161,7 +161,7 @@ export const decks: Decks = {
   },
   "05-05-2023-Rhinos-Sean-Hamilton": {
     slug: "05-05-2023-Rhinos-Sean-Hamilton",
-    pilot: "Sean Hamilton",
+    pilot: "Sean-Hamilton",
     name: "Rhinos",
     archtype: "rhinos",
     events: ["05-05-2023-FNM-with-Style"],
@@ -187,11 +187,7 @@ export const decks: Decks = {
         name: "Dead // Gone"
       },
       {
-        amount: 3,
-        name: "Fire // Ice"
-      },
-      {
-        amount: 1,
+        amount: 4,
         name: "Fire // Ice"
       },
       {
@@ -207,11 +203,7 @@ export const decks: Decks = {
         name: "Fury"
       },
       {
-        amount: 1,
-        name: "Gemstone Caverns"
-      },
-      {
-        amount: 1,
+        amount: 2,
         name: "Gemstone Caverns"
       },
       {
@@ -251,11 +243,7 @@ export const decks: Decks = {
         name: "Scalding Tarn"
       },
       {
-        amount: 1,
-        name: "Shardless Agent"
-      },
-      {
-        amount: 3,
+        amount: 4,
         name: "Shardless Agent"
       },
       {
@@ -263,11 +251,7 @@ export const decks: Decks = {
         name: "Steam Vents"
       },
       {
-        amount: 1,
-        name: "Stomping Ground"
-      },
-      {
-        amount: 1,
+        amount: 2,
         name: "Stomping Ground"
       },
       {
@@ -289,11 +273,7 @@ export const decks: Decks = {
         name: "Endurance"
       },
       {
-        amount: 2,
-        name: "Force of Vigor"
-      },
-      {
-        amount: 2,
+        amount: 4,
         name: "Force of Vigor"
       },
       {
@@ -312,7 +292,7 @@ export const decks: Decks = {
   },
   "05-05-2023-Gruul-Shamans-Golo-Stillger": {
     slug: "05-05-2023-Gruul-Shamans-Golo-Stillger",
-    pilot: "Golo Stillger",
+    pilot: "Golo-Stillger",
     name: "Gruul Shamans",
     archtype: "gruul shamans",
     events: ["05-05-2023-FNM-with-Style"],
@@ -443,7 +423,7 @@ export const decks: Decks = {
   },
   "05-05-2023-Grixis-Midrange-David-Amadu": {
     slug: "05-05-2023-Grixis-Midrange-David-Amadu",
-    pilot: "David Amadu",
+    pilot: "David-Amadu",
     name: "Grixis Midrange",
     archtype: "grixis midrange",
     events: ["05-05-2023-FNM-with-Style"],

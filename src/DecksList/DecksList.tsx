@@ -18,10 +18,9 @@ const DecksList = (props: DecksListProps): JSX.Element => {
     <StyledWindow className={classes.wrapperWindow}>
       <h2>Decks</h2>
       {Object.values(decks).map((deck, i) => {
-        const onClick = () => setModal("deck", deck, null, null);
+        const onClick = () => setModal("deck", deck.slug);
 
         const deckEventCount = deck.events.length;
-
 
         return (
           <RowLink key={i} onClick={onClick}>

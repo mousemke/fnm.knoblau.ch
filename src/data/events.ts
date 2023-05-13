@@ -10,7 +10,7 @@ interface EventRound {
 }
 
 export interface EventObject {
-  slug: string,
+  slug: string;
   name: string;
   location: string;
   date: string;

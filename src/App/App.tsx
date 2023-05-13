@@ -5,7 +5,7 @@ import StyledWindow from "../common/StyledWindow";
 import EventsList from "../EventsList";
 import PlayersList from "../PlayersList";
 import DecksList from "../DecksList";
-import SingleDeck from "../Deck";
+import SingleDeck from "../SingleDeck";
 
 import { decks } from "../data/decks";
 import { players } from "../data/players";
@@ -20,10 +20,10 @@ import useStyles from "./App.styles";
  * @param param parameter to set in the query string
  * @param slug value to set in the query string
  */
-const setQueryParam = (param: string, slug = "") => {
+const setQueryParam = (param: string | null, slug: string | null = null) => {
   const { pathname } = window.location;
 
-  const newQuery = slug ? `?type=${param}&slug=${slug}` : "";
+  const newQuery = param && slug ? `?type=${param}&slug=${slug}` : "";
   const newPath = `${pathname}${newQuery}`;
 
   window.history.pushState({ type: param, slug }, document.title, newPath);
@@ -38,57 +38,58 @@ const App = (): JSX.Element => {
   const [activePlayer, setActivePlayer] = useState<Player | null>(null);
   const [activeEvent, setActiveEvent] = useState<EventObject | null>(null);
 
-  const data: Data = useMemo(() => ({
-    decks,
-    players,
-    events
-  }), [decks, players, events]);
+  const data: Data = useMemo(
+    () => ({
+      decks,
+      players,
+      events
+    }),
+    [decks, players, events]
+  );
 
-  console.log(data);
+  const setModal = useCallback(
+    (modalType: string | null, slug: string | null, popstateEvent?: boolean) => {
+      setActiveDeck(null);
+      setActivePlayer(null);
+      setActiveEvent(null);
 
-  const setModal = (modalType: string | null, deck: Deck | null, event: EventObject | null, player: Player | null) => {
-    setActiveDeck(null);
-    setActivePlayer(null);
-    setActiveEvent(null);
+      switch (modalType) {
+        case "deck":
+          setActiveDeck(decks[slug as DeckId]);
+          !popstateEvent && setQueryParam("deck", slug);
+          break;
+        case "player":
+          setActivePlayer(players[slug as string]);
+          !popstateEvent && setQueryParam("player", slug);
+          break;
+        case "event":
+          setActiveEvent(events[slug as EventId]);
+          !popstateEvent && setQueryParam("event", slug);
+          break;
+        default:
+          !popstateEvent && setQueryParam(null, null);
+      }
 
-    switch (modalType) {
-      case "deck":
-        setActiveDeck(deck);
-        setQueryParam("deck", deck?.slug);
-        break;
-      case "player":
-        setActivePlayer(player);
-        setQueryParam("player", player?.slug);
-        break;
-      case "event":
-        setActiveEvent(event);
-        setQueryParam("event", event?.slug);
-        break;
-    }
-
-    setActiveModal(modalType);
-  }
+      setActiveModal(modalType);
+    },
+    [setActiveDeck, setActivePlayer, setActiveEvent]
+  );
 
   const classes = useStyles();
 
   /**
-   * catches the browser back event and sets the slug as the active recipe
+   * catches the browser navigation event and sets the slug
    */
-  const onBack = useCallback(
-    (e: PopStateEvent) =>
-    {
-      const type = e.state?.type;
-      const slug = e.state?.slug;
+  const onNavigate = useCallback((e: PopStateEvent) => {
+    const type = e.state?.type;
+    const slug = e.state?.slug;
 
-      setModal(
-        type || null,
-        type === "deck" ? decks[slug] : null,
-        type === "event" ? events[slug] : null,
-        type === "player" ? players[slug] : null
-      );
-    },
-    []
-  );
+    if (type && slug) {
+      setModal(type, slug, true);
+    } else {
+      setModal(null, null, true);
+    }
+  }, [setModal]);
 
   /**
    * on load, this takes query params, parses them, and sets appropriate states
@@ -105,20 +106,12 @@ const App = (): JSX.Element => {
         query[key] = value;
       });
 
-    const type = query?.type;
-    const slug = query?.slug;
+    onNavigate({ state: query } as PopStateEvent);
 
-    setModal(
-      type || null,
-      type === "deck" ? decks[slug as DeckId] : null,
-      type === "event" ? events[slug as EventId] : null,
-      type === "player" ? players[slug] : null
-    );
-
-    window.addEventListener("popstate", onBack);
+    window.addEventListener("popstate", onNavigate);
 
     return () => {
-      window.removeEventListener("popstate", onBack);
+      window.removeEventListener("popstate", onNavigate);
     };
   }, []);
 
@@ -142,15 +135,11 @@ const App = (): JSX.Element => {
           <PlayersList setModal={setModal} players={players} />
         </>
       )}
-      {activeModal === "event" && (
-        <span>{JSON.stringify(activeEvent)}</span>
-      )}
+      {activeModal === "event" && <span>{JSON.stringify(activeEvent)}</span>}
       {activeModal === "deck" && (
-        <SingleDeck setModal={setModal} activeDeck={activeDeck}/>
+        <SingleDeck data={data} setModal={setModal} activeDeck={activeDeck} />
       )}
-      {activeModal === "player" && (
-        <span>{JSON.stringify(activePlayer)}</span>
-      )}
+      {activeModal === "player" && <span>{JSON.stringify(activePlayer)}</span>}
     </>
   );
 };
