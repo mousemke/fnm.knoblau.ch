@@ -41,7 +41,7 @@ const SinglePlayer = (props: SinglePlayerProps): JSX.Element => {
       <h3>Decks</h3>
       <div>
         {decks.map((deck, i) => {
-          const { name } = data.decks[deck];
+          const { archetype } = data.decks[deck];
 
           return (
             <RowLink
@@ -49,7 +49,7 @@ const SinglePlayer = (props: SinglePlayerProps): JSX.Element => {
               key={i}
               onClick={onDeckClick(deck)}
             >
-              {name}
+              {archetype}
             </RowLink>
           );
         })}

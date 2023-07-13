@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useCallback } from "react";
 import StyledWindow from "../common/StyledWindow";
 import RowLink from "../common/RowLink";
 import useStyles from "./DecksList.styles";
 
+import type { Deck } from "../data";
 import type { DecksListProps } from "./DecksList.types";
 
 /**
@@ -13,18 +14,18 @@ const DecksList = (props: DecksListProps): JSX.Element => {
   const decks = data.decks;
 
   const classes = useStyles();
+  const onClick = useCallback((deck: Deck) => () => setModal("deck", deck.slug), []);
 
   return (
     <StyledWindow className={classes.wrapperWindow}>
       <h2>Decks</h2>
-      {Object.values(decks).map((deck, i) => {
-        const onClick = () => setModal("deck", deck.slug);
+      {Object.values(decks).map((deck: Deck, i) => {
 
         const deckEventCount = deck.events.length;
 
         return (
-          <RowLink key={i} onClick={onClick}>
-            <h3>{deck.name}</h3>
+          <RowLink key={i} onClick={onClick(deck)}>
+            <h3>{deck.archetype}</h3>
             <span>by {data.players[deck.pilotSlug].name}</span>
             <span>
               {deckEventCount} Event{deckEventCount !== 1 ? "s" : ""}

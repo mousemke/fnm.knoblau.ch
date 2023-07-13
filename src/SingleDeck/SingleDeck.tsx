@@ -20,7 +20,7 @@ const SingleDeck = (props: SingleDeckProps): JSX.Element => {
     return <></>;
   }
 
-  const { archtype, events, main, name, side } = activeDeck;
+  const { archetype, events, main, side } = activeDeck;
 
   const classes = useStyles();
 
@@ -48,7 +48,7 @@ const SingleDeck = (props: SingleDeckProps): JSX.Element => {
   return (
     <StyledWindow className={classes.wrapperWindow}>
       <h2>
-        {name} ({archtype})
+        {archetype}
       </h2>
       <h3>
         <b>

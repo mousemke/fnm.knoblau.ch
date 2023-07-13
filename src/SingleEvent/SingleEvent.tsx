@@ -6,7 +6,7 @@ import Separator from "../common/Separator";
 import useStyles from "./SingleEvent.styles";
 
 import type { SingleEventProps } from "./SingleEvent.types";
-import type { DeckId, EventId } from "../data";
+import type { DeckId } from "../data";
 
 /**
  * A single deck
@@ -44,7 +44,7 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
           {Object.keys(players).map((playerSlug, i) => {
             const { name: playerName } = data.players[playerSlug];
             const deckSlug = players[playerSlug];
-            const { name: deckName } = data.decks[deckSlug];
+            const { archetype: deckName } = data.decks[deckSlug];
 
             return (
               <span>
@@ -97,7 +97,7 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
                       const { name: playerName } = data.players[playerSlug];
 
                       return (
-                        <div key={k}>{playerName} - {result[playerSlug]}</div>
+                        <div key={k}><span className={classes.roundResultPlayerName}>{playerName}</span> - {result[playerSlug]}</div>
                       );
                     })}
                   </div>

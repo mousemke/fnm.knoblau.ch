@@ -17,6 +17,9 @@ const useStyles = createUseStyles(
       marginTop: "16px 0 8px",
       marginLeft: 35
     },
+    roundResultPlayerName: {
+      width: 250
+    },
     roundResultWrapper: {
       marginTop: "16px",
       marginLeft: 35

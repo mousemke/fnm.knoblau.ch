@@ -14,6 +14,7 @@ interface FinalRecord {
   result: `${number}-${number}`;
 }
 export interface EventObject {
+  format: string;
   slug: string;
   name: string;
   location: string;
@@ -31,15 +32,16 @@ export interface Events {
 
 export const events: Events = {
   "05-05-2023-FNM-with-Style": {
+    format: "modern",
     slug: "05-05-2023-FNM-with-Style",
     name: "FNM with Style",
     location: "Cafe Style",
     date: "05-05-2023",
     players: {
-      "Sadie-Braun": "Scam!-Sadie-Braun",
-      "Sean-Hamilton": "Rhinos-Sean-Hamilton",
-      "Golo-Stillger": "Gruul-Shamans-Golo-Stillger",
-      "David-Amadu": "Grixis-Midrange-David-Amadu"
+      "Sadie-Braun": "05-05-2023-Scam-Sadie-Braun",
+      "Sean-Hamilton": "05-05-2023-Rhinos-Sean-Hamilton",
+      "Golo-Stillger": "05-05-2023-Gruul-Shamans-Golo-Stillger",
+      "David-Amadu": "05-05-2023-Grixis-Midrange-David-Amadu"
     },
     final: [
       {

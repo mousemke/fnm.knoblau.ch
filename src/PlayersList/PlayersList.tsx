@@ -23,7 +23,7 @@ const PlayersList = (props: PlayersListProps): JSX.Element => {
   return (
     <StyledWindow className={classes.wrapperWindow}>
       <h2>Players</h2>
-      {Object.values(players).map((player, i) => {
+      {Object.values(players).map((player: Player, i) => {
         const playerEventCount = player.events.length;
         const playerDeckCount = player.decks.length;
 
