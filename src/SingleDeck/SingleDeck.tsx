@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from "react";
-import StyledWindow from "../common/StyledWindow";
 import RowLink from "../common/RowLink";
 import Separator from "../common/Separator";
+import ContentWindow from "../common/ContentWindow";
 
 import useStyles from "./SingleDeck.styles";
 
@@ -46,61 +46,70 @@ const SingleDeck = (props: SingleDeckProps): JSX.Element => {
   );
 
   return (
-    <StyledWindow className={classes.wrapperWindow}>
-      <h2>
-        {archetype}
-      </h2>
-      <h3>
-        <b>
-          <RowLink onClick={onPilotClick}>{pilot.name}</RowLink>
-        </b>
-      </h3>
-      <Separator />
-      <div>
-        <h4>Main {cardsInMain}</h4>
-        {main.map((card, i) => (
-          <RowLink
-            className={classes.card}
-            key={i}
-            target="_blank"
-            href={`https://scryfall.com/search?q=!"${card.name}"`}
-          >
-            {card.amount} {card.name}
-          </RowLink>
-        ))}
-      </div>
-      <Separator />
-      <h4>Sideboard {cardsInSide}</h4>
-      <div>
-        {side.map((card, i) => (
-          <RowLink
-            className={classes.card}
-            key={i}
-            target="_blank"
-            href={`https://scryfall.com/search?q=!"${card.name}"`}
-          >
-            {card.amount} {card.name}
-          </RowLink>
-        ))}
-      </div>
-      <Separator />
-      <h4>Events</h4>
-      <div>
-        {events.map((event, i) => {
-          const { date, name } = data.events[event];
-
-          return (
+    <>
+      <ContentWindow>
+        <h2 className={classes.noTopMargin}>
+          {archetype}
+        </h2>
+        <h3>
+          <b>
+            <RowLink onClick={onPilotClick}>{pilot.name}</RowLink>
+          </b>
+        </h3>
+      </ContentWindow>
+      <ContentWindow>
+          <h4 className={classes.noTopMargin}>
+            Main {cardsInMain}
+          </h4>
+          {main.map((card, i) => (
             <RowLink
               className={classes.card}
               key={i}
-              onClick={onEventClick(event)}
+              target="_blank"
+              href={`https://scryfall.com/search?q=!"${card.name}"`}
             >
-              {date} - {name}
+              {card.amount} {card.name}
             </RowLink>
-          );
-        })}
-      </div>
-    </StyledWindow>
+          ))}
+      </ContentWindow>
+      <ContentWindow>
+        <h4 className={classes.noTopMargin}>
+          Sideboard {cardsInSide}
+        </h4>
+        <div>
+          {side.map((card, i) => (
+            <RowLink
+              className={classes.card}
+              key={i}
+              target="_blank"
+              href={`https://scryfall.com/search?q=!"${card.name}"`}
+            >
+              {card.amount} {card.name}
+            </RowLink>
+          ))}
+        </div>
+        </ContentWindow>
+      <ContentWindow>
+        <h4 className={classes.noTopMargin}>
+          Events
+        </h4>
+        <div>
+          {events.map((event, i) => {
+            const { date, name } = data.events[event];
+
+            return (
+              <RowLink
+                className={classes.card}
+                key={i}
+                onClick={onEventClick(event)}
+              >
+                {date} - {name}
+              </RowLink>
+            );
+          })}
+        </div>
+      </ContentWindow>
+    </>
   );
 };
 

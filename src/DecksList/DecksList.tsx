@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
-import StyledWindow from "../common/StyledWindow";
 import RowLink from "../common/RowLink";
-import useStyles from "./DecksList.styles";
+import ContentWindow from "../common/ContentWindow";
+// import useStyles from "./DecksList.styles";
 
 import type { Deck } from "../data";
 import type { DecksListProps } from "./DecksList.types";
@@ -13,11 +13,11 @@ const DecksList = (props: DecksListProps): JSX.Element => {
   const { data, setModal } = props;
   const decks = data.decks;
 
-  const classes = useStyles();
+  // const classes = useStyles();
   const onClick = useCallback((deck: Deck) => () => setModal("deck", deck.slug), []);
 
   return (
-    <StyledWindow className={classes.wrapperWindow}>
+    <ContentWindow>
       <h2>Decks</h2>
       {Object.values(decks).map((deck: Deck, i) => {
 
@@ -33,7 +33,7 @@ const DecksList = (props: DecksListProps): JSX.Element => {
           </RowLink>
         );
       })}
-    </StyledWindow>
+    </ContentWindow>
   );
 };
 

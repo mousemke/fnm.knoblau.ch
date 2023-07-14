@@ -1,7 +1,7 @@
-import React, { useCallback, useMemo } from "react";
-import StyledWindow from "../common/StyledWindow";
+import React, { useCallback } from "react";
 import RowLink from "../common/RowLink";
 import Separator from "../common/Separator";
+import ContentWindow from "../common/ContentWindow";
 
 import useStyles from "./SinglePlayer.styles";
 
@@ -35,7 +35,7 @@ const SinglePlayer = (props: SinglePlayerProps): JSX.Element => {
   );
 
   return (
-    <StyledWindow className={classes.wrapperWindow}>
+    <ContentWindow>
       <h2>{name}</h2>
       <Separator />
       <h3>Decks</h3>
@@ -71,7 +71,7 @@ const SinglePlayer = (props: SinglePlayerProps): JSX.Element => {
           );
         })}
       </div>
-    </StyledWindow>
+    </ContentWindow>
   );
 };
 

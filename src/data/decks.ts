@@ -22,7 +22,7 @@ export interface Decks {
 export const decks: Decks = {
   "05-05-2023-Scam-Sadie-Braun": {
     format: "modern",
-    slug: "05-05-2023-archetype-Sadie-Braun",
+    slug: "05-05-2023-Scam-Sadie-Braun",
     pilotSlug: "Sadie-Braun",
     archetype: "Scam",
     events: ["05-05-2023-FNM-with-Style"],

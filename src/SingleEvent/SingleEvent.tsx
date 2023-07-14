@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from "react";
-import StyledWindow from "../common/StyledWindow";
 import RowLink from "../common/RowLink";
 import Separator from "../common/Separator";
+import ContentWindow from "../common/ContentWindow";
 
 import useStyles from "./SingleEvent.styles";
 
@@ -36,7 +36,7 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
 
   return (
     <>
-      <StyledWindow className={classes.wrapperWindow}>
+      <ContentWindow>
         <h2>{name}</h2>
         <Separator />
         <h3>Players & Decks</h3>
@@ -47,17 +47,15 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
             const { archetype: deckName } = data.decks[deckSlug];
 
             return (
-              <span>
+              <span key={`${i}-player`}>
                 <RowLink
                   className={classes.inlinePaddedLine}
-                  key={`${i}-player`}
                   onClick={onPlayerClick(playerSlug)}
                   >
                   {playerName}
                 </RowLink>
                 <RowLink
                   className={classes.inlinePaddedLine}
-                  key={`${i}-deck`}
                   onClick={onDeckClick(deckSlug)}
                   >
                   playing {deckName}
@@ -66,8 +64,8 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
             );
           })}
         </div>
-      </StyledWindow>
-      <StyledWindow className={classes.wrapperWindow}>
+      </ContentWindow>
+      <ContentWindow>
         <h3>Final Results</h3>
         <div>
           {final.map((finalRecord, f) => (
@@ -83,8 +81,8 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
             </div>
           ))}
         </div>
-      </StyledWindow>
-      <StyledWindow className={classes.wrapperWindow}>
+      </ContentWindow>
+      <ContentWindow>
       <h3>Results ({rounds.length} rounds)</h3>
       <div>
         {rounds.map((round, i) => (
@@ -106,7 +104,7 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
             </div>
           ))}
         </div>
-      </StyledWindow>
+      </ContentWindow>
     </>
   );
 };

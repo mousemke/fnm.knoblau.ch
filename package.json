@@ -27,10 +27,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@arwes/react-animator": "^1.0.0-next.6",
-    "@arwes/react-bgs": "^1.0.0-next.6",
-    "@arwes/react-frames": "^1.0.0-next.6",
-    "@arwes/react-text": "^1.0.0-next.6",
+    "@arwes/react-animator": "^1.0.0-alpha.21",
+    "@arwes/react-bgs": "^1.0.0-alpha.21",
+    "@arwes/react-frames": "^1.0.0-alpha.21",
+    "@arwes/react-text": "^1.0.0-alpha.21",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-html": "^0.2.4",

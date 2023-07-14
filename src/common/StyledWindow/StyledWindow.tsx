@@ -1,5 +1,5 @@
 import React from "react";
-import { FrameSVGUnderline } from "@arwes/react-frames";
+import { FrameSVGNefrex } from "@arwes/react-frames";
 import { Text } from "@arwes/react-text";
 
 import type { StyledWindowProps } from "./StyledWindow.types";
@@ -13,8 +13,8 @@ const StyledWindow = (props: StyledWindowProps): JSX.Element => {
 
   return (
     <div className={`${className} ${classes.wrapper}`}>
-      <Text>{children}</Text>
-      <FrameSVGUnderline className={classes.frame} />
+      <Text as="div">{children}</Text>
+      <FrameSVGNefrex className={classes.frame} />
     </div>
   );
 };

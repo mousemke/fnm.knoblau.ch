@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Puffs } from "@arwes/react-bgs";
 import { Animator } from "@arwes/react-animator";
 import StyledWindow from "../common/StyledWindow";
+import Nav from "../common/Nav";
+import Rules from "../Rules";
 import EventsList from "../EventsList";
 import PlayersList from "../PlayersList";
 import DecksList from "../DecksList";
@@ -25,8 +27,10 @@ import useStyles from "./App.styles";
 const setQueryParam = (param: string | null, slug: string | null = null) => {
   const { pathname } = window.location;
 
-  const newQuery = param && slug ? `?type=${param}&slug=${slug}` : "";
+  const slugQuery = slug ? `&slug=${slug}` : "";
+  const newQuery = param ? `?type=${param}${slugQuery}` : "";
   const newPath = `${pathname}${newQuery}`;
+
 
   window.history.pushState({ type: param, slug }, document.title, newPath);
 };
@@ -72,6 +76,15 @@ const App = (): JSX.Element => {
           setActiveEvent(events[slug as EventId]);
           !popstateEvent && setQueryParam("event", slug);
           break;
+        case "decklist":
+          !popstateEvent && setQueryParam("decklist");
+          break;
+        case "playerlist":
+          !popstateEvent && setQueryParam("playerlist");
+          break;
+        case "eventlist":
+          !popstateEvent && setQueryParam("eventlist");
+          break;
         default:
           !popstateEvent && setQueryParam(null, null);
       }
@@ -91,8 +104,8 @@ const App = (): JSX.Element => {
       const type = e.state?.type;
       const slug = e.state?.slug;
 
-      if (type && slug) {
-        setModal(type, slug, true);
+      if (type) {
+        setModal(type, slug || null, true);
       } else {
         setModal(null, null, true);
       }
@@ -137,12 +150,21 @@ const App = (): JSX.Element => {
           <b>fnm.knoblau.ch</b>
         </h3>
       </StyledWindow>
+
+      <Animator active>
+        <Nav setModal={setModal} />
+      </Animator>
       {activeModal === null && (
-        <>
-          <EventsList setModal={setModal} events={events} />
-          <DecksList setModal={setModal} data={data} />
-          <PlayersList setModal={setModal} players={players} />
-        </>
+        <Rules />
+      )}
+      {activeModal === "eventlist" && (
+        <EventsList setModal={setModal} events={events} />
+      )}
+      {activeModal === "decklist" && (
+        <DecksList setModal={setModal} data={data} />
+      )}
+      {activeModal === "playerlist" && (
+        <PlayersList setModal={setModal} players={players} />
       )}
       {activeModal === "event" && (
         <SingleEvent data={data} setModal={setModal} activeEvent={activeEvent} />

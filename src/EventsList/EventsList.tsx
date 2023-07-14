@@ -1,8 +1,8 @@
 import React, { useCallback } from "react";
-import StyledWindow from "../common/StyledWindow";
+import ContentWindow from "../common/ContentWindow";
 import RowLink from "../common/RowLink";
 
-import useStyles from "./EventsList.styles";
+// import useStyles from "./EventsList.styles";
 
 import type { EventObject } from "../data";
 import type { EventsListProps } from "./EventsList.types";
@@ -13,11 +13,11 @@ import type { EventsListProps } from "./EventsList.types";
 const EventsList = (props: EventsListProps): JSX.Element => {
   const { events, setModal } = props;
 
-  const classes = useStyles();
+  // const classes = useStyles();
   const onClick = useCallback((event: EventObject) => () => setModal("event", event.slug), []);
 
   return (
-    <StyledWindow className={classes.wrapperWindow}>
+    <ContentWindow>
       <h2>Events</h2>
       {Object.values(events).map((event: EventObject, i) => {
 
@@ -30,7 +30,7 @@ const EventsList = (props: EventsListProps): JSX.Element => {
           </RowLink>
         );
       })}
-    </StyledWindow>
+    </ContentWindow>
   );
 };
 

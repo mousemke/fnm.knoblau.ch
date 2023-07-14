@@ -1,8 +1,8 @@
 import React, { useCallback } from "react";
-import StyledWindow from "../common/StyledWindow";
+import ContentWindow from "../common/ContentWindow";
 import RowLink from "../common/RowLink";
 
-import useStyles from "./PlayersList.styles";
+// import useStyles from "./PlayersList.styles";
 
 import type { PlayersListProps } from "./PlayersList.types";
 import type { Player } from "../data";
@@ -13,7 +13,7 @@ import type { Player } from "../data";
 const PlayersList = (props: PlayersListProps): JSX.Element => {
   const { players, setModal } = props;
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const onClick = useCallback(
     (player: Player) => () => setModal("player", player.slug),
@@ -21,7 +21,7 @@ const PlayersList = (props: PlayersListProps): JSX.Element => {
   );
 
   return (
-    <StyledWindow className={classes.wrapperWindow}>
+    <ContentWindow>
       <h2>Players</h2>
       {Object.values(players).map((player: Player, i) => {
         const playerEventCount = player.events.length;
@@ -41,7 +41,7 @@ const PlayersList = (props: PlayersListProps): JSX.Element => {
           </RowLink>
         );
       })}
-    </StyledWindow>
+    </ContentWindow>
   );
 };
 

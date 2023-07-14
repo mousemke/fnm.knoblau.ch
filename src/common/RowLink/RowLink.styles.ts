@@ -12,10 +12,12 @@ const useStyles = createUseStyles(
       color: "#fff",
 
       "&:hover": {
-        backgroundColor: "rgba(235, 36, 235, 15%)"
+        backgroundColor: "rgba(235, 36, 235, 15%)",
+        color: "rgb(245 150 245)"
       },
       "&:active": {
-        backgroundColor: "rgba(36, 184, 235, 15%)"
+        backgroundColor: "rgba(36, 184, 235, 15%)",
+        color: "rgb(170 104 170)"
       }
     }
   },

@@ -23,10 +23,6 @@ const useStyles = createUseStyles(
     roundResultWrapper: {
       marginTop: "16px",
       marginLeft: 35
-    },
-    wrapperWindow: {
-      width: "calc(80% - 100px)",
-      marginLeft: "20%"
     }
   },
   {
