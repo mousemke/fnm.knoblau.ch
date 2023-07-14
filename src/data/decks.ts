@@ -7,7 +7,7 @@ interface CardInDeck {
 
 export interface Deck {
   archetype: string;
-  events: EventId[];
+  event: EventId;
   format: string;
   main: CardInDeck[];
   pilotSlug: string;
@@ -25,7 +25,7 @@ export const decks: Decks = {
     slug: "05-05-2023-Scam-Sadie-Braun",
     pilotSlug: "Sadie-Braun",
     archetype: "Scam",
-    events: ["05-05-2023-FNM-with-Style"],
+    event: "05-05-2023-FNM-with-Style",
     main: [
       {
         amount: 3,
@@ -164,7 +164,7 @@ export const decks: Decks = {
     slug: "05-05-2023-Rhinos-Sean-Hamilton",
     pilotSlug: "Sean-Hamilton",
     archetype: "Rhinos",
-    events: ["05-05-2023-FNM-with-Style"],
+    event: "05-05-2023-FNM-with-Style",
     main: [
       {
         amount: 4,
@@ -295,7 +295,7 @@ export const decks: Decks = {
     slug: "05-05-2023-Gruul-Shamans-Golo-Stillger",
     pilotSlug: "Golo-Stillger",
     archetype: "Gruul Shamans",
-    events: ["05-05-2023-FNM-with-Style"],
+    event: "05-05-2023-FNM-with-Style",
     main: [
       {
         amount: 3,
@@ -426,7 +426,7 @@ export const decks: Decks = {
     slug: "05-05-2023-Grixis-Midrange-David-Amadu",
     pilotSlug: "David-Amadu",
     archetype: "Grixis Midrange",
-    events: ["05-05-2023-FNM-with-Style"],
+    event: "05-05-2023-FNM-with-Style",
     main: [
       {
         amount: 1,

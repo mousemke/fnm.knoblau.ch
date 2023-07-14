@@ -7,7 +7,7 @@ const useStyles = createUseStyles(
       marginLeft: "calc(200px + 10%)",
       paddingLeft: 30,
 
-      "& > p > span": {
+      "& > div > span": {
         width: "100%"
       }
     }

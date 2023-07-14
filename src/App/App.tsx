@@ -2,10 +2,11 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Puffs } from "@arwes/react-bgs";
 import { Animator } from "@arwes/react-animator";
 import StyledWindow from "../common/StyledWindow";
-import Nav from "../common/Nav";
+import Nav from "../Nav";
 import Rules from "../Rules";
 import EventsList from "../EventsList";
 import PlayersList from "../PlayersList";
+import ArchetypeList from "../ArchetypeList";
 import DecksList from "../DecksList";
 import SingleDeck from "../SingleDeck";
 import SinglePlayer from "../SinglePlayer";
@@ -36,11 +37,49 @@ const setQueryParam = (param: string | null, slug: string | null = null) => {
 };
 
 /**
+ * checks the active modal prop and returns the correct component
+ */
+const getActivePage = (
+  activeModal: string | null,
+  setModal: (modalType: string | null, slug: string | null, popstateEvent?: boolean) => void,
+  data: Data,
+  activeEvent: EventObject | null,
+  activeDeck: Deck | null,
+  activePlayer: Player | null,
+  activeArchetype: string | null
+) => {
+  switch (activeModal) {
+    case "eventlist":
+      return <EventsList setModal={setModal} events={events} />;
+    case "archetypelist":
+      return <ArchetypeList setModal={setModal} data={data} />;
+    case "playerlist":
+      return <PlayersList setModal={setModal} players={players} />;
+    case "deckslist":
+        return <DecksList data={data} setModal={setModal} activeArchetype={activeArchetype} />;
+    case "event":
+      <SingleEvent data={data} setModal={setModal} activeEvent={activeEvent} />;
+    case "deck":
+      <SingleDeck data={data} setModal={setModal} activeDeck={activeDeck} />;
+    case "player":
+      return (
+        <SinglePlayer
+          data={data}
+          setModal={setModal}
+          activePlayer={activePlayer}
+        />
+      );
+    default:
+      return <Rules />;
+  }
+}
+/**
  * The main control app. Controls which view is visible as well as having the states and setters
  */
 const App = (): JSX.Element => {
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const [activeDeck, setActiveDeck] = useState<Deck | null>(null);
+  const [activeArchetype, setActiveArchetype] = useState<string | null>(null);
   const [activePlayer, setActivePlayer] = useState<Player | null>(null);
   const [activeEvent, setActiveEvent] = useState<EventObject | null>(null);
 
@@ -59,9 +98,10 @@ const App = (): JSX.Element => {
       slug: string | null,
       popstateEvent?: boolean
     ) => {
-      setActiveDeck(null);
-      setActivePlayer(null);
-      setActiveEvent(null);
+      activeDeck !== null && setActiveDeck(null);
+      activePlayer !== null && setActivePlayer(null);
+      activeArchetype !== null && setActiveArchetype(null);
+      activeEvent !== null && setActiveEvent(null);
 
       switch (modalType) {
         case "deck":
@@ -76,14 +116,14 @@ const App = (): JSX.Element => {
           setActiveEvent(events[slug as EventId]);
           !popstateEvent && setQueryParam("event", slug);
           break;
-        case "decklist":
-          !popstateEvent && setQueryParam("decklist");
-          break;
+        case "archetypelist":
         case "playerlist":
-          !popstateEvent && setQueryParam("playerlist");
-          break;
         case "eventlist":
-          !popstateEvent && setQueryParam("eventlist");
+          !popstateEvent && setQueryParam(modalType);
+          break;
+        case "deckslist":
+          setActiveArchetype(slug);
+          !popstateEvent && setQueryParam("deckslist", slug);
           break;
         default:
           !popstateEvent && setQueryParam(null, null);
@@ -91,7 +131,16 @@ const App = (): JSX.Element => {
 
       setActiveModal(modalType);
     },
-    [setActiveDeck, setActivePlayer, setActiveEvent]
+    [
+      setActiveArchetype,
+      setActiveDeck,
+      setActivePlayer,
+      setActiveEvent,
+      activeDeck,
+      activePlayer,
+      activeArchetype,
+      activeEvent
+    ]
   );
 
   const classes = useStyles();
@@ -160,8 +209,11 @@ const App = (): JSX.Element => {
       {activeModal === "eventlist" && (
         <EventsList setModal={setModal} events={events} />
       )}
-      {activeModal === "decklist" && (
-        <DecksList setModal={setModal} data={data} />
+      {activeModal === "deckslist" && (
+        <DecksList data={data} setModal={setModal} activeArchetype={activeArchetype} />
+      )}
+      {activeModal === "archetypelist" && (
+        <ArchetypeList setModal={setModal} data={data} />
       )}
       {activeModal === "playerlist" && (
         <PlayersList setModal={setModal} players={players} />
@@ -179,6 +231,7 @@ const App = (): JSX.Element => {
           activePlayer={activePlayer}
         />
       )}
+      {/* {getActivePage(activeModal, setModal, data, activeEvent, activeDeck, activePlayer, activeArchetype)} */}
     </>
   );
 };

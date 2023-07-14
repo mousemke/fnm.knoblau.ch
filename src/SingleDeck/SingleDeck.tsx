@@ -20,8 +20,8 @@ const SingleDeck = (props: SingleDeckProps): JSX.Element => {
     return <></>;
   }
 
-  const { archetype, events, main, side } = activeDeck;
-
+  const { archetype, event, main, side } = activeDeck;
+  const { name: eventName, date: eventDate } = data.events[event];
   const classes = useStyles();
 
   const pilot = useMemo(() => data.players[activeDeck.pilotSlug], [data]);
@@ -91,22 +91,15 @@ const SingleDeck = (props: SingleDeckProps): JSX.Element => {
         </ContentWindow>
       <ContentWindow>
         <h4 className={classes.noTopMargin}>
-          Events
+          Event
         </h4>
         <div>
-          {events.map((event, i) => {
-            const { date, name } = data.events[event];
-
-            return (
-              <RowLink
-                className={classes.card}
-                key={i}
-                onClick={onEventClick(event)}
-              >
-                {date} - {name}
-              </RowLink>
-            );
-          })}
+          <RowLink
+            className={classes.card}
+            onClick={onEventClick(event)}
+          >
+            {eventDate} - {eventName}
+          </RowLink>
         </div>
       </ContentWindow>
     </>

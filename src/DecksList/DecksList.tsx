@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import RowLink from "../common/RowLink";
 import ContentWindow from "../common/ContentWindow";
 // import useStyles from "./DecksList.styles";
@@ -7,29 +7,25 @@ import type { Deck } from "../data";
 import type { DecksListProps } from "./DecksList.types";
 
 /**
- * The list of all decks
+ * The list of all decks of a specific archetype
  */
 const DecksList = (props: DecksListProps): JSX.Element => {
-  const { data, setModal } = props;
+  const { activeArchetype, data, setModal } = props;
   const decks = data.decks;
 
   // const classes = useStyles();
   const onClick = useCallback((deck: Deck) => () => setModal("deck", deck.slug), []);
+  const decksArray = useMemo(() => activeArchetype === null ? Object.values(decks) : Object.values(decks).filter(d => d.archetype === activeArchetype), [activeArchetype]);
 
   return (
     <ContentWindow>
-      <h2>Decks</h2>
-      {Object.values(decks).map((deck: Deck, i) => {
-
-        const deckEventCount = deck.events.length;
-
+      <h2>{activeArchetype} Decks</h2>
+      {decksArray.map((deck: Deck, i) => {
         return (
           <RowLink key={i} onClick={onClick(deck)}>
             <h3>{deck.archetype}</h3>
             <span>by {data.players[deck.pilotSlug].name}</span>
-            <span>
-              {deckEventCount} Event{deckEventCount !== 1 ? "s" : ""}
-            </span>
+            <span>in {data.events[deck.event].name} on {data.events[deck.event].date}</span>
           </RowLink>
         );
       })}

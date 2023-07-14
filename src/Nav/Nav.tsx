@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useRef } from 'react';
 import { FrameSVGKranox, useFrameSVGAssemblingAnimation, Illuminator } from '@arwes/react-frames';
-import RowLink from "../RowLink";
+import RowLink from "../common/RowLink";
 import { Text } from "@arwes/react-text";
 
 import type { ReactElement } from 'react';
@@ -22,7 +22,7 @@ const Nav = (props: NavProps): ReactElement => {
   return (
     <div className={classes.wrapper}>
       <Text as="div" className={classes.textWrapper}>
-        <RowLink onClick={setSlug("decklist")}>
+        <RowLink onClick={setSlug("archetypelist")}>
           <h2>Decks</h2>
         </RowLink>
         <RowLink onClick={setSlug("playerlist")}>
