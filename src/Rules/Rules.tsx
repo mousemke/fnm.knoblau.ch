@@ -30,8 +30,13 @@ const Rules = (): JSX.Element => {
         <Separator />
         <h3>3. You need a decklist.</h3>
         <div>
-          Your decklist needs to be submitted digitally to fnm@knoblau.ch by Friday at 18:00. It must include your name, your deckname, your deck archetype, your MB cards, and your SB cards. Please try to keep your listed archetypes typical so we can sort them with the data.  You can check current and previous results at https://fnm.knoblau.ch
+          Your decklist needs to be submitted digitally to <a href="mailto:fnm@knoblau.ch" className={classes.link}>fnm@knoblau.ch</a> by Friday at 18:00. It must include your name, your deckname, your deck archetype, your MB cards, and your SB cards. Please try to keep your listed archetypes typical so we can sort them with the data.
         </div>
+        <br />
+        <div>
+          You can check current and previous results at <a className={classes.link} href="https://fnm.knoblau.ch">https://fnm.knoblau.ch</a>
+        </div>
+        <br />
         <div>
         Submitting your decklist is also considered an RSVP.
         </div>
