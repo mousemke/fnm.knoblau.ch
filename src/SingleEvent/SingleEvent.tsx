@@ -1,7 +1,8 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback} from "react";
 import RowLink from "../common/RowLink";
-import Separator from "../common/Separator";
+import Link from "../common/Link";
 import ContentWindow from "../common/ContentWindow";
+import { venues } from "../data";
 
 import useStyles from "./SingleEvent.styles";
 
@@ -21,6 +22,7 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
   }
 
   const { final, name, players, rounds } = activeEvent;
+  const location = venues[activeEvent.venueSlug];
 
   const classes = useStyles();
 
@@ -37,8 +39,11 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
   return (
     <>
       <ContentWindow>
-        <h2>{name}</h2>
-        <Separator />
+        <div className={classes.inlineAllChildren}>
+          <h1>{name}</h1> at <h3><Link href={location.mapsLink} target="_blank">{location.name}</Link></h3>
+        </div>
+      </ContentWindow>
+      <ContentWindow>
         <h3>Players & Decks</h3>
         <div>
           {Object.keys(players).map((playerSlug, i) => {

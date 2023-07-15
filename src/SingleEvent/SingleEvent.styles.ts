@@ -8,7 +8,7 @@ const useStyles = createUseStyles(
       padding: 2
     },
     match: {
-      margin: "8px 0 0",
+      margin: "16px 0 0",
     },
     paddedLine: {
       padding: 2
@@ -21,8 +21,14 @@ const useStyles = createUseStyles(
       width: 250
     },
     roundResultWrapper: {
-      marginTop: "16px",
+      marginTop: 20,
       marginLeft: 35
+    },
+    inlineAllChildren: {
+      "& > h1, & > h3": {
+        width: "45%",
+        display: "inline-block"
+      }
     }
   },
   {

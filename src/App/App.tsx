@@ -11,10 +11,7 @@ import DecksList from "../DecksList";
 import SingleDeck from "../SingleDeck";
 import SinglePlayer from "../SinglePlayer";
 import SingleEvent from "../SingleEvent";
-
-import { decks } from "../data/decks";
-import { players } from "../data/players";
-import { events } from "../data/events";
+import { decks, players, events, venues } from "../data";
 
 import type { Data, Deck, DeckId, Player, EventId, EventObject } from "../data";
 
@@ -87,9 +84,10 @@ const App = (): JSX.Element => {
     () => ({
       decks,
       players,
-      events
+      events,
+      venues
     }),
-    [decks, players, events]
+    [decks, players, events, venues]
   );
 
   const setModal = useCallback(
@@ -231,7 +229,6 @@ const App = (): JSX.Element => {
           activePlayer={activePlayer}
         />
       )}
-      {/* {getActivePage(activeModal, setModal, data, activeEvent, activeDeck, activePlayer, activeArchetype)} */}
     </>
   );
 };

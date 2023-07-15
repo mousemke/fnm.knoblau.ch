@@ -1,6 +1,7 @@
 import React from "react";
 import ContentWindow from "../common/ContentWindow";
 import Separator from "../common/Separator";
+import Link from "../common/Link";
 import useStyles from "./Rules.styles";
 
 /**
@@ -14,7 +15,7 @@ const Rules = (): JSX.Element => {
       <ContentWindow>
         <div>4 players minimum. Otherwise it's just playing magic and drinking.</div>
         <Separator />
-        <div>For more info on joining Berlin's premier guerilla FNM, please <a className={classes.link} href="https://discord.gg/CrBz7X7HUD">check out our discord</a></div>
+        <div>For more info on joining Berlin's premier guerilla FNM, please <Link href="https://discord.gg/CrBz7X7HUD">check out our discord</Link></div>
       </ContentWindow>
       <ContentWindow>
         <h2>Rules</h2>
@@ -30,11 +31,11 @@ const Rules = (): JSX.Element => {
         <Separator />
         <h3>3. You need a decklist.</h3>
         <div>
-          Your decklist needs to be submitted digitally to <a href="mailto:fnm@knoblau.ch" className={classes.link}>fnm@knoblau.ch</a> by Friday at 18:00. It must include your name, your deckname, your deck archetype, your MB cards, and your SB cards. Please try to keep your listed archetypes typical so we can sort them with the data.
+          Your decklist needs to be submitted digitally to <Link href="mailto:fnm@knoblau.ch">fnm@knoblau.ch</Link> by Friday at 18:00. It must include your name, your deckname, your deck archetype, your MB cards, and your SB cards. Please try to keep your listed archetypes typical so we can sort them with the data.
         </div>
         <br />
         <div>
-          You can check current and previous results at <a className={classes.link} href="https://fnm.knoblau.ch">https://fnm.knoblau.ch</a>
+          You can check current and previous results at <Link href="https://fnm.knoblau.ch">https://fnm.knoblau.ch</Link>
         </div>
         <br />
         <div>

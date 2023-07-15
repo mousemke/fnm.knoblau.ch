@@ -595,5 +595,855 @@ export const decks: Decks = {
         name: "Ashiok, Dream Render"
       }
     ]
+  },
+  "14-07-2023-Scam-Sadie-Braun": {
+    format: "modern",
+    slug: "14-07-2023-Scam-Sadie-Braun",
+    pilotSlug: "Sadie-Braun",
+    archetype: "Scam",
+    event: "14-07-2023-FNM-with-Style",
+    main: [
+      {
+        amount: 3,
+        name: "Blackcleave Cliffs"
+      },
+      {
+        amount: 3,
+        name: "Blood Crypt"
+      },
+      {
+        amount: 2,
+        name: "Blood Moon"
+      },
+      {
+        amount: 4,
+        name: "Bloodstained Mire"
+      },
+      {
+        amount: 1,
+        name: "Castle Locthwain"
+      },
+      {
+        amount: 4,
+        name: "Dauthi Voidwalker"
+      },
+      {
+        amount: 2,
+        name: "Fatal Push"
+      },
+      {
+        amount: 2,
+        name: "Feign Death"
+      },
+      {
+        amount: 4,
+        name: "Fury"
+      },
+      {
+        amount: 4,
+        name: "Grief"
+      },
+      {
+        amount: 4,
+        name: "Marsh Flats"
+      },
+      {
+        amount: 4,
+        name: "Orcish Bowmasters"
+      },
+      {
+        amount: 4,
+        name: "Ragavan, Nimble Pilferer"
+      },
+      {
+        amount: 4,
+        name: "Seasoned Pyromancer"
+      },
+      {
+        amount: 3,
+        name: "Swamp"
+      },
+      {
+        amount: 3,
+        name: "Terminate"
+      },
+      {
+        amount: 3,
+        name: "Thoughtseize"
+      },
+      {
+        amount: 4,
+        name: "Undying Malice"
+      },
+      {
+        amount: 2,
+        name: "Verdant Catacombs"
+      },
+    ],
+    side: [
+      {
+        amount: 1,
+        name: "Blood Moon"
+      },
+      {
+        amount: 3,
+        name: "Chalice of the Void"
+      },
+      {
+        amount: 2,
+        name: "Engineered Explosives"
+      },
+      {
+        amount: 2,
+        name: "Fable of the Mirror-Breaker"
+      },
+      {
+        amount: 2,
+        name: "Nihil Spellbomb"
+      },
+      {
+        amount: 1,
+        name: "Sheoldred, the Apocalypse"
+      },
+      {
+        amount: 1,
+        name: "The Filigree Sylex"
+      },
+      {
+        amount: 1,
+        name: "Thoughtseize"
+      },
+      {
+        amount: 2,
+        name: "Unlicensed Hearse"
+      },
+    ]
+  },
+  "14-07-2023-Esper-Blink-Alex-Humphreys": {
+    format: "modern",
+    slug: "14-07-2023-Esper-Blink-Alex-Humphreys",
+    pilotSlug: "Alex-Humphreys",
+    archetype: "Esper Blink",
+    event: "14-07-2023-FNM-with-Style",
+    main: [
+      {
+        amount: 3,
+        name: "Aether Channeler"
+      },
+      {
+        amount: 2,
+        name: "Can't Stay Away"
+      },
+      {
+        amount: 3,
+        name: "Charming Prince"
+      },
+      {
+        amount: 4,
+        name: "Ephemerate"
+      },
+      {
+        amount: 2,
+        name: "Flooded Strand"
+      },
+      {
+        amount: 2,
+        name: "Godless Shrine"
+      },
+      {
+        amount: 1,
+        name: "Graceful Restoration"
+      },
+      {
+        amount: 4,
+        name: "Grief"
+      },
+      {
+        amount: 2,
+        name: "Hallowed Fountain"
+      },
+      {
+        amount: 3,
+        name: "Halo Forager"
+      },
+      {
+        amount: 1,
+        name: "Island"
+      },
+      {
+        amount: 3,
+        name: "Marsh Flats"
+      },
+      {
+        amount: 2,
+        name: "Plains"
+      },
+      {
+        amount: 3,
+        name: "Polluted Delta"
+      },
+      {
+        amount: 2,
+        name: "Profane Tutor"
+      },
+      {
+        amount: 1,
+        name: "Raffine's Tower"
+      },
+      {
+        amount: 1,
+        name: "Seachrome Coast"
+      },
+      {
+        amount: 4,
+        name: "Solitude"
+      },
+      {
+        amount: 4,
+        name: "Soulherder"
+      },
+      {
+        amount: 1,
+        name: "Swamp"
+      },
+      {
+        amount: 3,
+        name: "Touch the Spirit Realm"
+      },
+      {
+        amount: 4,
+        name: "Undying Malice"
+      },
+      {
+        amount: 2,
+        name: "Vanishing Verse"
+      },
+      {
+        amount: 1,
+        name: "Vesuvan Duplimancy"
+      },
+      {
+        amount: 2,
+        name: "Watery Grave"
+      },
+    ],
+    side: [
+      {
+        amount: 2,
+        name: "Chalice of the Void"
+      },
+      {
+        amount: 1,
+        name: "Dovin's Veto"
+      },
+      {
+        amount: 1,
+        name: "Drannith Magistrate"
+      },
+      {
+        amount: 1,
+        name: "Elesh Norn, Mother of Machines"
+      },
+      {
+        amount: 1,
+        name: "Grafdigger's Cage"
+      },
+      {
+        amount: 1,
+        name: "Phyrexian Metamorph"
+      },
+      {
+        amount: 2,
+        name: "Pithing Needle"
+      },
+      {
+        amount: 1,
+        name: "Prismatic Ending"
+      },
+      {
+        amount: 1,
+        name: "Relic of Progenitus"
+      },
+      {
+        amount: 2,
+        name: "Subtlety"
+      },
+      {
+        amount: 2,
+        name: "Teferi, Time Raveler"
+      },
+    ]
+  },
+  "14-07-2023-Angels-Magda-Szymaniec": {
+    format: "modern",
+    slug: "14-07-2023-Angels-Magda-Szymaniec",
+    pilotSlug: "Magda-Szymaniec",
+    archetype: "Angels",
+    event: "14-07-2023-FNM-with-Style",
+    main: [
+      {
+        amount: 2,
+        name: "Archangel Elspeth"
+      },
+      {
+        amount: 1,
+        name: "Archangel of Thune"
+      },
+      {
+        amount: 1,
+        name: "Banishing Light"
+      },
+      {
+        amount: 4,
+        name: "Bishop of Wings"
+      },
+      {
+        amount: 1,
+        name: "Borrowed Time"
+      },
+      {
+        amount: 2,
+        name: "Castle Ardenvale"
+      },
+      {
+        amount: 2,
+        name: "Cave of the Frost Dragon"
+      },
+      {
+        amount: 2,
+        name: "Cavern of Souls"
+      },
+      {
+        amount: 1,
+        name: "Eiganjo, Seat of the Empire"
+      },
+      {
+        amount: 2,
+        name: "Elspeth Resplendent"
+      },
+      {
+        amount: 2,
+        name: "Giada, Font of Hope"
+      },
+      {
+        amount: 2,
+        name: "Heliod, Sun-Crowned"
+      },
+      {
+        amount: 2,
+        name: "Metropolis Reformer"
+      },
+      {
+        amount: 1,
+        name: "Oblivion Ring"
+      },
+      {
+        amount: 1,
+        name: "Ossification"
+      },
+      {
+        amount: 1,
+        name: "Path to Exile"
+      },
+      {
+        amount: 1,
+        name: " Plains"
+      },
+      {
+        amount: 4,
+        name: "Righteous Valkyrie"
+      },
+      {
+        amount: 1,
+        name: "Segovian Angel"
+      },
+      {
+        amount: 4,
+        name: "Seraph Sanctuary"
+      },
+      {
+        amount: 2,
+        name: "Serra Paragon"
+      },
+      {
+        amount: 2,
+        name: "Serra the Benevolent"
+      },
+      {
+        amount: 2,
+        name: "Soul Warden"
+      },
+      {
+        amount: 2,
+        name: "Speaker of the Heavens"
+      },
+      {
+        amount: 2,
+        name: "The Book of Exalted Deeds"
+      },
+      {
+        amount: 2,
+        name: "Youthful Valkyrie"
+      },
+    ],
+    side: [
+      {
+        amount: 1,
+        name: "Borrowed Time"
+      },
+      {
+        amount: 1,
+        name: "Giada, Font of Hope"
+      },
+      {
+        amount: 2,
+        name: "Inspiring Overseer"
+      },
+      {
+        amount: 1,
+        name: "Resplendent Angel"
+      },
+      {
+        amount: 2,
+        name: "Sanctify"
+      },
+      {
+        amount: 1,
+        name: "Segovian Angel"
+      },
+      {
+        amount: 1,
+        name: "Sephara, Sky's Blade"
+      },
+      {
+        amount: 1,
+        name: "Soul Warden"
+      },
+      {
+        amount: 1,
+        name: "Tormod's Crypt"
+      },
+      {
+        amount: 2,
+        name: "Traveling Minister"
+      },
+      {
+        amount: 1,
+        name: "Youthful Valkyrie"
+      },
+    ]
+  },
+  "14-07-2023-Rhinos-Sean-Hamilton": {
+    format: "modern",
+    slug: "14-07-2023-Rhinos-Sean-Hamilton",
+    pilotSlug: "Sean-Hamilton",
+    archetype: "Rhinos",
+    event: "14-07-2023-FNM-with-Style",
+    main: [
+      {
+        amount: 2,
+        name: "Teferi, Time Raveler"
+      },
+      {
+        amount: 4,
+        name: "Shardless Agent"
+      },
+      {
+        amount: 2,
+        name: "Fury"
+      },
+      {
+        amount: 2,
+        name: "The One Ring"
+      },
+      {
+        amount: 4,
+        name: "Force of Negation"
+      },
+      {
+        amount: 2,
+        name: "Mystical Dispute"
+      },
+      {
+        amount: 4,
+        name: "Violent Outburst"
+      },
+      {
+        amount: 3,
+        name: "Dead // Gone"
+      },
+      {
+        amount: 4,
+        name: "Fire // Ice"
+      },
+      {
+        amount: 4,
+        name: "Crashing Footfalls"
+      },
+      {
+        amount: 4,
+        name: "Leyline Binding"
+      },
+      {
+        amount: 4,
+        name: "Arid Mesa"
+      },
+      {
+        amount: 2,
+        name: "Boseiju, Who Endures"
+      },
+      {
+        amount: 1,
+        name: "Forest"
+      },
+      {
+        amount: 2,
+        name: "Gemstone Caverns"
+      },
+      {
+        amount: 1,
+        name: "Hallowed Fountain"
+      },
+      {
+        amount: 1,
+        name: "Indatha Triome"
+      },
+      {
+        amount: 2,
+        name: "Island"
+      },
+      {
+        amount: 2,
+        name: "Misty Rainforest"
+      },
+      {
+        amount: 1,
+        name: "Otawara, Soaring City"
+      },
+      {
+        amount: 1,
+        name: "Raugrin Triome"
+      },
+      {
+        amount: 4,
+        name: "Scalding Tarn"
+      },
+      {
+        amount: 1,
+        name: "Steam Vents"
+      },
+      {
+        amount: 2,
+        name: "Stomping Ground"
+      },
+      {
+        amount: 1,
+        name: "Temple Garden"
+      },
+    ],
+    side: [
+      {
+        amount: 2,
+        name: "Chalice of the Void"
+      },
+      {
+        amount: 4,
+        name: "Endurance"
+      },
+      {
+        amount: 2,
+        name: "Mystical Dispute"
+      },
+      {
+        amount: 4,
+        name: "Force of Vigor"
+      },
+      {
+        amount: 1,
+        name: "Subtlety"
+      },
+      {
+        amount: 2,
+        name: "Fury"
+      },
+    ]
+  },
+  "14-07-2023-Living-End-Anthony-Hernandez": {
+    format: "modern",
+    slug: "14-07-2023-Living-End-Anthony-Hernandez",
+    pilotSlug: "Anthony-Hernandez",
+    archetype: "Living-End",
+    event: "14-07-2023-FNM-with-Style",
+    main: [
+      {
+        amount: 1,
+        name: "Island"
+      },
+      {
+        amount: 1,
+        name: "Sunken Ruins"
+      },
+      {
+        amount: 4,
+        name: "Architects of Will"
+      },
+      {
+        amount: 4,
+        name: "Violent Outburst"
+      },
+      {
+        amount: 1,
+        name: "Forest"
+      },
+      {
+        amount: 2,
+        name: "Steam Vents"
+      },
+      {
+        amount: 2,
+        name: "Breeding Pool"
+      },
+      {
+        amount: 1,
+        name: "Stomping Ground"
+      },
+      {
+        amount: 4,
+        name: "Street Wraith"
+      },
+      {
+        amount: 4,
+        name: "Shardless Agent"
+      },
+      {
+        amount: 2,
+        name: "Botanical Sanctum"
+      },
+      {
+        amount: 4,
+        name: "Misty Rainforest"
+      },
+      {
+        amount: 4,
+        name: "Curator of Mysteries"
+      },
+      {
+        amount: 4,
+        name: "Striped Riverwinder"
+      },
+      {
+        amount: 4,
+        name: "Force of Negation"
+      },
+      {
+        amount: 3,
+        name: "Waker of Waves"
+      },
+      {
+        amount: 4,
+        name: "Living End"
+      },
+      {
+        amount: 4,
+        name: "Grief"
+      },
+      {
+        amount: 1,
+        name: "Otawara, Soaring City"
+      },
+      {
+        amount: 2,
+        name: "Oliphaunt"
+      },
+      {
+        amount: 4,
+        name: "Generous Ent"
+      },
+    ],
+    side: [
+      {
+        amount: 2,
+        name: "Force of Vigor"
+      },
+      {
+        amount: 3,
+        name: "Leyline of Sanctity"
+      },
+      {
+        amount: 1,
+        name: "Mystical Dispute"
+      },
+      {
+        amount: 4,
+        name: "Subtlety"
+      },
+      {
+        amount: 3,
+        name: "Endurance"
+      },
+      {
+        amount: 2,
+        name: "Foundation Breaker"
+      },
+    ]
+  },
+  "14-07-2023-Green-Tron-Aubrey-Browne": {
+    format: "modern",
+    slug: "14-07-2023-Green-Tron-Aubrey-Browne",
+    pilotSlug: "Aubrey-Browne",
+    archetype: "Green-Tron",
+    event: "14-07-2023-FNM-with-Style",
+    main: [
+      {
+        amount: 4,
+        name: "Urza's Tower"
+      },
+      {
+        amount: 4,
+        name: "Urza's Power Plant"
+      },
+      {
+        amount: 4,
+        name: "Urza's Mine"
+      },
+      {
+        amount: 3,
+        name: "Forest"
+      },
+      {
+        amount: 1,
+        name: "Blast Zone"
+      },
+      {
+        amount: 1,
+        name: "Boseiju, Who Endures"
+      },
+      {
+        amount: 1,
+        name: "Sanctum of Ugin"
+      },
+      {
+        amount: 4,
+        name: "Expedition Map"
+      },
+      {
+        amount: 4,
+        name: "Sylvan Scrying"
+      },
+      {
+        amount: 4,
+        name: "Ancient Stirrings"
+      },
+      {
+        amount: 4,
+        name: "Chromatic Sphere"
+      },
+      {
+        amount: 4,
+        name: "Chromatic Star"
+      },
+      {
+        amount: 3,
+        name: "Oblivion Stone"
+      },
+      {
+        amount: 1,
+        name: "Ugin, the Spirit Dragon"
+      },
+      {
+        amount: 4,
+        name: "Karn, the Great Creator"
+      },
+      {
+        amount: 1,
+        name: "Wurmcoil Engine"
+      },
+      {
+        amount: 1,
+        name: "Cityscape Leveler"
+      },
+      {
+        amount: 1,
+        name: "Sundering Titan"
+      },
+      {
+        amount: 1,
+        name: "Ulamog, the Ceaseless Hunger"
+      },
+      {
+        amount: 1,
+        name: "Kozilek, Butcher of Truth"
+      },
+      {
+        amount: 3,
+        name: "The One Ring"
+      },
+      {
+        amount: 3,
+        name: "Relic of Progenitus"
+      },
+      {
+        amount: 2,
+        name: "Warping Wail"
+      },
+      {
+        amount: 1,
+        name: "Emrakul, the Promised End"
+      },
+    ],
+    side: [
+      {
+        amount: 3,
+        name: "Haywire Mite"
+      },
+      {
+        amount: 1,
+        name: "Walking Ballista"
+      },
+      {
+        amount: 1,
+        name: "Chalice of the Void"
+      },
+      {
+        amount: 1,
+        name: "Tormod's Crypt"
+      },
+      {
+        amount: 1,
+        name: "Ensnaring Bridge"
+      },
+      {
+        amount: 1,
+        name: "Jegantha, the Wellspring"
+      },
+      {
+        amount: 1,
+        name: "Boulderbranch Golem"
+      },
+      {
+        amount: 1,
+        name: "Sundering Titan"
+      },
+      {
+        amount: 1,
+        name: "The Stone Brain"
+      },
+      {
+        amount: 1,
+        name: "Engineered Explosives"
+      },
+      {
+        amount: 1,
+        name: "The One Ring"
+      },
+      {
+        amount: 1,
+        name: "Liquimetal Coating"
+      },
+      {
+        amount: 1,
+        name: "Soulless Jailer"
+      },
+    ]
   }
 };

@@ -11,13 +11,14 @@ interface EventRound {
 
 interface FinalRecord {
   slug: string;
-  result: `${number}-${number}`;
+  result: `${number}-${number}-${number}`;
 }
 export interface EventObject {
   format: string;
   slug: string;
   name: string;
-  location: string;
+  venue: string;
+  venueSlug: string;
   date: string;
   players: {
     [name: string]: DeckId;
@@ -35,7 +36,8 @@ export const events: Events = {
     format: "modern",
     slug: "05-05-2023-FNM-with-Style",
     name: "FNM with Style",
-    location: "Cafe Style",
+    venue: "Cafe Style",
+    venueSlug: "Cafe-Style",
     date: "05-05-2023",
     players: {
       "Sadie-Braun": "05-05-2023-Scam-Sadie-Braun",
@@ -46,19 +48,19 @@ export const events: Events = {
     final: [
       {
         slug: "Sean-Hamilton",
-        result: "2-1"
+        result: "2-1-0"
       },
       {
         slug: "David-Amadu",
-        result: "2-1"
+        result: "2-1-0"
       },
       {
         slug: "Golo-Stillger",
-        result: "2-1"
+        result: "2-1-0"
       },
       {
         slug: "Sadie-Braun",
-        result: "0-3"
+        result: "0-3-0"
       },
     ],
     rounds: [
@@ -95,6 +97,98 @@ export const events: Events = {
           {
             "David-Amadu": 2,
             "Sadie-Braun": 1
+          }
+        ]
+      }
+    ]
+  },
+  "14-07-2023-FNM-with-Style": {
+    format: "modern",
+    slug: "14-07-2023-FNM-with-Style",
+    name: "FNM with Style",
+    venue: "Cafe Style",
+    venueSlug: "Cafe-Style",
+    date: "14-07-2023",
+    players: {
+      "Sadie-Braun": "14-07-2023-Scam-Sadie-Braun",
+      "Sean-Hamilton": "14-07-2023-Rhinos-Sean-Hamilton",
+      "Alex-Humphreys": "14-07-2023-Esper-Blink-Alex-Humphreys",
+      "Magda-Szymaniec": "14-07-2023-Angels-Magda-Szymaniec",
+      "Anthony-Hernandez": "14-07-2023-Living-End-Anthony-Hernandez",
+      "Aubrey-Browne": "14-07-2023-Green-Tron-Aubrey-Browne"
+    },
+    final: [
+      {
+        slug: "Aubrey-Browne",
+        result: "2-0-1",
+      },
+      {
+        slug: "Sadie-Braun",
+        result: "2-1-0",
+      },
+      {
+        slug: "Alex-Humphreys",
+        result: "2-1-0",
+      },
+      {
+        slug: "Sean-Hamilton",
+        result: "2-1-0",
+      },
+      {
+        slug: "Magda-Szymaniec",
+        result: "0-2-1",
+      },
+      {
+        slug: "Anthony-Hernandez",
+        result: "0-3-0",
+      },
+    ],
+    rounds: [
+      {
+        results: [
+          {
+            "Sean-Hamilton": 0,
+            "Alex-Humphreys": 2
+          },
+          {
+            "Magda-Szymaniec": 1,
+            "Aubrey-Browne": 1
+          },
+          {
+            "Sadie-Braun": 2,
+            "Anthony-Hernandez": 1
+          }
+        ]
+      },
+      {
+        results: [
+          {
+            "Anthony-Hernandez": 1,
+            "Aubrey-Browne": 2
+          },
+          {
+            "Alex-Humphreys": 1,
+            "Sadie-Braun": 2
+          },
+          {
+            "Sean-Hamilton": 2,
+            "Magda-Szymaniec": 0
+          }
+        ]
+      },
+      {
+        results: [
+          {
+            "Alex-Humphreys": 2,
+            "Magda-Szymaniec": 0
+          },
+          {
+            "Sean-Hamilton": 2,
+            "Anthony-Hernandez": 1
+          },
+          {
+            "Sadie-Braun": 0,
+            "Aubrey-Browne": 2
           }
         ]
       }
