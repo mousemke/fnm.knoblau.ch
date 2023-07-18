@@ -33,19 +33,19 @@ export interface Events {
 }
 
 export const events: Events = {
-  "05-05-2023-FNM-with-Style": {
+  "2023-05-05-FNM-with-Style": {
     finished: true,
     format: "modern",
-    slug: "05-05-2023-FNM-with-Style",
+    slug: "2023-05-05-FNM-with-Style",
     name: "FNM with Style",
     venue: "Cafe Style",
     venueSlug: "Cafe-Style",
-    date: "05-05-2023",
+    date: "2023-05-05",
     players: {
-      "Sadie-Braun": "05-05-2023-Scam-Sadie-Braun",
-      "Sean-Hamilton": "05-05-2023-Rhinos-Sean-Hamilton",
-      "Golo-Stillger": "05-05-2023-Gruul-Shamans-Golo-Stillger",
-      "David-Amadu": "05-05-2023-Grixis-Midrange-David-Amadu"
+      "Sadie-Braun": "2023-05-05-Scam-Sadie-Braun",
+      "Sean-Hamilton": "2023-05-05-Rhinos-Sean-Hamilton",
+      "Golo-Stillger": "2023-05-05-Gruul-Shamans-Golo-Stillger",
+      "David-Amadu": "2023-05-05-Grixis-Midrange-David-Amadu"
     },
     final: [
       {
@@ -104,21 +104,21 @@ export const events: Events = {
       }
     ]
   },
-  "14-07-2023-FNM-with-Style": {
+  "2023-07-14-FNM-with-Style": {
     finished: true,
     format: "modern",
-    slug: "14-07-2023-FNM-with-Style",
+    slug: "2023-07-14-FNM-with-Style",
     name: "FNM with Style",
     venue: "Cafe Style",
     venueSlug: "Cafe-Style",
-    date: "14-07-2023",
+    date: "2023-07-14",
     players: {
-      "Sadie-Braun": "14-07-2023-Scam-Sadie-Braun",
-      "Sean-Hamilton": "14-07-2023-Rhinos-Sean-Hamilton",
-      "Alex-Humphreys": "14-07-2023-Esper-Blink-Alex-Humphreys",
-      "Magda-Szymaniec": "14-07-2023-Angels-Magda-Szymaniec",
-      "Anthony-Hernandez": "14-07-2023-Living-End-Anthony-Hernandez",
-      "Aubrey-Browne": "14-07-2023-Green-Tron-Aubrey-Browne"
+      "Sadie-Braun": "2023-07-14-Scam-Sadie-Braun",
+      "Sean-Hamilton": "2023-07-14-Rhinos-Sean-Hamilton",
+      "Alex-Humphreys": "2023-07-14-Esper-Blink-Alex-Humphreys",
+      "Magda-Szymaniec": "2023-07-14-Angels-Magda-Szymaniec",
+      "Anthony-Hernandez": "2023-07-14-Living-End-Anthony-Hernandez",
+      "Aubrey-Browne": "2023-07-14-Green-Tron-Aubrey-Browne"
     },
     final: [
       {
@@ -197,14 +197,14 @@ export const events: Events = {
       }
     ]
   },
-  "28-07-2023-FNM-with-Style": {
+  "2023-07-28-FNM-with-Style": {
     finished: false,
     format: "modern",
-    slug: "28-07-2023-FNM-with-Style",
+    slug: "2023-07-28-FNM-with-Style",
     name: "FNM with Style",
     venue: "Cafe Style",
     venueSlug: "Cafe-Style",
-    date: "28-07-2023",
+    date: "2023-07-28",
     players: {
     },
     final: [

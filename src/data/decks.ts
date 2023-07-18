@@ -20,12 +20,12 @@ export interface Decks {
 }
 
 export const decks: Decks = {
-  "05-05-2023-Scam-Sadie-Braun": {
+  "2023-05-05-Scam-Sadie-Braun": {
     format: "modern",
-    slug: "05-05-2023-Scam-Sadie-Braun",
+    slug: "2023-05-05-Scam-Sadie-Braun",
     pilotSlug: "Sadie-Braun",
     archetype: "Scam",
-    event: "05-05-2023-FNM-with-Style",
+    event: "2023-05-05-FNM-with-Style",
     main: [
       {
         amount: 3,
@@ -159,12 +159,12 @@ export const decks: Decks = {
       }
     ]
   },
-  "05-05-2023-Rhinos-Sean-Hamilton": {
+  "2023-05-05-Rhinos-Sean-Hamilton": {
     format: "modern",
-    slug: "05-05-2023-Rhinos-Sean-Hamilton",
+    slug: "2023-05-05-Rhinos-Sean-Hamilton",
     pilotSlug: "Sean-Hamilton",
     archetype: "Rhinos",
-    event: "05-05-2023-FNM-with-Style",
+    event: "2023-05-05-FNM-with-Style",
     main: [
       {
         amount: 4,
@@ -290,12 +290,12 @@ export const decks: Decks = {
       }
     ]
   },
-  "05-05-2023-Gruul-Shamans-Golo-Stillger": {
+  "2023-05-05-Gruul-Shamans-Golo-Stillger": {
     format: "modern",
-    slug: "05-05-2023-Gruul-Shamans-Golo-Stillger",
+    slug: "2023-05-05-Gruul-Shamans-Golo-Stillger",
     pilotSlug: "Golo-Stillger",
     archetype: "Gruul Shamans",
-    event: "05-05-2023-FNM-with-Style",
+    event: "2023-05-05-FNM-with-Style",
     main: [
       {
         amount: 3,
@@ -421,12 +421,12 @@ export const decks: Decks = {
       }
     ]
   },
-  "05-05-2023-Grixis-Midrange-David-Amadu": {
+  "2023-05-05-Grixis-Midrange-David-Amadu": {
     format: "modern",
-    slug: "05-05-2023-Grixis-Midrange-David-Amadu",
+    slug: "2023-05-05-Grixis-Midrange-David-Amadu",
     pilotSlug: "David-Amadu",
     archetype: "Grixis Midrange",
-    event: "05-05-2023-FNM-with-Style",
+    event: "2023-05-05-FNM-with-Style",
     main: [
       {
         amount: 1,
@@ -596,12 +596,12 @@ export const decks: Decks = {
       }
     ]
   },
-  "14-07-2023-Scam-Sadie-Braun": {
+  "2023-07-14-Scam-Sadie-Braun": {
     format: "modern",
-    slug: "14-07-2023-Scam-Sadie-Braun",
+    slug: "2023-07-14-Scam-Sadie-Braun",
     pilotSlug: "Sadie-Braun",
     archetype: "Scam",
-    event: "14-07-2023-FNM-with-Style",
+    event: "2023-07-14-FNM-with-Style",
     main: [
       {
         amount: 3,
@@ -719,12 +719,12 @@ export const decks: Decks = {
       },
     ]
   },
-  "14-07-2023-Esper-Blink-Alex-Humphreys": {
+  "2023-07-14-Esper-Blink-Alex-Humphreys": {
     format: "modern",
-    slug: "14-07-2023-Esper-Blink-Alex-Humphreys",
+    slug: "2023-07-14-Esper-Blink-Alex-Humphreys",
     pilotSlug: "Alex-Humphreys",
     archetype: "Esper Blink",
-    event: "14-07-2023-FNM-with-Style",
+    event: "2023-07-14-FNM-with-Style",
     main: [
       {
         amount: 3,
@@ -874,12 +874,12 @@ export const decks: Decks = {
       },
     ]
   },
-  "14-07-2023-Angels-Magda-Szymaniec": {
+  "2023-07-14-Angels-Magda-Szymaniec": {
     format: "modern",
-    slug: "14-07-2023-Angels-Magda-Szymaniec",
+    slug: "2023-07-14-Angels-Magda-Szymaniec",
     pilotSlug: "Magda-Szymaniec",
     archetype: "Angels",
-    event: "14-07-2023-FNM-with-Style",
+    event: "2023-07-14-FNM-with-Style",
     main: [
       {
         amount: 2,
@@ -1033,12 +1033,12 @@ export const decks: Decks = {
       },
     ]
   },
-  "14-07-2023-Rhinos-Sean-Hamilton": {
+  "2023-07-14-Rhinos-Sean-Hamilton": {
     format: "modern",
-    slug: "14-07-2023-Rhinos-Sean-Hamilton",
+    slug: "2023-07-14-Rhinos-Sean-Hamilton",
     pilotSlug: "Sean-Hamilton",
     archetype: "Rhinos",
-    event: "14-07-2023-FNM-with-Style",
+    event: "2023-07-14-FNM-with-Style",
     main: [
       {
         amount: 2,
@@ -1168,12 +1168,12 @@ export const decks: Decks = {
       },
     ]
   },
-  "14-07-2023-Living-End-Anthony-Hernandez": {
+  "2023-07-14-Living-End-Anthony-Hernandez": {
     format: "modern",
-    slug: "14-07-2023-Living-End-Anthony-Hernandez",
+    slug: "2023-07-14-Living-End-Anthony-Hernandez",
     pilotSlug: "Anthony-Hernandez",
     archetype: "Living-End",
-    event: "14-07-2023-FNM-with-Style",
+    event: "2023-07-14-FNM-with-Style",
     main: [
       {
         amount: 1,
@@ -1287,12 +1287,12 @@ export const decks: Decks = {
       },
     ]
   },
-  "14-07-2023-Green-Tron-Aubrey-Browne": {
+  "2023-07-14-Green-Tron-Aubrey-Browne": {
     format: "modern",
-    slug: "14-07-2023-Green-Tron-Aubrey-Browne",
+    slug: "2023-07-14-Green-Tron-Aubrey-Browne",
     pilotSlug: "Aubrey-Browne",
     archetype: "Green-Tron",
-    event: "14-07-2023-FNM-with-Style",
+    event: "2023-07-14-FNM-with-Style",
     main: [
       {
         amount: 4,

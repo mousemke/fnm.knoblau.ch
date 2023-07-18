@@ -25,7 +25,7 @@ const DecksList = (props: DecksListProps): JSX.Element => {
           <RowLink key={i} onClick={onClick(deck)}>
             <h3>{deck.archetype}</h3>
             <span>by {data.players[deck.pilotSlug].name}</span>
-            <span>in {data.events[deck.event].name} on {data.events[deck.event].date}</span>
+            <span>in {data.events[deck.event].name} on {new Date(data.events[deck.event].date).toDateString()}</span>
           </RowLink>
         );
       })}

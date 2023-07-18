@@ -21,15 +21,11 @@ const NextEvent = (props: NextEventProps): JSX.Element => {
         <h2 className={classes.header}>Next Event{nextEvents.length !== 1 ? "s" : ""}</h2>
         <ul>
           {nextEvents.reverse().map((e, i) => {
-            const location = venues[e.venueSlug]
+            const location = venues[e.venueSlug];
 
-            const d = e.date.split("-");
-            console.log(d)
-            const date = new Date(`${d[2]}-${d[1]}-${d[0]}`);
-console.log(date)
             return (
               <li key={i}>
-                {new Date(date).toDateString()}: {e.name} at <Link href={location.mapsLink}>{location.name}</Link>
+                {new Date(e.date).toDateString()}: {e.name} at <Link href={location.mapsLink}>{location.name}</Link>
               </li>
             )
           })}

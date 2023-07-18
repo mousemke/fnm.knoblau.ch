@@ -21,13 +21,10 @@ const EventsList = (props: EventsListProps): JSX.Element => {
     <ContentWindow>
       <h2>Past Events</h2>
       {Object.values(events).filter(e => e.finished).map((event: EventObject, i) => {
-        const d = event.date.split("-");
-        const date = new Date(`${d[2]}-${d[1]}-${d[0]}`);
-
         return (
           <RowLink key={i} onClick={onClick(event)}>
             <h3>{event.name}</h3>
-            <span>{new Date(date).toDateString()}</span>
+            <span>{new Date(event.date).toDateString()}</span>
             <span>at {event.venue}</span>
             <span>{Object.keys(event.players).length} players</span>
           </RowLink>

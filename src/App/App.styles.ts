@@ -19,7 +19,8 @@ const useStyles = createUseStyles(
     titleWindow: {
       width: 300,
       height: 100,
-      marginBottom: 50
+      marginBottom: 50,
+      paddingBottom: 40
     }
   },
   {

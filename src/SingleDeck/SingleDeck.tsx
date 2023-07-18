@@ -98,7 +98,7 @@ const SingleDeck = (props: SingleDeckProps): JSX.Element => {
             className={classes.card}
             onClick={onEventClick(event)}
           >
-            {eventDate} - {eventName}
+            {new Date(eventDate).toDateString()} - {eventName}
           </RowLink>
         </div>
       </ContentWindow>
