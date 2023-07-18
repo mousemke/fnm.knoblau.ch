@@ -8,12 +8,12 @@ import type { ContentWindowProps } from "./ContentWindow.types";
  * The list of all decks
  */
 const ContentWindow = (props: ContentWindowProps): JSX.Element => {
-  const { children } = props;
+  const { children, className } = props;
 
   const classes = useStyles();
 
   return (
-    <StyledWindow className={classes.wrapperWindow}>
+    <StyledWindow className={`${classes.wrapperWindow} ${className || ''}`}>
       {children}
     </StyledWindow>
   );

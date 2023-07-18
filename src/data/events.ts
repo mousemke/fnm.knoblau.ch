@@ -14,6 +14,7 @@ interface FinalRecord {
   result: `${number}-${number}-${number}`;
 }
 export interface EventObject {
+  finished: boolean;
   format: string;
   slug: string;
   name: string;
@@ -33,6 +34,7 @@ export interface Events {
 
 export const events: Events = {
   "05-05-2023-FNM-with-Style": {
+    finished: true,
     format: "modern",
     slug: "05-05-2023-FNM-with-Style",
     name: "FNM with Style",
@@ -103,6 +105,7 @@ export const events: Events = {
     ]
   },
   "14-07-2023-FNM-with-Style": {
+    finished: true,
     format: "modern",
     slug: "14-07-2023-FNM-with-Style",
     name: "FNM with Style",

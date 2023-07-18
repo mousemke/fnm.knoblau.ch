@@ -11,11 +11,14 @@ import DecksList from "../DecksList";
 import SingleDeck from "../SingleDeck";
 import SinglePlayer from "../SinglePlayer";
 import SingleEvent from "../SingleEvent";
+import NextEvent from "../NextEvent";
 import { decks, players, events, venues } from "../data";
 
 import type { Data, Deck, DeckId, Player, EventId, EventObject } from "../data";
 
 import useStyles from "./App.styles";
+
+const NEXT_EVENT_SLUG: string | null = null;
 
 /**
  *
@@ -33,43 +36,6 @@ const setQueryParam = (param: string | null, slug: string | null = null) => {
   window.history.pushState({ type: param, slug }, document.title, newPath);
 };
 
-/**
- * checks the active modal prop and returns the correct component
- */
-const getActivePage = (
-  activeModal: string | null,
-  setModal: (modalType: string | null, slug: string | null, popstateEvent?: boolean) => void,
-  data: Data,
-  activeEvent: EventObject | null,
-  activeDeck: Deck | null,
-  activePlayer: Player | null,
-  activeArchetype: string | null
-) => {
-  switch (activeModal) {
-    case "eventlist":
-      return <EventsList setModal={setModal} events={events} />;
-    case "archetypelist":
-      return <ArchetypeList setModal={setModal} data={data} />;
-    case "playerlist":
-      return <PlayersList setModal={setModal} players={players} />;
-    case "deckslist":
-        return <DecksList data={data} setModal={setModal} activeArchetype={activeArchetype} />;
-    case "event":
-      <SingleEvent data={data} setModal={setModal} activeEvent={activeEvent} />;
-    case "deck":
-      <SingleDeck data={data} setModal={setModal} activeDeck={activeDeck} />;
-    case "player":
-      return (
-        <SinglePlayer
-          data={data}
-          setModal={setModal}
-          activePlayer={activePlayer}
-        />
-      );
-    default:
-      return <Rules />;
-  }
-}
 /**
  * The main control app. Controls which view is visible as well as having the states and setters
  */
@@ -184,6 +150,8 @@ const App = (): JSX.Element => {
     };
   }, []);
 
+  const nextEvents = Object.values(events).filter(e => !e.finished);
+
   return (
     <>
       <div className={classes.backgroundWrapper}>
@@ -197,10 +165,10 @@ const App = (): JSX.Element => {
           <b>fnm.knoblau.ch</b>
         </h3>
       </StyledWindow>
-
       <Animator active>
         <Nav setModal={setModal} />
       </Animator>
+      {nextEvents.length && <NextEvent nextEvents={nextEvents} />}
       {activeModal === null && (
         <Rules />
       )}

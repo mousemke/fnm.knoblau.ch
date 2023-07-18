@@ -19,8 +19,8 @@ const EventsList = (props: EventsListProps): JSX.Element => {
 
   return (
     <ContentWindow>
-      <h2>Events</h2>
-      {Object.values(events).map((event: EventObject, i) => {
+      <h2>Past Events</h2>
+      {Object.values(events).filter(e => e.finished).map((event: EventObject, i) => {
         const d = event.date.split("-");
         const date = new Date(`${d[1]}-${d[0]}-${d[2]}`);
 

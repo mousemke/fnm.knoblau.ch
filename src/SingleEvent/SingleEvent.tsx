@@ -21,8 +21,10 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
     return <></>;
   }
 
-  const { final, name, players, rounds } = activeEvent;
+  const { final, name, players, rounds, date } = activeEvent;
   const location = venues[activeEvent.venueSlug];
+  const d = date.split("-");
+  const formattedDate = new Date(`${d[1]}-${d[0]}-${d[2]}`);
 
   const classes = useStyles();
 
@@ -41,6 +43,7 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
       <ContentWindow>
         <div className={classes.inlineAllChildren}>
           <h1>{name}</h1> at <h3><Link href={location.mapsLink} target="_blank">{location.name}</Link></h3>
+          <h3>{new Date(formattedDate).toDateString()}</h3>
         </div>
       </ContentWindow>
       <ContentWindow>
