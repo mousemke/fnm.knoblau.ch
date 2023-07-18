@@ -10,8 +10,10 @@ const Link = (props: LinkProps): JSX.Element => {
   const classes = useStyles();
 
   const combinedClasses = useMemo(
-    () => `${classes.link} ${className}`.trim(),
-    [classes.link, className]
+    () => href ?
+    `${classes.link} ${className}`.trim() :
+    `${classes.link} ${classes.buttonAsLink} ${className}`.trim(),
+    [classes.link, className, href]
   );
 
   const options = {
@@ -21,6 +23,10 @@ const Link = (props: LinkProps): JSX.Element => {
     role: href ? undefined : "button",
     target
   };
+
+  if (!href) {
+    return <button {...options}>{children}</button>;
+  }
 
   return <a {...options}>{children}</a>;
 };

@@ -26,16 +26,12 @@ const Rules = (): JSX.Element => {
         <Separator />
         <h3>2. This is unsustainable.</h3>
         <div>
-          The "cost" of the FNM is drinking here and supporting the bar. Given that, I've paid for our prizes today. I accept donations to help reimburse this cost.
+          The "cost" of the FNM is drinking here and supporting the bar. Given that, so far I've paid for our prizes today. I accept donations to help reimburse this cost.
         </div>
         <Separator />
         <h3>3. You need a decklist.</h3>
         <div>
           Your decklist needs to be submitted digitally to <Link href="mailto:fnm@knoblau.ch">fnm@knoblau.ch</Link> by Friday at 18:00. It must include your name, your deckname, your deck archetype, your MB cards, and your SB cards. Please try to keep your listed archetypes typical so we can sort them with the data.
-        </div>
-        <br />
-        <div>
-          You can check current and previous results at <Link href="https://fnm.knoblau.ch">https://fnm.knoblau.ch</Link>
         </div>
         <br />
         <div>

@@ -11,6 +11,16 @@ const useStyles = createUseStyles(
       "&:active": {
         color: "rgb(170 104 170)"
       }
+    },
+    buttonAsLink: {
+      /* removes default button styles to appear as link */
+      background: "none",
+      border: "none",
+      color: "#fff",
+      cursor: "pointer",
+      fontFamily: "monospace",
+      padding: 0,
+      textDecoration: "underline"
     }
   },
   {

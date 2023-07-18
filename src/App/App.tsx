@@ -12,6 +12,7 @@ import SingleDeck from "../SingleDeck";
 import SinglePlayer from "../SinglePlayer";
 import SingleEvent from "../SingleEvent";
 import NextEvent from "../NextEvent";
+import Link from "../common/Link";
 import { decks, players, events, venues } from "../data";
 
 import type { Data, Deck, DeckId, Player, EventId, EventObject } from "../data";
@@ -162,8 +163,9 @@ const App = (): JSX.Element => {
       <StyledWindow className={classes.titleWindow}>
         <h2>Guerilla FNM with style</h2>
         <h3>
-          <b>fnm.knoblau.ch</b>
+          <b><Link onClick={() => setModal(null, null)}>fnm.knoblau.ch</Link></b>
         </h3>
+        <h4><Link href="https://discord.gg/CrBz7X7HUD">Crossfit Meat Factory Discord</Link></h4>
       </StyledWindow>
       <Animator active>
         <Nav setModal={setModal} />
