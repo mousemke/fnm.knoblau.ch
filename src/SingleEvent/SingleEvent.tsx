@@ -24,7 +24,7 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
   const { final, name, players, rounds, date } = activeEvent;
   const location = venues[activeEvent.venueSlug];
   const d = date.split("-");
-  const formattedDate = new Date(`${d[1]}-${d[0]}-${d[2]}`);
+  const formattedDate = new Date(`${d[2]}-${d[1]}-${d[0]}`);
 
   const classes = useStyles();
 

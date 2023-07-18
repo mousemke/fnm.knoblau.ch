@@ -24,8 +24,9 @@ const NextEvent = (props: NextEventProps): JSX.Element => {
             const location = venues[e.venueSlug]
 
             const d = e.date.split("-");
-            const date = new Date(`${d[1]}-${d[0]}-${d[2]}`);
-
+            console.log(d)
+            const date = new Date(`${d[2]}-${d[1]}-${d[0]}`);
+console.log(date)
             return (
               <li key={i}>
                 {new Date(date).toDateString()}: {e.name} at <Link href={location.mapsLink}>{location.name}</Link>

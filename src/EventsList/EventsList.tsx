@@ -22,7 +22,7 @@ const EventsList = (props: EventsListProps): JSX.Element => {
       <h2>Past Events</h2>
       {Object.values(events).filter(e => e.finished).map((event: EventObject, i) => {
         const d = event.date.split("-");
-        const date = new Date(`${d[1]}-${d[0]}-${d[2]}`);
+        const date = new Date(`${d[2]}-${d[1]}-${d[0]}`);
 
         return (
           <RowLink key={i} onClick={onClick(event)}>
