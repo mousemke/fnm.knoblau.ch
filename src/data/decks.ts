@@ -1172,8 +1172,8 @@ export const decks: Decks = {
     format: "modern",
     slug: "2023-07-14-Living-End-Anthony-Hernandez",
     pilotSlug: "Anthony-Hernandez",
-    archetype: "Living-End",
     event: "2023-07-14-FNM-with-Style",
+    archetype: "Living End",
     main: [
       {
         amount: 1,
@@ -1291,7 +1291,7 @@ export const decks: Decks = {
     format: "modern",
     slug: "2023-07-14-Green-Tron-Aubrey-Browne",
     pilotSlug: "Aubrey-Browne",
-    archetype: "Green-Tron",
+    archetype: "Green Tron",
     event: "2023-07-14-FNM-with-Style",
     main: [
       {

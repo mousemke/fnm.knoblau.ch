@@ -14,8 +14,9 @@ const DecksList = (props: DecksListProps): JSX.Element => {
   const decks = data.decks;
 
   // const classes = useStyles();
+
   const onClick = useCallback((deck: Deck) => () => setModal("deck", deck.slug), []);
-  const decksArray = useMemo(() => activeArchetype === null ? Object.values(decks) : Object.values(decks).filter(d => d.archetype === activeArchetype), [activeArchetype]);
+  const decksArray = useMemo(() => Object.values(decks).filter(d => d.archetype === activeArchetype), [activeArchetype]);
 
   return (
     <ContentWindow>

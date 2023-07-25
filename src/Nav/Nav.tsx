@@ -22,7 +22,7 @@ const Nav = (props: NavProps): ReactElement => {
   return (
     <div className={classes.wrapper}>
       <Text as="div" className={classes.textWrapper}>
-        <RowLink onClick={setSlug("archetypelist")}>
+        <RowLink onClick={setSlug("deckslist")}>
           <h2>Decks</h2>
         </RowLink>
         <RowLink onClick={setSlug("playerlist")}>

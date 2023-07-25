@@ -19,8 +19,6 @@ import type { Data, Deck, DeckId, Player, EventId, EventObject } from "../data";
 
 import useStyles from "./App.styles";
 
-const NEXT_EVENT_SLUG: string | null = null;
-
 /**
  *
  * @param param parameter to set in the query string
@@ -81,7 +79,6 @@ const App = (): JSX.Element => {
           setActiveEvent(events[slug as EventId]);
           !popstateEvent && setQueryParam("event", slug);
           break;
-        case "archetypelist":
         case "playerlist":
         case "eventlist":
           !popstateEvent && setQueryParam(modalType);
@@ -177,10 +174,10 @@ const App = (): JSX.Element => {
       {activeModal === "eventlist" && (
         <EventsList setModal={setModal} events={events} />
       )}
-      {activeModal === "deckslist" && (
+      {activeModal === "deckslist" && activeArchetype && (
         <DecksList data={data} setModal={setModal} activeArchetype={activeArchetype} />
       )}
-      {activeModal === "archetypelist" && (
+      {activeModal === "deckslist" && !activeArchetype && (
         <ArchetypeList setModal={setModal} data={data} />
       )}
       {activeModal === "playerlist" && (

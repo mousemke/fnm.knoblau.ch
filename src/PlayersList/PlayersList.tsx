@@ -1,11 +1,15 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import ContentWindow from "../common/ContentWindow";
 import RowLink from "../common/RowLink";
 
 // import useStyles from "./PlayersList.styles";
 
 import type { PlayersListProps } from "./PlayersList.types";
-import type { Player } from "../data";
+import type { Player, Players } from "../data";
+
+
+
+
 
 /**
  * The list of all players
@@ -20,10 +24,25 @@ const PlayersList = (props: PlayersListProps): JSX.Element => {
     []
   );
 
+  /**
+   * pulls out the player objects and sorts them by first name
+   */
+  const playersArray: Player[] = useMemo(() => {
+    return Object.values(players).sort((a: Player, b: Player) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+  }, [players]);
+
   return (
     <ContentWindow>
       <h2>Players</h2>
-      {Object.values(players).map((player: Player, i) => {
+      {playersArray.map((player: Player, i) => {
         const playerEventCount = player.events.length;
         const playerDeckCount = player.decks.length;
 
