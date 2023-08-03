@@ -197,14 +197,14 @@ export const events: Events = {
       }
     ]
   },
-  "2023-07-28-FNM-with-Style": {
+  "2023-08-11-FNM-with-Style": {
     finished: false,
     format: "modern",
-    slug: "2023-07-28-FNM-with-Style",
+    slug: "2023-08-11-FNM-with-Style",
     name: "FNM with Style",
     venue: "Cafe Style",
     venueSlug: "Cafe-Style",
-    date: "2023-07-28",
+    date: "2023-08-11",
     players: {
     },
     final: [
