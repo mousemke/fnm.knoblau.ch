@@ -1445,5 +1445,545 @@ export const decks: Decks = {
         name: "Soulless Jailer"
       },
     ]
+  },
+  "2023-11-17-Scam-Sadie-Braun": {
+    format: "modern",
+    slug: "2023-11-17-Scam-Sadie-Braun",
+    pilotSlug: "Sadie-Braun",
+    archetype: "Scam",
+    event: "2023-11-17-FNM-with-Style",
+    main: [
+      {
+        amount: 3,
+        name: "Blackcleave Cliffs"
+      },
+      {
+        amount: 3,
+        name: "Blood Crypt"
+      },
+      {
+        amount: 1,
+        name: "Blood Moon"
+      },
+      {
+        amount: 4,
+        name: "Bloodstained Mire"
+      },
+      {
+        amount: 4,
+        name: "Dauthi Voidwalker"
+      },
+      {
+        amount: 4,
+        name: "Fable of the Mirror-Breaker"
+      },
+      {
+        amount: 4,
+        name: "Fury"
+      },
+      {
+        amount: 1,
+        name: "Godless Shrine"
+      },
+      {
+        amount: 4,
+        name: "Grief"
+      },
+      {
+        amount: 2,
+        name: "Lightning Bolt"
+      },
+      {
+        amount: 3,
+        name: "Marsh Flats"
+      },
+      {
+        amount: 1,
+        name: "Mount Doom"
+      },
+      {
+        amount: 4,
+        name: "Not Dead After All"
+      },
+      {
+        amount: 4,
+        name: "Orcish Bowmasters"
+      },
+      {
+        amount: 4,
+        name: "Ragavan, Nimble Pilferer"
+      },
+      {
+        amount: 1,
+        name: "Sheoldred, the Apocalypse"
+      },
+      {
+        amount: 3,
+        name: "Swamp"
+      },
+      {
+        amount: 1,
+        name: "Terminate"
+      },
+      {
+        amount: 2,
+        name: "Molten Collapse"
+      },
+      {
+        amount: 3,
+        name: "Thoughtseize"
+      },
+      {
+        amount: 2,
+        name: "Undying Evil"
+      },
+      {
+        amount: 2,
+        name: "Verdant Catacombs"
+      },
+    ],
+    side: [
+      {
+        amount: 2,
+        name: "Blood Moon"
+      },
+      {
+        amount: 2,
+        name: "Brotherhood's End"
+      },
+      {
+        amount: 3,
+        name: "Chalice of the Void"
+      },
+      {
+        amount: 2,
+        name: "Engineered Explosives"
+      },
+      {
+        amount: 3,
+        name: "Leyline of the Void"
+      },
+      {
+        amount: 1,
+        name: "Sheoldred, the Apocalypse"
+      },
+      {
+        amount: 2,
+        name: "Wear // Tear"
+      },
+    ]
+  },
+  "2023-11-17-Yawgmoth-Sean-Hamilton": {
+    format: "modern",
+    slug: "2023-11-17-Yawgmoth-Sean-Hamilton",
+    pilotSlug: "Sean-Hamilton",
+    archetype: "Yawgmoth",
+    event: "2023-11-17-FNM-with-Style",
+    main: [
+      {
+        amount: 4,
+        name: "Grist, the Hunger Tide"
+      },
+      {
+        amount: 1,
+        name: "Walking Ballista"
+      },
+      {
+        amount: 4,
+        name: "Delighted Halfling"
+      },
+      {
+        amount: 4,
+        name: "Young Wolf"
+      },
+      {
+        amount: 1,
+        name: "Blood Artist"
+      },
+      {
+        amount: 1,
+        name: "Hapatra, Vizier of Poisons"
+      },
+      {
+        amount: 4,
+        name: "Orcish Bowmasters"
+      },
+      {
+        amount: 1,
+        name: "Prosperous Innkeeper"
+      },
+      {
+        amount: 1,
+        name: "Strangleroot Geist"
+      },
+      {
+        amount: 4,
+        name: "Wall of Roots"
+      },
+      {
+        amount: 1,
+        name: "Sheoldred, the Apocalypse"
+      },
+      {
+        amount: 4,
+        name: "Yawgmoth, Thran Physician"
+      },
+      {
+        amount: 2,
+        name: "Agatha's Soul Cauldron"
+      },
+      {
+        amount: 2,
+        name: "The One Ring"
+      },
+      {
+        amount: 4,
+        name: "Chord of Calling"
+      },
+      {
+        amount: 3,
+        name: "Blooming Marsh"
+      },
+      {
+        amount: 2,
+        name: "Boseiju, Who Endures"
+      },
+      {
+        amount: 2,
+        name: "Forest"
+      },
+      {
+        amount: 1,
+        name: "Khalni Garden"
+      },
+      {
+        amount: 1,
+        name: "Misty Rainforest"
+      },
+      {
+        amount: 2,
+        name: "Nurturing Peatland"
+      },
+      {
+        amount: 2,
+        name: "Overgrown Tomb"
+      },
+      {
+        amount: 1,
+        name: "Pendelhaven"
+      },
+      {
+        amount: 1,
+        name: "Swamp"
+      },
+      {
+        amount: 1,
+        name: "Takenuma, Abandoned Mire"
+      },
+      {
+        amount: 2,
+        name: "Twilight Mire"
+      },
+      {
+        amount: 4,
+        name: "Verdant Catacombs"
+      },
+    ],
+    side: [
+      {
+        amount: 1,
+        name: "Fatal Push"
+      },
+      {
+        amount: 1,
+        name: "Haywire Mite"
+      },
+      {
+        amount: 1,
+        name: "Legion's End"
+      },
+      {
+        amount: 1,
+        name: "Soulless Jailer"
+      },
+      {
+        amount: 1,
+        name: "Tear Asunder"
+      },
+      {
+        amount: 2,
+        name: "Void Mirror"
+      },
+      {
+        amount: 1,
+        name: "Endurance"
+      },
+      {
+        amount: 1,
+        name: "Fulminator Mage"
+      },
+      {
+        amount: 1,
+        name: "Spike Feeder"
+      },
+      {
+        amount: 2,
+        name: "Elven Chorus"
+      },
+      {
+        amount: 2,
+        name: "Force of Vigor"
+      },
+      {
+        amount: 1,
+        name: "The End"
+      },
+    ]
+  },
+  "2023-11-17-Jeskai-Boomshine-Hanna-Neubauer": {
+    format: "modern",
+    slug: "2023-11-17-Jeskai-Boomshine-Hanna-Neubauer",
+    pilotSlug: "Hanna-Neubauer",
+    archetype: "Jeskai Boomshine",
+    event: "2023-11-17-FNM-with-Style",
+    main: [
+      {
+        amount: 4,
+        name: "Boom // Bust"
+      },
+      {
+        amount: 4,
+        name: "Cleansing Wildfire"
+      },
+      {
+        amount: 2,
+        name: "Darksteel Citadel"
+      },
+      {
+        amount: 2,
+        name: "Darksteel Relic"
+      },
+      {
+        amount: 3,
+        name: "Ensoul Artifact"
+      },
+      {
+        amount: 4,
+        name: "Expressive Iteration"
+      },
+      {
+        amount: 4,
+        name: "Galvanic Blast"
+      },
+      {
+        amount: 2,
+        name: "Hindering Light"
+      },
+      {
+        amount: 2,
+        name: "Island"
+      },
+      {
+        amount: 4,
+        name: "Lightning Bolt"
+      },
+      {
+        amount: 1,
+        name: "Mountain"
+      },
+      {
+        amount: 3,
+        name: "Narset, Parter of Veils"
+      },
+      {
+        amount: 1,
+        name: "Plains"
+      },
+      {
+        amount: 3,
+        name: "Razortide Bridge"
+      },
+      {
+        amount: 3,
+        name: "Rise and Shine"
+      },
+      {
+        amount: 3,
+        name: "Rustvale Bridge"
+      },
+      {
+        amount: 2,
+        name: "Seachrome Coast"
+      },
+      {
+        amount: 4,
+        name: "Shivan Reef"
+      },
+      {
+        amount: 4,
+        name: "Silverbluff Bridge"
+      },
+      {
+        amount: 2,
+        name: "Stubborn Denial"
+      },
+      {
+        amount: 1,
+        name: "Tezzeret, Betrayer of Flesh"
+      },
+      {
+        amount: 2,
+        name: "The Blackstaff of Waterdeep"
+      },
+    ],
+    side: [
+      {
+        amount: 2,
+        name: "Crumble to Dust"
+      },
+      {
+        amount: 1,
+        name: "Day's Undoing"
+      },
+      {
+        amount: 2,
+        name: "Dispatch"
+      },
+      {
+        amount: 3,
+        name: "Prismatic Ending"
+      },
+      {
+        amount: 3,
+        name: "Rest in Peace"
+      },
+      {
+        amount: 2,
+        name: "Stubborn Denial"
+      },
+      {
+        amount: 2,
+        name: "Supreme Verdict"
+      },
+    ]
+  },
+  "2023-11-17-Mono-W-Hammer-Maximilian-Sache": {
+    format: "modern",
+    slug: "2023-11-17-Mono-W-Hammer-Maximilian-Sache",
+    pilotSlug: "Maximilian-Sache",
+    archetype: "Mono W Hammer",
+    event: "2023-11-17-FNM-with-Style",
+    main: [
+      {
+        amount: 4,
+        name: "Colossus Hammer"
+      },
+      {
+        amount: 4,
+        name: "Emeria's Call // Emeria, Shattered Skyclave 4 Esper Sentinel"
+      },
+      {
+        amount: 2,
+        name: "Forge Anew"
+      },
+      {
+        amount: 1,
+        name: "Gingerbrute"
+      },
+      {
+        amount: 2,
+        name: "Giver of Runes"
+      },
+      {
+        amount: 1,
+        name: "Horizon Canopy"
+      },
+      {
+        amount: 3,
+        name: "Inkmoth Nexus"
+      },
+      {
+        amount: 1,
+        name: "Kaldra Compleat"
+      },
+      {
+        amount: 3,
+        name: "Ornithopter"
+      },
+      {
+        amount: 1,
+        name: "Paradise Mantle"
+      },
+      {
+        amount: 10,
+        name: "Plains"
+      },
+      {
+        amount: 4,
+        name: "Puresteel Paladin"
+      },
+      {
+        amount: 1,
+        name: "Shadowspear"
+      },
+      {
+        amount: 4,
+        name: "Sigarda's Aid"
+      },
+      {
+        amount: 2,
+        name: "Solitude"
+      },
+      {
+        amount: 2,
+        name: "Springleaf Drum"
+      },
+      {
+        amount: 4,
+        name: "Stoneforge Mystic"
+      },
+      {
+        amount: 3,
+        name: "Surge of Salvation"
+      },
+      {
+        amount: 4,
+        name: "Urza's Saga"
+      },
+    ],
+    side: [
+      {
+        amount: 2,
+        name: "Drannith Magistrate"
+      },
+      {
+        amount: 2,
+        name: "Hushbringer"
+      },
+      {
+        amount: 2,
+        name: "March of Otherworldly Light"
+      },
+      {
+        amount: 1,
+        name: "Pithing Needle"
+      },
+      {
+        amount: 1,
+        name: "Relic of Progenitus"
+      },
+      {
+        amount: 4,
+        name: "Sanctifier en-Vec"
+      },
+      {
+        amount: 2,
+        name: "Solitude"
+      },
+      {
+        amount: 1,
+        name: "Surge of Salvation"
+      },
+    ]
   }
 };

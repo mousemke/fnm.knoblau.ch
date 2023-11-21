@@ -26,7 +26,7 @@ const Rules = (): JSX.Element => {
         <Separator />
         <h3>2. This is unsustainable.</h3>
         <div>
-          The "cost" of the FNM is drinking here and supporting the bar. Given that, so far I've paid for our prizes today. I accept donations to help reimburse this cost.
+          The "cost" of the FNM is drinking here and supporting the bar. Given that, so far prizes are generally paid for by the orgamizers and would glady accept donations to help reimburse this cost.
         </div>
         <Separator />
         <h3>3. You need a decklist.</h3>
@@ -35,12 +35,12 @@ const Rules = (): JSX.Element => {
         </div>
         <br />
         <div>
-        Submitting your decklist is also considered an RSVP.
+        Submitting your decklist is also considered an RSVP. That said, the earlier you can reach out and RSVP the better. It helps us gauge interest and plan accordingly.
         </div>
         <Separator />
         <h3>4. For now, there is no Judge.</h3>
         <div>
-          I volunteer to solve any rules questions, if it involves me then me and the other party involved will find another that we mutually trust for a ruling.
+          Sadie has volunteered to consult on any rules questions, but generally if thing are not clear (or there is a conflict of interest) the questions can be crowdsourced amongst the players.
         </div>
         <Separator />
         <h3>5. We will have a "competition" level rules enforcement.</h3>
@@ -51,6 +51,11 @@ const Rules = (): JSX.Element => {
         <h3>6. We will have 50 min rounds.</h3>
         <div>
           Round times will be enforced, after time runs out the current game gets 5 more turns.
+        </div>
+        <Separator />
+        <h3>7. Proxies.</h3>
+        <div>
+          Proxies are allowed as it is more important to us to encourage accessible, high level gameplay, however they should be clear print outs of the cards they represent.
         </div>
       </ContentWindow>
     </>

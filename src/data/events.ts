@@ -198,7 +198,7 @@ export const events: Events = {
     ]
   },
   "2023-11-17-FNM-with-Style": {
-    finished: false,
+    finished: true,
     format: "modern",
     slug: "2023-11-17-FNM-with-Style",
     name: "FNM with Style",
@@ -206,10 +206,42 @@ export const events: Events = {
     venueSlug: "Cafe-Style",
     date: "2023-11-17",
     players: {
+      "Sadie-Braun": "2023-11-17-Scam-Sadie-Braun",
+      "Sean-Hamilton": "2023-11-17-Yawgmoth-Sean-Hamilton",
+      "Hanna-Neubauer": "2023-11-17-Jeskai-Boomshine-Hanna-Neubauer",
+      "Maximilian-Sache": "2023-11-17-Mono-W-Hammer-Maximilian-Sache",
     },
     final: [
+      {
+        slug: "Sadie-Braun",
+        result: "1-0-0",
+      },
+      {
+        slug: "Sean-Hamilton",
+        result: "1-0-0",
+      },
+      {
+        slug: "Hanna-Neubauer",
+        result: "0-1-0",
+      },
+      {
+        slug: "Maximilian-Sache",
+        result: "0-1-0",
+      }
     ],
     rounds: [
+      {
+        results: [
+          {
+            "Sean-Hamilton": 2,
+            "Maximilian-Sache": 0
+          },
+          {
+            "Sadie-Braun": 2,
+            "Hanna-Neubauer": 1
+          }
+        ]
+      }
     ]
   }
 };

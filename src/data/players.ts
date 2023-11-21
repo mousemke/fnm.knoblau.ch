@@ -19,11 +19,13 @@ export const players: Players = {
     isTeamCFM: true,
     events: [
       "2023-05-05-FNM-with-Style",
-      "2023-07-14-FNM-with-Style"
+      "2023-07-14-FNM-with-Style",
+      "2023-11-17-FNM-with-Style"
     ],
     decks: [
       "2023-05-05-Scam-Sadie-Braun",
-      "2023-07-14-Scam-Sadie-Braun"
+      "2023-07-14-Scam-Sadie-Braun",
+      "2023-11-17-Scam-Sadie-Braun"
     ]
   },
   "Sean-Hamilton": {
@@ -32,17 +34,19 @@ export const players: Players = {
     isTeamCFM: true,
     events: [
       "2023-05-05-FNM-with-Style",
-      "2023-07-14-FNM-with-Style"
+      "2023-07-14-FNM-with-Style",
+      "2023-11-17-FNM-with-Style"
     ],
     decks: [
       "2023-05-05-Rhinos-Sean-Hamilton",
-      "2023-07-14-Rhinos-Sean-Hamilton"
+      "2023-07-14-Rhinos-Sean-Hamilton",
+      "2023-11-17-Yawgmoth-Sean-Hamilton",
     ]
   },
   "Golo-Stillger": {
     name: "Golo Stillger",
     slug: "Golo-Stillger",
-    isTeamCFM: false,
+    isTeamCFM: true,
     events: ["2023-05-05-FNM-with-Style"],
     decks: ["2023-05-05-Gruul-Shamans-Golo-Stillger"]
   },
@@ -70,7 +74,7 @@ export const players: Players = {
   "Anthony-Hernandez": {
     name: "Anthony Hernandez",
     slug: "Anthony-Hernandez",
-    isTeamCFM: true,
+    isTeamCFM: false,
     events: ["2023-07-14-FNM-with-Style"],
     decks: ["2023-07-14-Living-End-Anthony-Hernandez"]
   },
@@ -80,5 +84,19 @@ export const players: Players = {
     isTeamCFM: false,
     events: ["2023-07-14-FNM-with-Style"],
     decks: ["2023-07-14-Green-Tron-Aubrey-Browne"]
+  },
+  "Hanna-Neubauer": {
+    name: "Hanna Neubauer",
+    slug: "Hanna-Neubauer",
+    isTeamCFM: true,
+    events: ["2023-11-17-FNM-with-Style"],
+    decks: ["2023-11-17-Jeskai-Boomshine-Hanna-Neubauer"]
+  },
+  "Maximilian-Sache": {
+    name: "Maximilian Sache",
+    slug: "Maximilian-Sache",
+    isTeamCFM: true,
+    events: ["2023-11-17-FNM-with-Style"],
+    decks: ["2023-11-17-Mono-W-Hammer-Maximilian-Sache"]
   }
 };

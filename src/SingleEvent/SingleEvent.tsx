@@ -36,6 +36,8 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
     []
   );
 
+  const roundCount = rounds.length;
+
   return (
     <>
       <ContentWindow>
@@ -89,7 +91,7 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
         </div>
       </ContentWindow>
       <ContentWindow>
-      <h3>Results ({rounds.length} rounds)</h3>
+      <h3>Results ({roundCount} round{roundCount !== 1 ? "s" : ""})</h3>
       <div>
         {rounds.map((round, i) => (
             <div className={classes.roundResultWrapper} key={i}>
