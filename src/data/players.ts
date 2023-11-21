@@ -28,9 +28,9 @@ export const players: Players = {
       "2023-11-17-Scam-Sadie-Braun"
     ]
   },
-  "Sean-Hamilton": {
-    name: "Sean Hamilton",
-    slug: "Sean-Hamilton",
+  "Kaia-Hamilton": {
+    name: "Kaia Hamilton",
+    slug: "Kaia-Hamilton",
     isTeamCFM: true,
     events: [
       "2023-05-05-FNM-with-Style",
@@ -38,9 +38,9 @@ export const players: Players = {
       "2023-11-17-FNM-with-Style"
     ],
     decks: [
-      "2023-05-05-Rhinos-Sean-Hamilton",
-      "2023-07-14-Rhinos-Sean-Hamilton",
-      "2023-11-17-Yawgmoth-Sean-Hamilton",
+      "2023-05-05-Rhinos-Kaia-Hamilton",
+      "2023-07-14-Rhinos-Kaia-Hamilton",
+      "2023-11-17-Yawgmoth-Kaia-Hamilton",
     ]
   },
   "Golo-Stillger": {

@@ -159,10 +159,10 @@ export const decks: Decks = {
       }
     ]
   },
-  "2023-05-05-Rhinos-Sean-Hamilton": {
+  "2023-05-05-Rhinos-Kaia-Hamilton": {
     format: "modern",
-    slug: "2023-05-05-Rhinos-Sean-Hamilton",
-    pilotSlug: "Sean-Hamilton",
+    slug: "2023-05-05-Rhinos-Kaia-Hamilton",
+    pilotSlug: "Kaia-Hamilton",
     archetype: "Rhinos",
     event: "2023-05-05-FNM-with-Style",
     main: [
@@ -1033,10 +1033,10 @@ export const decks: Decks = {
       },
     ]
   },
-  "2023-07-14-Rhinos-Sean-Hamilton": {
+  "2023-07-14-Rhinos-Kaia-Hamilton": {
     format: "modern",
-    slug: "2023-07-14-Rhinos-Sean-Hamilton",
-    pilotSlug: "Sean-Hamilton",
+    slug: "2023-07-14-Rhinos-Kaia-Hamilton",
+    pilotSlug: "Kaia-Hamilton",
     archetype: "Rhinos",
     event: "2023-07-14-FNM-with-Style",
     main: [
@@ -1573,10 +1573,10 @@ export const decks: Decks = {
       },
     ]
   },
-  "2023-11-17-Yawgmoth-Sean-Hamilton": {
+  "2023-11-17-Yawgmoth-Kaia-Hamilton": {
     format: "modern",
-    slug: "2023-11-17-Yawgmoth-Sean-Hamilton",
-    pilotSlug: "Sean-Hamilton",
+    slug: "2023-11-17-Yawgmoth-Kaia-Hamilton",
+    pilotSlug: "Kaia-Hamilton",
     archetype: "Yawgmoth",
     event: "2023-11-17-FNM-with-Style",
     main: [

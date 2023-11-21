@@ -43,13 +43,13 @@ export const events: Events = {
     date: "2023-05-05",
     players: {
       "Sadie-Braun": "2023-05-05-Scam-Sadie-Braun",
-      "Sean-Hamilton": "2023-05-05-Rhinos-Sean-Hamilton",
+      "Kaia-Hamilton": "2023-05-05-Rhinos-Kaia-Hamilton",
       "Golo-Stillger": "2023-05-05-Gruul-Shamans-Golo-Stillger",
       "David-Amadu": "2023-05-05-Grixis-Midrange-David-Amadu"
     },
     final: [
       {
-        slug: "Sean-Hamilton",
+        slug: "Kaia-Hamilton",
         result: "2-1-0"
       },
       {
@@ -70,7 +70,7 @@ export const events: Events = {
         results: [
           {
             "Sadie-Braun": 0,
-            "Sean-Hamilton": 2
+            "Kaia-Hamilton": 2
           },
           {
             "Golo-Stillger": 0,
@@ -85,7 +85,7 @@ export const events: Events = {
             "Sadie-Braun": 1
           },
           {
-            "Sean-Hamilton": 2,
+            "Kaia-Hamilton": 2,
             "David-Amadu": 1
           }
         ]
@@ -94,7 +94,7 @@ export const events: Events = {
         results: [
           {
             "Golo-Stillger": 2,
-            "Sean-Hamilton": 1
+            "Kaia-Hamilton": 1
           },
           {
             "David-Amadu": 2,
@@ -114,7 +114,7 @@ export const events: Events = {
     date: "2023-07-14",
     players: {
       "Sadie-Braun": "2023-07-14-Scam-Sadie-Braun",
-      "Sean-Hamilton": "2023-07-14-Rhinos-Sean-Hamilton",
+      "Kaia-Hamilton": "2023-07-14-Rhinos-Kaia-Hamilton",
       "Alex-Humphreys": "2023-07-14-Esper-Blink-Alex-Humphreys",
       "Magda-Szymaniec": "2023-07-14-Angels-Magda-Szymaniec",
       "Anthony-Hernandez": "2023-07-14-Living-End-Anthony-Hernandez",
@@ -134,7 +134,7 @@ export const events: Events = {
         result: "2-1-0",
       },
       {
-        slug: "Sean-Hamilton",
+        slug: "Kaia-Hamilton",
         result: "2-1-0",
       },
       {
@@ -150,7 +150,7 @@ export const events: Events = {
       {
         results: [
           {
-            "Sean-Hamilton": 0,
+            "Kaia-Hamilton": 0,
             "Alex-Humphreys": 2
           },
           {
@@ -174,7 +174,7 @@ export const events: Events = {
             "Sadie-Braun": 2
           },
           {
-            "Sean-Hamilton": 2,
+            "Kaia-Hamilton": 2,
             "Magda-Szymaniec": 0
           }
         ]
@@ -186,7 +186,7 @@ export const events: Events = {
             "Magda-Szymaniec": 0
           },
           {
-            "Sean-Hamilton": 2,
+            "Kaia-Hamilton": 2,
             "Anthony-Hernandez": 1
           },
           {
@@ -207,7 +207,7 @@ export const events: Events = {
     date: "2023-11-17",
     players: {
       "Sadie-Braun": "2023-11-17-Scam-Sadie-Braun",
-      "Sean-Hamilton": "2023-11-17-Yawgmoth-Sean-Hamilton",
+      "Kaia-Hamilton": "2023-11-17-Yawgmoth-Kaia-Hamilton",
       "Hanna-Neubauer": "2023-11-17-Jeskai-Boomshine-Hanna-Neubauer",
       "Maximilian-Sache": "2023-11-17-Mono-W-Hammer-Maximilian-Sache",
     },
@@ -217,7 +217,7 @@ export const events: Events = {
         result: "1-0-0",
       },
       {
-        slug: "Sean-Hamilton",
+        slug: "Kaia-Hamilton",
         result: "1-0-0",
       },
       {
@@ -233,7 +233,7 @@ export const events: Events = {
       {
         results: [
           {
-            "Sean-Hamilton": 2,
+            "Kaia-Hamilton": 2,
             "Maximilian-Sache": 0
           },
           {
