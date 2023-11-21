@@ -38,9 +38,9 @@ export const players: Players = {
       "2023-11-17-FNM-with-Style"
     ],
     decks: [
-      "2023-05-05-Rhinos-Kaia-Hamilton",
-      "2023-07-14-Rhinos-Kaia-Hamilton",
-      "2023-11-17-Yawgmoth-Kaia-Hamilton",
+      "2023-05-05-4c-Rhinos-Kaia-Hamilton",
+      "2023-07-14-4c-Rhinos-Kaia-Hamilton",
+      "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton",
     ]
   },
   "Golo-Stillger": {
@@ -69,7 +69,7 @@ export const players: Players = {
     slug: "Magda-Szymaniec",
     isTeamCFM: true,
     events: ["2023-07-14-FNM-with-Style"],
-    decks: ["2023-07-14-Angels-Magda-Szymaniec"]
+    decks: ["2023-07-14-Mono-W-Angels-Magda-Szymaniec"]
   },
   "Anthony-Hernandez": {
     name: "Anthony Hernandez",
@@ -83,7 +83,7 @@ export const players: Players = {
     slug: "Aubrey-Browne",
     isTeamCFM: false,
     events: ["2023-07-14-FNM-with-Style"],
-    decks: ["2023-07-14-Green-Tron-Aubrey-Browne"]
+    decks: ["2023-07-14-Mono-G-Tron-Aubrey-Browne"]
   },
   "Hanna-Neubauer": {
     name: "Hanna Neubauer",

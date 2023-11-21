@@ -43,7 +43,7 @@ export const events: Events = {
     date: "2023-05-05",
     players: {
       "Sadie-Braun": "2023-05-05-Scam-Sadie-Braun",
-      "Kaia-Hamilton": "2023-05-05-Rhinos-Kaia-Hamilton",
+      "Kaia-Hamilton": "2023-05-05-4c-Rhinos-Kaia-Hamilton",
       "Golo-Stillger": "2023-05-05-Gruul-Shamans-Golo-Stillger",
       "David-Amadu": "2023-05-05-Grixis-Midrange-David-Amadu"
     },
@@ -114,11 +114,11 @@ export const events: Events = {
     date: "2023-07-14",
     players: {
       "Sadie-Braun": "2023-07-14-Scam-Sadie-Braun",
-      "Kaia-Hamilton": "2023-07-14-Rhinos-Kaia-Hamilton",
+      "Kaia-Hamilton": "2023-07-14-4c-Rhinos-Kaia-Hamilton",
       "Alex-Humphreys": "2023-07-14-Esper-Blink-Alex-Humphreys",
-      "Magda-Szymaniec": "2023-07-14-Angels-Magda-Szymaniec",
+      "Magda-Szymaniec": "2023-07-14-Mono-W-Angels-Magda-Szymaniec",
       "Anthony-Hernandez": "2023-07-14-Living-End-Anthony-Hernandez",
-      "Aubrey-Browne": "2023-07-14-Green-Tron-Aubrey-Browne"
+      "Aubrey-Browne": "2023-07-14-Mono-G-Tron-Aubrey-Browne"
     },
     final: [
       {
@@ -207,7 +207,7 @@ export const events: Events = {
     date: "2023-11-17",
     players: {
       "Sadie-Braun": "2023-11-17-Scam-Sadie-Braun",
-      "Kaia-Hamilton": "2023-11-17-Yawgmoth-Kaia-Hamilton",
+      "Kaia-Hamilton": "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton",
       "Hanna-Neubauer": "2023-11-17-Jeskai-Boomshine-Hanna-Neubauer",
       "Maximilian-Sache": "2023-11-17-Mono-W-Hammer-Maximilian-Sache",
     },

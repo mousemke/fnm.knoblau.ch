@@ -159,11 +159,11 @@ export const decks: Decks = {
       }
     ]
   },
-  "2023-05-05-Rhinos-Kaia-Hamilton": {
+  "2023-05-05-4c-Rhinos-Kaia-Hamilton": {
     format: "modern",
-    slug: "2023-05-05-Rhinos-Kaia-Hamilton",
+    slug: "2023-05-05-4c-Rhinos-Kaia-Hamilton",
     pilotSlug: "Kaia-Hamilton",
-    archetype: "Rhinos",
+    archetype: "4c Rhinos",
     event: "2023-05-05-FNM-with-Style",
     main: [
       {
@@ -874,11 +874,11 @@ export const decks: Decks = {
       },
     ]
   },
-  "2023-07-14-Angels-Magda-Szymaniec": {
+  "2023-07-14-Mono-W-Angels-Magda-Szymaniec": {
     format: "modern",
-    slug: "2023-07-14-Angels-Magda-Szymaniec",
+    slug: "2023-07-14-Mono-W-Angels-Magda-Szymaniec",
     pilotSlug: "Magda-Szymaniec",
-    archetype: "Angels",
+    archetype: "Mono W Angels",
     event: "2023-07-14-FNM-with-Style",
     main: [
       {
@@ -1033,11 +1033,11 @@ export const decks: Decks = {
       },
     ]
   },
-  "2023-07-14-Rhinos-Kaia-Hamilton": {
+  "2023-07-14-4c-Rhinos-Kaia-Hamilton": {
     format: "modern",
-    slug: "2023-07-14-Rhinos-Kaia-Hamilton",
+    slug: "2023-07-14-4c-Rhinos-Kaia-Hamilton",
     pilotSlug: "Kaia-Hamilton",
-    archetype: "Rhinos",
+    archetype: "4c Rhinos",
     event: "2023-07-14-FNM-with-Style",
     main: [
       {
@@ -1287,11 +1287,11 @@ export const decks: Decks = {
       },
     ]
   },
-  "2023-07-14-Green-Tron-Aubrey-Browne": {
+  "2023-07-14-Mono-G-Tron-Aubrey-Browne": {
     format: "modern",
-    slug: "2023-07-14-Green-Tron-Aubrey-Browne",
+    slug: "2023-07-14-Mono-G-Tron-Aubrey-Browne",
     pilotSlug: "Aubrey-Browne",
-    archetype: "Green Tron",
+    archetype: "Mono G Tron",
     event: "2023-07-14-FNM-with-Style",
     main: [
       {
@@ -1573,11 +1573,11 @@ export const decks: Decks = {
       },
     ]
   },
-  "2023-11-17-Yawgmoth-Kaia-Hamilton": {
+  "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton": {
     format: "modern",
-    slug: "2023-11-17-Yawgmoth-Kaia-Hamilton",
+    slug: "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton",
     pilotSlug: "Kaia-Hamilton",
-    archetype: "Yawgmoth",
+    archetype: "Golgari Yawgmoth",
     event: "2023-11-17-FNM-with-Style",
     main: [
       {
