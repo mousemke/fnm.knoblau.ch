@@ -16,16 +16,16 @@ const ArchetypeList = (props: ArchetypeListProps): JSX.Element => {
 
   // const classes = useStyles();
 
-  const onClick = useCallback((archetype: string) => () => setModal("deckslist", archetype), []);
+  const onClick = useCallback((archetypeSlug: string) => () => setModal("deckslist", archetypeSlug), []);
 
   const decksByArchetype = useMemo(() => {
     const decksObject: DecksByArchetype = {};
 
     Object.values(decks).forEach((d: Deck) => {
-      if (decksObject[d.archetype]) {
-        decksObject[d.archetype].push(d);
+      if (decksObject[d.archetypeSlug]) {
+        decksObject[d.archetypeSlug].push(d);
       } else {
-        decksObject[d.archetype] = [d];
+        decksObject[d.archetypeSlug] = [d];
       }
     });
 
@@ -45,10 +45,10 @@ const ArchetypeList = (props: ArchetypeListProps): JSX.Element => {
   return (
     <ContentWindow>
       <h2>Deck Archtypes</h2>
-      {deckArchetypeKeys.map((archetype, i) => (
-        <RowLink key={i} onClick={onClick(archetype)}>
-          <h3>{archetype}</h3>
-          <span>{decksByArchetype[archetype].length} deck{decksByArchetype[archetype].length === 1 ? "" : "s"}</span>
+      {deckArchetypeKeys.map((archetypeSlug, i) => (
+        <RowLink key={i} onClick={onClick(archetypeSlug)}>
+          <h3>{decksByArchetype[archetypeSlug][0].archetype}</h3>
+          <span>{decksByArchetype[archetypeSlug].length} deck{decksByArchetype[archetypeSlug].length === 1 ? "" : "s"}</span>
         </RowLink>
       ))}
     </ContentWindow>

@@ -16,11 +16,11 @@ const DecksList = (props: DecksListProps): JSX.Element => {
   // const classes = useStyles();
 
   const onClick = useCallback((deck: Deck) => () => setModal("deck", deck.slug), []);
-  const decksArray = useMemo(() => Object.values(decks).filter(d => d.archetype === activeArchetype), [activeArchetype]);
+  const decksArray = useMemo(() => Object.values(decks).filter(d => d.archetypeSlug === activeArchetype), [activeArchetype]);
 
   return (
     <ContentWindow>
-      <h2>{activeArchetype} Decks</h2>
+      <h2>{decksArray[0] ? decksArray[0].archetype : "No"} Decks</h2>
       {decksArray.map((deck: Deck, i) => {
         return (
           <RowLink key={i} onClick={onClick(deck)}>

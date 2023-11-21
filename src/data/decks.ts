@@ -7,6 +7,7 @@ interface CardInDeck {
 
 export interface Deck {
   archetype: string;
+  archetypeSlug: string;
   event: EventId;
   format: string;
   main: CardInDeck[];
@@ -25,6 +26,7 @@ export const decks: Decks = {
     slug: "2023-05-05-Scam-Sadie-Braun",
     pilotSlug: "Sadie-Braun",
     archetype: "Scam",
+    archetypeSlug: "Scam",
     event: "2023-05-05-FNM-with-Style",
     main: [
       {
@@ -164,6 +166,7 @@ export const decks: Decks = {
     slug: "2023-05-05-4c-Rhinos-Kaia-Hamilton",
     pilotSlug: "Kaia-Hamilton",
     archetype: "4c Rhinos",
+    archetypeSlug: "4c-Rhinos",
     event: "2023-05-05-FNM-with-Style",
     main: [
       {
@@ -295,6 +298,7 @@ export const decks: Decks = {
     slug: "2023-05-05-Gruul-Shamans-Golo-Stillger",
     pilotSlug: "Golo-Stillger",
     archetype: "Gruul Shamans",
+    archetypeSlug: "Gruul-Shamans",
     event: "2023-05-05-FNM-with-Style",
     main: [
       {
@@ -426,6 +430,7 @@ export const decks: Decks = {
     slug: "2023-05-05-Grixis-Midrange-David-Amadu",
     pilotSlug: "David-Amadu",
     archetype: "Grixis Midrange",
+    archetypeSlug: "Grixis-Midrange",
     event: "2023-05-05-FNM-with-Style",
     main: [
       {
@@ -601,6 +606,7 @@ export const decks: Decks = {
     slug: "2023-07-14-Scam-Sadie-Braun",
     pilotSlug: "Sadie-Braun",
     archetype: "Scam",
+    archetypeSlug: "Scam",
     event: "2023-07-14-FNM-with-Style",
     main: [
       {
@@ -724,6 +730,7 @@ export const decks: Decks = {
     slug: "2023-07-14-Esper-Blink-Alex-Humphreys",
     pilotSlug: "Alex-Humphreys",
     archetype: "Esper Blink",
+    archetypeSlug: "Esper-Blink",
     event: "2023-07-14-FNM-with-Style",
     main: [
       {
@@ -879,6 +886,7 @@ export const decks: Decks = {
     slug: "2023-07-14-Mono-W-Angels-Magda-Szymaniec",
     pilotSlug: "Magda-Szymaniec",
     archetype: "Mono W Angels",
+    archetypeSlug: "Mono-W-Angels",
     event: "2023-07-14-FNM-with-Style",
     main: [
       {
@@ -1038,6 +1046,7 @@ export const decks: Decks = {
     slug: "2023-07-14-4c-Rhinos-Kaia-Hamilton",
     pilotSlug: "Kaia-Hamilton",
     archetype: "4c Rhinos",
+    archetypeSlug: "4c-Rhinos",
     event: "2023-07-14-FNM-with-Style",
     main: [
       {
@@ -1174,6 +1183,7 @@ export const decks: Decks = {
     pilotSlug: "Anthony-Hernandez",
     event: "2023-07-14-FNM-with-Style",
     archetype: "Living End",
+    archetypeSlug: "Living-End",
     main: [
       {
         amount: 1,
@@ -1292,6 +1302,7 @@ export const decks: Decks = {
     slug: "2023-07-14-Mono-G-Tron-Aubrey-Browne",
     pilotSlug: "Aubrey-Browne",
     archetype: "Mono G Tron",
+    archetypeSlug: "Mono-G-Tron",
     event: "2023-07-14-FNM-with-Style",
     main: [
       {
@@ -1451,6 +1462,7 @@ export const decks: Decks = {
     slug: "2023-11-17-Scam-Sadie-Braun",
     pilotSlug: "Sadie-Braun",
     archetype: "Scam",
+    archetypeSlug: "Scam",
     event: "2023-11-17-FNM-with-Style",
     main: [
       {
@@ -1578,6 +1590,7 @@ export const decks: Decks = {
     slug: "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton",
     pilotSlug: "Kaia-Hamilton",
     archetype: "Golgari Yawgmoth",
+    archetypeSlug: "Golgari-Yawgmoth",
     event: "2023-11-17-FNM-with-Style",
     main: [
       {
@@ -1745,6 +1758,7 @@ export const decks: Decks = {
     slug: "2023-11-17-Jeskai-Boomshine-Hanna-Neubauer",
     pilotSlug: "Hanna-Neubauer",
     archetype: "Jeskai Boomshine",
+    archetypeSlug: "Jeskai-Boomshine",
     event: "2023-11-17-FNM-with-Style",
     main: [
       {
@@ -1872,6 +1886,7 @@ export const decks: Decks = {
     slug: "2023-11-17-Mono-W-Hammer-Maximilian-Sache",
     pilotSlug: "Maximilian-Sache",
     archetype: "Mono W Hammer",
+    archetypeSlug: "Mono-W-Hammer",
     event: "2023-11-17-FNM-with-Style",
     main: [
       {
