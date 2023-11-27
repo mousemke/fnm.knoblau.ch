@@ -243,5 +243,17 @@ export const events: Events = {
         ]
       }
     ]
+  },
+  "2023-12-15-FNM-with-Style": {
+    finished: false,
+    format: "modern",
+    slug: "2023-12-15-FNM-with-Style",
+    name: "FNM with Style",
+    venue: "Cafe Style",
+    venueSlug: "Cafe-Style",
+    date: "2023-12-15",
+    players: {},
+    final: [],
+    rounds: []
   }
 };
