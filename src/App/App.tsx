@@ -15,9 +15,9 @@ import NextEvent from "../NextEvent";
 import Link from "../common/Link";
 import { decks, players, events, venues } from "../data";
 
-import type { Data, Deck, DeckId, Player, EventId, EventObject } from "../data";
-
 import useStyles from "./App.styles";
+
+import type { Data, Deck, DeckId, Player, EventId, EventObject } from "../data";
 
 /**
  *
@@ -30,7 +30,6 @@ const setQueryParam = (param: string | null, slug: string | null = null) => {
   const slugQuery = slug ? `&slug=${slug}` : "";
   const newQuery = param ? `?type=${param}${slugQuery}` : "";
   const newPath = `${pathname}${newQuery}`;
-
 
   window.history.pushState({ type: param, slug }, document.title, newPath);
 };
@@ -61,34 +60,54 @@ const App = (): JSX.Element => {
       slug: string | null,
       popstateEvent?: boolean
     ) => {
-      activeDeck !== null && setActiveDeck(null);
-      activePlayer !== null && setActivePlayer(null);
-      activeArchetype !== null && setActiveArchetype(null);
-      activeEvent !== null && setActiveEvent(null);
+      if (activeDeck !== null) {
+        setActiveDeck(null);
+      }
+      if (activePlayer !== null) {
+        setActivePlayer(null);
+      }
+      if (activeArchetype !== null) {
+        setActiveArchetype(null);
+      }
+      if (activeEvent !== null) {
+        setActiveEvent(null);
+      }
 
       switch (modalType) {
         case "deck":
           setActiveDeck(decks[slug as DeckId]);
-          !popstateEvent && setQueryParam("deck", slug);
+          if (!popstateEvent) {
+            setQueryParam("deck", slug);
+          }
           break;
         case "player":
           setActivePlayer(players[slug as string]);
-          !popstateEvent && setQueryParam("player", slug);
+          if (!popstateEvent) {
+            setQueryParam("player", slug);
+          }
           break;
         case "event":
           setActiveEvent(events[slug as EventId]);
-          !popstateEvent && setQueryParam("event", slug);
+          if (!popstateEvent) {
+            setQueryParam("event", slug);
+          }
           break;
         case "playerlist":
         case "eventlist":
-          !popstateEvent && setQueryParam(modalType);
+          if (!popstateEvent) {
+            setQueryParam(modalType);
+          }
           break;
         case "deckslist":
           setActiveArchetype(slug);
-          !popstateEvent && setQueryParam("deckslist", slug);
+          if (!popstateEvent) {
+            setQueryParam("deckslist", slug);
+          }
           break;
         default:
-          !popstateEvent && setQueryParam(null, null);
+          if (!popstateEvent) {
+            setQueryParam(null, null);
+          }
       }
 
       setActiveModal(modalType);
@@ -148,7 +167,7 @@ const App = (): JSX.Element => {
     };
   }, []);
 
-  const nextEvents = Object.values(events).filter(e => !e.finished);
+  const nextEvents = Object.values(events).filter((e) => !e.finished);
 
   return (
     <>
@@ -160,22 +179,30 @@ const App = (): JSX.Element => {
       <StyledWindow className={classes.titleWindow}>
         <h2>Guerilla FNM with style</h2>
         <h3>
-          <b><Link onClick={() => setModal(null, null)}>fnm.knoblau.ch</Link></b>
+          <b>
+            <Link onClick={() => setModal(null, null)}>fnm.knoblau.ch</Link>
+          </b>
         </h3>
-        <h4><Link href="https://discord.gg/CrBz7X7HUD">Crossfit Meat Factory Discord</Link></h4>
+        <h4>
+          <Link href="https://discord.gg/CrBz7X7HUD">
+            Crossfit Meat Factory Discord
+          </Link>
+        </h4>
       </StyledWindow>
       <Animator active>
         <Nav setModal={setModal} />
       </Animator>
       {nextEvents.length && <NextEvent nextEvents={nextEvents} />}
-      {activeModal === null && (
-        <Rules />
-      )}
+      {activeModal === null && <Rules />}
       {activeModal === "eventlist" && (
         <EventsList setModal={setModal} events={events} />
       )}
       {activeModal === "deckslist" && activeArchetype && (
-        <DecksList data={data} setModal={setModal} activeArchetype={activeArchetype} />
+        <DecksList
+          data={data}
+          setModal={setModal}
+          activeArchetype={activeArchetype}
+        />
       )}
       {activeModal === "deckslist" && !activeArchetype && (
         <ArchetypeList setModal={setModal} data={data} />
@@ -184,7 +211,11 @@ const App = (): JSX.Element => {
         <PlayersList setModal={setModal} players={players} />
       )}
       {activeModal === "event" && (
-        <SingleEvent data={data} setModal={setModal} activeEvent={activeEvent} />
+        <SingleEvent
+          data={data}
+          setModal={setModal}
+          activeEvent={activeEvent}
+        />
       )}
       {activeModal === "deck" && (
         <SingleDeck data={data} setModal={setModal} activeDeck={activeDeck} />

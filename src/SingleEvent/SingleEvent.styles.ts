@@ -2,13 +2,21 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles(
   {
+    contentWindow: {},
+    seperator: {
+      transition: "border-bottom 1s",
+
+      "$contentWindow:hover &": {
+        borderBottom: "1px solid rgb(36 210 235)"
+      }
+    },
     inlinePaddedLine: {
       display: "inline-block",
       width: "45%",
       padding: 2
     },
     match: {
-      margin: "16px 0 0",
+      margin: "16px 0 0"
     },
     paddedLine: {
       padding: 2

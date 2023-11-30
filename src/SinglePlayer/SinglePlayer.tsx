@@ -30,12 +30,12 @@ const SinglePlayer = (props: SinglePlayerProps): JSX.Element => {
   );
 
   const onEventClick = useCallback(
-    (event: EventId) => () => setModal("event", event),
+    (eventId: EventId) => () => setModal("event", eventId),
     []
   );
 
   return (
-    <ContentWindow>
+    <ContentWindow className={classes.contentWindow}>
       <h2>{name}</h2>
       <Separator />
       <h3>Decks</h3>
@@ -54,11 +54,11 @@ const SinglePlayer = (props: SinglePlayerProps): JSX.Element => {
           );
         })}
       </div>
-      <Separator />
+      <Separator className={classes.seperator} />
       <h3>Events</h3>
       <div>
         {events.map((event, i) => {
-          const { date, name } = data.events[event];
+          const { date, name: eventName } = data.events[event];
 
           return (
             <RowLink
@@ -66,7 +66,7 @@ const SinglePlayer = (props: SinglePlayerProps): JSX.Element => {
               key={i}
               onClick={onEventClick(event)}
             >
-              {date} - {name}
+              {date} - {eventName}
             </RowLink>
           );
         })}

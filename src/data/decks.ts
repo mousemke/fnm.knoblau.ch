@@ -684,7 +684,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Verdant Catacombs"
-      },
+      }
     ],
     side: [
       {
@@ -722,7 +722,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Unlicensed Hearse"
-      },
+      }
     ]
   },
   "2023-07-14-Esper-Blink-Alex-Humphreys": {
@@ -832,7 +832,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Watery Grave"
-      },
+      }
     ],
     side: [
       {
@@ -878,7 +878,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Teferi, Time Raveler"
-      },
+      }
     ]
   },
   "2023-07-14-Mono-W-Angels-Magda-Szymaniec": {
@@ -992,7 +992,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Youthful Valkyrie"
-      },
+      }
     ],
     side: [
       {
@@ -1038,7 +1038,7 @@ export const decks: Decks = {
       {
         amount: 1,
         name: "Youthful Valkyrie"
-      },
+      }
     ]
   },
   "2023-07-14-4c-Rhinos-Kaia-Hamilton": {
@@ -1148,7 +1148,7 @@ export const decks: Decks = {
       {
         amount: 1,
         name: "Temple Garden"
-      },
+      }
     ],
     side: [
       {
@@ -1174,7 +1174,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Fury"
-      },
+      }
     ]
   },
   "2023-07-14-Living-End-Anthony-Hernandez": {
@@ -1268,7 +1268,7 @@ export const decks: Decks = {
       {
         amount: 4,
         name: "Generous Ent"
-      },
+      }
     ],
     side: [
       {
@@ -1294,7 +1294,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Foundation Breaker"
-      },
+      }
     ]
   },
   "2023-07-14-Mono-G-Tron-Aubrey-Browne": {
@@ -1400,7 +1400,7 @@ export const decks: Decks = {
       {
         amount: 1,
         name: "Emrakul, the Promised End"
-      },
+      }
     ],
     side: [
       {
@@ -1454,7 +1454,7 @@ export const decks: Decks = {
       {
         amount: 1,
         name: "Soulless Jailer"
-      },
+      }
     ]
   },
   "2023-11-17-Scam-Sadie-Braun": {
@@ -1552,7 +1552,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Verdant Catacombs"
-      },
+      }
     ],
     side: [
       {
@@ -1582,7 +1582,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Wear // Tear"
-      },
+      }
     ]
   },
   "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton": {
@@ -1700,7 +1700,7 @@ export const decks: Decks = {
       {
         amount: 4,
         name: "Verdant Catacombs"
-      },
+      }
     ],
     side: [
       {
@@ -1750,7 +1750,7 @@ export const decks: Decks = {
       {
         amount: 1,
         name: "The End"
-      },
+      }
     ]
   },
   "2023-11-17-Jeskai-Boomshine-Hanna-Neubauer": {
@@ -1848,7 +1848,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "The Blackstaff of Waterdeep"
-      },
+      }
     ],
     side: [
       {
@@ -1878,7 +1878,7 @@ export const decks: Decks = {
       {
         amount: 2,
         name: "Supreme Verdict"
-      },
+      }
     ]
   },
   "2023-11-17-Mono-W-Hammer-Maximilian-Sache": {
@@ -1964,7 +1964,7 @@ export const decks: Decks = {
       {
         amount: 4,
         name: "Urza's Saga"
-      },
+      }
     ],
     side: [
       {
@@ -1998,7 +1998,7 @@ export const decks: Decks = {
       {
         amount: 1,
         name: "Surge of Salvation"
-      },
+      }
     ]
   }
 };

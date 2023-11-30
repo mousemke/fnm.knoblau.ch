@@ -63,7 +63,7 @@ export const events: Events = {
       {
         slug: "Sadie-Braun",
         result: "0-3-0"
-      },
+      }
     ],
     rounds: [
       {
@@ -123,28 +123,28 @@ export const events: Events = {
     final: [
       {
         slug: "Aubrey-Browne",
-        result: "2-0-1",
+        result: "2-0-1"
       },
       {
         slug: "Sadie-Braun",
-        result: "2-1-0",
+        result: "2-1-0"
       },
       {
         slug: "Alex-Humphreys",
-        result: "2-1-0",
+        result: "2-1-0"
       },
       {
         slug: "Kaia-Hamilton",
-        result: "2-1-0",
+        result: "2-1-0"
       },
       {
         slug: "Magda-Szymaniec",
-        result: "0-2-1",
+        result: "0-2-1"
       },
       {
         slug: "Anthony-Hernandez",
-        result: "0-3-0",
-      },
+        result: "0-3-0"
+      }
     ],
     rounds: [
       {
@@ -209,24 +209,24 @@ export const events: Events = {
       "Sadie-Braun": "2023-11-17-Scam-Sadie-Braun",
       "Kaia-Hamilton": "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton",
       "Hanna-Neubauer": "2023-11-17-Jeskai-Boomshine-Hanna-Neubauer",
-      "Maximilian-Sache": "2023-11-17-Mono-W-Hammer-Maximilian-Sache",
+      "Maximilian-Sache": "2023-11-17-Mono-W-Hammer-Maximilian-Sache"
     },
     final: [
       {
         slug: "Sadie-Braun",
-        result: "1-0-0",
+        result: "1-0-0"
       },
       {
         slug: "Kaia-Hamilton",
-        result: "1-0-0",
+        result: "1-0-0"
       },
       {
         slug: "Hanna-Neubauer",
-        result: "0-1-0",
+        result: "0-1-0"
       },
       {
         slug: "Maximilian-Sache",
-        result: "0-1-0",
+        result: "0-1-0"
       }
     ],
     rounds: [

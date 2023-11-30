@@ -1,6 +1,7 @@
-import React, { useCallback} from "react";
+import React, { useCallback } from "react";
 import RowLink from "../common/RowLink";
 import Link from "../common/Link";
+import Separator from "../common/Separator";
 import ContentWindow from "../common/ContentWindow";
 import { venues } from "../data";
 
@@ -40,13 +41,18 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
 
   return (
     <>
-      <ContentWindow>
+      <ContentWindow className={classes.contentWindow}>
         <div className={classes.inlineAllChildren}>
-          <h1>{name}</h1> at <h3><Link href={location.mapsLink} target="_blank">{location.name}</Link></h3>
+          <h1>{name}</h1> at{" "}
+          <h3>
+            <Link href={location.mapsLink} target="_blank">
+              {location.name}
+            </Link>
+          </h3>
           <h3>{new Date(date).toDateString()}</h3>
         </div>
       </ContentWindow>
-      <ContentWindow>
+      <ContentWindow className={classes.contentWindow}>
         <h3>Players & Decks</h3>
         <div>
           {Object.keys(players).map((playerSlug, i) => {
@@ -59,13 +65,13 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
                 <RowLink
                   className={classes.inlinePaddedLine}
                   onClick={onPlayerClick(playerSlug)}
-                  >
+                >
                   {playerName}
                 </RowLink>
                 <RowLink
                   className={classes.inlinePaddedLine}
                   onClick={onDeckClick(deckSlug)}
-                  >
+                >
                   playing {deckName}
                 </RowLink>
               </span>
@@ -73,16 +79,16 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
           })}
         </div>
       </ContentWindow>
-      <ContentWindow>
+      <ContentWindow className={classes.contentWindow}>
         <h3>Final Results</h3>
         <div>
           {final.map((finalRecord, f) => (
             <div key={f}>
-              <span>{f + 1}.{" "}</span>
+              <span>{f + 1}. </span>
               <RowLink
                 className={classes.inlinePaddedLine}
                 onClick={onPlayerClick(finalRecord.slug)}
-                >
+              >
                 {data.players[finalRecord.slug].name}
               </RowLink>
               <span>{finalRecord.result}</span>
@@ -90,11 +96,14 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
           ))}
         </div>
       </ContentWindow>
-      <ContentWindow>
-      <h3>Results ({roundCount} round{roundCount !== 1 ? "s" : ""})</h3>
-      <div>
-        {rounds.map((round, i) => (
+      <ContentWindow className={classes.contentWindow}>
+        <h3>
+          Results ({roundCount} round{roundCount !== 1 ? "s" : ""})
+        </h3>
+        <div>
+          {rounds.map((round, i) => (
             <div className={classes.roundResultWrapper} key={i}>
+              {i !== 0 && <Separator className={classes.seperator} />}
               <div>Round {i + 1}</div>
               <div className={classes.roundResult}>
                 {round.results.map((result, j) => (
@@ -103,7 +112,12 @@ const SingleEvent = (props: SingleEventProps): JSX.Element => {
                       const { name: playerName } = data.players[playerSlug];
 
                       return (
-                        <div key={k}><span className={classes.roundResultPlayerName}>{playerName}</span> - {result[playerSlug]}</div>
+                        <div key={k}>
+                          <span className={classes.roundResultPlayerName}>
+                            {playerName}
+                          </span>{" "}
+                          - {result[playerSlug]}
+                        </div>
                       );
                     })}
                   </div>

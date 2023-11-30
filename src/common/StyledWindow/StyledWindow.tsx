@@ -2,9 +2,9 @@ import React from "react";
 import { FrameSVGNefrex } from "@arwes/react-frames";
 import { Text } from "@arwes/react-text";
 
-import type { StyledWindowProps } from "./StyledWindow.types";
-
 import useStyles from "./StyledWindow.styles";
+
+import type { StyledWindowProps } from "./StyledWindow.types";
 
 const StyledWindow = (props: StyledWindowProps): JSX.Element => {
   const { children, className } = props;

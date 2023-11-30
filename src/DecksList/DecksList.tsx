@@ -11,12 +11,19 @@ import type { DecksListProps } from "./DecksList.types";
  */
 const DecksList = (props: DecksListProps): JSX.Element => {
   const { activeArchetype, data, setModal } = props;
-  const decks = data.decks;
+  const { decks } = data;
 
   // const classes = useStyles();
 
-  const onClick = useCallback((deck: Deck) => () => setModal("deck", deck.slug), []);
-  const decksArray = useMemo(() => Object.values(decks).filter(d => d.archetypeSlug === activeArchetype), [activeArchetype]);
+  const onClick = useCallback(
+    (deck: Deck) => () => setModal("deck", deck.slug),
+    []
+  );
+  const decksArray = useMemo(
+    () =>
+      Object.values(decks).filter((d) => d.archetypeSlug === activeArchetype),
+    [activeArchetype]
+  );
 
   return (
     <ContentWindow>
@@ -26,7 +33,10 @@ const DecksList = (props: DecksListProps): JSX.Element => {
           <RowLink key={i} onClick={onClick(deck)}>
             <h3>{deck.archetype}</h3>
             <span>by {data.players[deck.pilotSlug].name}</span>
-            <span>in {data.events[deck.event].name} on {new Date(data.events[deck.event].date).toDateString()}</span>
+            <span>
+              in {data.events[deck.event].name} on{" "}
+              {new Date(data.events[deck.event].date).toDateString()}
+            </span>
           </RowLink>
         );
       })}

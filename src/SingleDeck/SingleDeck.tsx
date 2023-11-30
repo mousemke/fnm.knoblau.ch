@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo } from "react";
 import RowLink from "../common/RowLink";
-import Separator from "../common/Separator";
 import ContentWindow from "../common/ContentWindow";
 
 import useStyles from "./SingleDeck.styles";
@@ -32,7 +31,7 @@ const SingleDeck = (props: SingleDeckProps): JSX.Element => {
   );
 
   const onEventClick = useCallback(
-    (event: EventId) => () => setModal("event", event),
+    (eventId: EventId) => () => setModal("event", eventId),
     []
   );
 
@@ -48,9 +47,7 @@ const SingleDeck = (props: SingleDeckProps): JSX.Element => {
   return (
     <>
       <ContentWindow>
-        <h2 className={classes.noTopMargin}>
-          {archetype}
-        </h2>
+        <h2 className={classes.noTopMargin}>{archetype}</h2>
         <h3>
           <b>
             <RowLink onClick={onPilotClick}>{pilot.name}</RowLink>
@@ -58,24 +55,20 @@ const SingleDeck = (props: SingleDeckProps): JSX.Element => {
         </h3>
       </ContentWindow>
       <ContentWindow>
-          <h4 className={classes.noTopMargin}>
-            Main {cardsInMain}
-          </h4>
-          {main.map((card, i) => (
-            <RowLink
-              className={classes.card}
-              key={i}
-              target="_blank"
-              href={`https://scryfall.com/search?q=!"${card.name}"`}
-            >
-              {card.amount} {card.name}
-            </RowLink>
-          ))}
+        <h4 className={classes.noTopMargin}>Main {cardsInMain}</h4>
+        {main.map((card, i) => (
+          <RowLink
+            className={classes.card}
+            key={i}
+            target="_blank"
+            href={`https://scryfall.com/search?q=!"${card.name}"`}
+          >
+            {card.amount} {card.name}
+          </RowLink>
+        ))}
       </ContentWindow>
       <ContentWindow>
-        <h4 className={classes.noTopMargin}>
-          Sideboard {cardsInSide}
-        </h4>
+        <h4 className={classes.noTopMargin}>Sideboard {cardsInSide}</h4>
         <div>
           {side.map((card, i) => (
             <RowLink
@@ -88,16 +81,11 @@ const SingleDeck = (props: SingleDeckProps): JSX.Element => {
             </RowLink>
           ))}
         </div>
-        </ContentWindow>
+      </ContentWindow>
       <ContentWindow>
-        <h4 className={classes.noTopMargin}>
-          Event
-        </h4>
+        <h4 className={classes.noTopMargin}>Event</h4>
         <div>
-          <RowLink
-            className={classes.card}
-            onClick={onEventClick(event)}
-          >
+          <RowLink className={classes.card} onClick={onEventClick(event)}>
             {new Date(eventDate).toDateString()} - {eventName}
           </RowLink>
         </div>

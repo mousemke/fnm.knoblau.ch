@@ -1,6 +1,7 @@
 import { createUseStyles } from "react-jss";
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles(
+  {
     frame: {
       "& path[data-name=bg]": {
         color: "rgba(45, 6, 36, 0.5)",
@@ -10,7 +11,7 @@ const useStyles = createUseStyles({
         transition: "color 1s",
         color: "rgb(235 36 235)",
         filter: "drop-shadow(0 0 4px rgb(235 36 235))"
-      },
+      }
     },
     textWrapper: {
       padding: 10

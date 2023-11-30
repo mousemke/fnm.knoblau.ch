@@ -5,7 +5,6 @@ export interface ArchetypeListProps {
   setModal: (modalType: string | null, slug: string | null) => void;
 }
 
-
 export interface DecksByArchetype {
-  [archetype: string]: Deck[]
+  [archetype: string]: Deck[];
 }

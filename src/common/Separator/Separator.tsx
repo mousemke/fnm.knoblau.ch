@@ -1,11 +1,13 @@
-import React, { useMemo } from "react";
+import React from "react";
 
 import useStyles from "./Separator.styles";
 
-const separator = (): JSX.Element => {
+import type { SeperatorProps } from "./Separator.types";
+
+const separator = ({ className }: SeperatorProps): JSX.Element => {
   const classes = useStyles();
 
-  return <div className={classes.separator} />;
+  return <div className={`${classes.separator} ${className || ""}`} />;
 };
 
 export default separator;

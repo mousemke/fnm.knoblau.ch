@@ -13,7 +13,7 @@ const ContentWindow = (props: ContentWindowProps): JSX.Element => {
   const classes = useStyles();
 
   return (
-    <StyledWindow className={`${classes.wrapperWindow} ${className || ''}`}>
+    <StyledWindow className={`${classes.wrapperWindow} ${className || ""}`}>
       {children}
     </StyledWindow>
   );

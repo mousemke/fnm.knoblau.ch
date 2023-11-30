@@ -10,9 +10,10 @@ const Link = (props: LinkProps): JSX.Element => {
   const classes = useStyles();
 
   const combinedClasses = useMemo(
-    () => href ?
-    `${classes.link} ${className}`.trim() :
-    `${classes.link} ${classes.buttonAsLink} ${className}`.trim(),
+    () =>
+      href
+        ? `${classes.link} ${className}`.trim()
+        : `${classes.link} ${classes.buttonAsLink} ${className}`.trim(),
     [classes.link, className, href]
   );
 

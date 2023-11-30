@@ -40,7 +40,7 @@ export const players: Players = {
     decks: [
       "2023-05-05-4c-Rhinos-Kaia-Hamilton",
       "2023-07-14-4c-Rhinos-Kaia-Hamilton",
-      "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton",
+      "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton"
     ]
   },
   "Golo-Stillger": {

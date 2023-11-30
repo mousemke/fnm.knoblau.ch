@@ -2,22 +2,14 @@ import React, { useCallback, useMemo } from "react";
 import ContentWindow from "../common/ContentWindow";
 import RowLink from "../common/RowLink";
 
-// import useStyles from "./PlayersList.styles";
-
 import type { PlayersListProps } from "./PlayersList.types";
-import type { Player, Players } from "../data";
-
-
-
-
+import type { Player } from "../data";
 
 /**
  * The list of all players
  */
 const PlayersList = (props: PlayersListProps): JSX.Element => {
   const { players, setModal } = props;
-
-  // const classes = useStyles();
 
   const onClick = useCallback(
     (player: Player) => () => setModal("player", player.slug),
