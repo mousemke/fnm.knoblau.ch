@@ -35,7 +35,7 @@ const Rules = (): JSX.Element => {
         <h3>2. This is unsustainable.</h3>
         <div>
           The "cost" of the FNM is drinking here and supporting the bar. Given
-          that, so far prizes are generally paid for by the orgamizers and would
+          that, so far prizes are generally paid for by the organizers and would
           glady accept donations to help reimburse this cost.
         </div>
         <Separator className={classes.seperator} />
