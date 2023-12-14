@@ -35,8 +35,7 @@ const Rules = (): JSX.Element => {
         <h3>2. This is unsustainable.</h3>
         <div>
           The "cost" of the FNM is drinking here and supporting the bar. Given
-          that, so far prizes are generally paid for by the organizers and would
-          glady accept donations to help reimburse this cost.
+          that, we suggest a 3€ - 5€ donations to help reimburse the organizers for the prizes.
         </div>
         <Separator className={classes.seperator} />
         <h3>3. You need a decklist.</h3>

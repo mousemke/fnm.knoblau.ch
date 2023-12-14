@@ -24,7 +24,7 @@ export default {
     babel({ babelHelpers: "bundled", extensions: [".ts", ".tsx"] }),
     terser(),
     html({
-      meta: [{ name: "robots", content: "noindex,nofollow" }],
+      meta: [{ name: "robots", content: "noindex,nofollow", charset: "utf-8" }],
       title: "fnm.knoblau.ch"
     })
   ]
