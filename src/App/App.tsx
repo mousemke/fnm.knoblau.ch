@@ -192,7 +192,7 @@ const App = (): JSX.Element => {
       <Animator active>
         <Nav setModal={setModal} />
       </Animator>
-      {nextEvents.length && <NextEvent nextEvents={nextEvents} />}
+      {nextEvents.length ? <NextEvent nextEvents={nextEvents} /> : null}
       {activeModal === null && <Rules />}
       {activeModal === "eventlist" && (
         <EventsList setModal={setModal} events={events} />

@@ -245,15 +245,62 @@ export const events: Events = {
     ]
   },
   "2023-12-15-FNM-with-Style": {
-    finished: false,
+    finished: true,
     format: "modern",
     slug: "2023-12-15-FNM-with-Style",
     name: "FNM with Style",
     venue: "Cafe Style",
     venueSlug: "Cafe-Style",
     date: "2023-12-15",
-    players: {},
-    final: [],
-    rounds: []
+    players: {
+      "Sadie-Braun": "2023-12-15-Scam-Sadie-Braun",
+      "Kaia-Hamilton": "2023-12-15-Golgari-Yawgmoth-Kaia-Hamilton",
+      "Hanna-Neubauer": "2023-12-15-Jeskai-Boomshine-Hanna-Neubauer",
+      "Alex-Humphreys": "2023-12-15-Time-Travel-Eldrazi-Alex-Humphreys"
+    },
+    final: [
+      {
+        slug: "Kaia-Hamilton",
+        result: "2-0-0"
+      },
+      {
+        slug: "Alex-Humphreys",
+        result: "1-1-0"
+      },
+      {
+        slug: "Sadie-Braun",
+        result: "1-1-0"
+      },
+      {
+        slug: "Hanna-Neubauer",
+        result: "0-2-0"
+      }
+    ],
+    rounds: [
+      {
+        results: [
+          {
+            "Kaia-Hamilton": 2,
+            "Hanna-Neubauer": 0
+          },
+          {
+            "Sadie-Braun": 0,
+            "Alex-Humphreys": 2
+          }
+        ]
+      },
+      {
+        results: [
+          {
+            "Kaia-Hamilton": 2,
+            "Alex-Humphreys": 1
+          },
+          {
+            "Sadie-Braun": 2,
+            "Hanna-Neubauer": 1
+          }
+        ]
+      }
+    ]
   }
 };

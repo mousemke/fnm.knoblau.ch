@@ -20,12 +20,14 @@ export const players: Players = {
     events: [
       "2023-05-05-FNM-with-Style",
       "2023-07-14-FNM-with-Style",
-      "2023-11-17-FNM-with-Style"
+      "2023-11-17-FNM-with-Style",
+      "2023-12-15-FNM-with-Style"
     ],
     decks: [
       "2023-05-05-Scam-Sadie-Braun",
       "2023-07-14-Scam-Sadie-Braun",
-      "2023-11-17-Scam-Sadie-Braun"
+      "2023-11-17-Scam-Sadie-Braun",
+      "2023-12-15-Scam-Sadie-Braun"
     ]
   },
   "Kaia-Hamilton": {
@@ -35,12 +37,14 @@ export const players: Players = {
     events: [
       "2023-05-05-FNM-with-Style",
       "2023-07-14-FNM-with-Style",
-      "2023-11-17-FNM-with-Style"
+      "2023-11-17-FNM-with-Style",
+      "2023-12-15-FNM-with-Style"
     ],
     decks: [
       "2023-05-05-4c-Rhinos-Kaia-Hamilton",
       "2023-07-14-4c-Rhinos-Kaia-Hamilton",
-      "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton"
+      "2023-11-17-Golgari-Yawgmoth-Kaia-Hamilton",
+      "2023-12-15-Golgari-Yawgmoth-Kaia-Hamilton"
     ]
   },
   "Golo-Stillger": {
@@ -61,8 +65,14 @@ export const players: Players = {
     name: "Alex Humphreys",
     slug: "Alex-Humphreys",
     isTeamCFM: true,
-    events: ["2023-07-14-FNM-with-Style"],
-    decks: ["2023-07-14-Esper-Blink-Alex-Humphreys"]
+    events: [
+      "2023-07-14-FNM-with-Style",
+      "2023-12-15-FNM-with-Style"
+    ],
+    decks: [
+      "2023-07-14-Esper-Blink-Alex-Humphreys",
+      "2023-12-15-Time-Travel-Eldrazi-Alex-Humphreys"
+    ]
   },
   "Magda-Szymaniec": {
     name: "Magda Szymaniec",
@@ -89,8 +99,14 @@ export const players: Players = {
     name: "Hanna Neubauer",
     slug: "Hanna-Neubauer",
     isTeamCFM: true,
-    events: ["2023-11-17-FNM-with-Style"],
-    decks: ["2023-11-17-Jeskai-Boomshine-Hanna-Neubauer"]
+    events: [
+      "2023-11-17-FNM-with-Style",
+      "2023-12-15-FNM-with-Style"
+    ],
+    decks: [
+      "2023-11-17-Jeskai-Boomshine-Hanna-Neubauer",
+      "2023-12-15-Jeskai-Boomshine-Hanna-Neubauer"
+    ]
   },
   "Maximilian-Sache": {
     name: "Maximilian Sache",

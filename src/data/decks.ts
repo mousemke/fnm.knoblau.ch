@@ -2000,5 +2000,566 @@ export const decks: Decks = {
         name: "Surge of Salvation"
       }
     ]
+  },
+
+
+
+
+
+
+
+  ////////////
+
+
+
+
+
+  "2023-12-15-Jeskai-Boomshine-Hanna-Neubauer": {
+    format: "modern",
+    slug: "2023-12-15-Jeskai-Boomshine-Hanna-Neubauer",
+    pilotSlug: "Hanna-Neubauer",
+    archetype: "Jeskai Boomshine",
+    archetypeSlug: "Jeskai-Boomshine",
+    event: "2023-12-15-FNM-with-Style",
+    main: [
+      {
+        amount: 4,
+        name: "Boom // Bust"
+      },
+      {
+        amount: 4,
+        name: "Cleansing Wildfire"
+      },
+      {
+        amount: 2,
+        name: "Counterspell"
+      },
+      {
+        amount: 2,
+        name: "Darksteel Citadel"
+      },
+      {
+        amount: 2,
+        name: "Darksteel Relic"
+      },
+      {
+        amount: 4,
+        name: "Ensoul Artifact"
+      },
+      {
+        amount: 2,
+        name: "Expressive Iteration"
+      },
+      {
+        amount: 4,
+        name: "Galvanic Blast"
+      },
+      {
+        amount: 2,
+        name: "Island"
+      },
+      {
+        amount: 2,
+        name: "Lightning Bolt"
+      },
+      {
+        amount: 1,
+        name: "Mountain"
+      },
+      {
+        amount: 3,
+        name: "Narset, Parter of Veils"
+      },
+      {
+        amount: 1,
+        name: "Plains"
+      },
+      {
+        amount: 3,
+        name: "Razortide Bridge"
+      },
+      {
+        amount: 4,
+        name: "Rise and Shine"
+      },
+      {
+        amount: 3,
+        name: "Rustvale Bridge"
+      },
+      {
+        amount: 2,
+        name: "Seachrome Coast"
+      },
+      {
+        amount: 4,
+        name: "Shivan Reef"
+      },
+      {
+        amount: 4,
+        name: "Silverbluff Bridge"
+      },
+      {
+        amount: 4,
+        name: "Spell Pierce"
+      },
+      {
+        amount: 2,
+        name: "Stubborn Denial"
+      },
+      {
+        amount: 1,
+        name: "Tezzeret, Betrayer of Flesh"
+      }
+    ],
+    side: [
+      {
+        amount: 2,
+        name: "Crumble to Dust"
+      },
+      {
+        amount: 2,
+        name: "Dispatch"
+      },
+      {
+        amount: 2,
+        name: "Prismatic Ending"
+      },
+      {
+        amount: 3,
+        name: "Rest in Peace"
+      },
+      {
+        amount: 2,
+        name: "Shadowspear"
+      },
+      {
+        amount: 2,
+        name: "Supreme Verdict"
+      },
+      {
+        amount: 2,
+        name: "Wear // Tear"
+      }
+    ]
+  },
+  "2023-12-15-Scam-Sadie-Braun": {
+    format: "modern",
+    slug: "2023-12-15-Scam-Sadie-Braun",
+    pilotSlug: "Sadie-Braun",
+    archetype: "Scam",
+    archetypeSlug: "Scam",
+    event: "2023-12-15-FNM-with-Style",
+    main: [
+      {
+        amount: 3,
+        name: "Blackcleave Cliffs"
+      },
+      {
+        amount: 3,
+        name: "Blood Crypt"
+      },
+      {
+        amount: 1,
+        name: "Blood Moon"
+      },
+      {
+        amount: 4,
+        name: "Bloodstained Mire"
+      },
+      {
+        amount: 4,
+        name: "Dauthi Voidwalker"
+      },
+      {
+        amount: 3,
+        name: "Fable of the Mirror-Breaker"
+      },
+      {
+        amount: 2,
+        name: "Fatal Push"
+      },
+      {
+        amount: 4,
+        name: "Grief"
+      },
+      {
+        amount: 2,
+        name: "Lightning Bolt"
+      },
+      {
+        amount: 3,
+        name: "Marsh Flats"
+      },
+      {
+        amount: 1,
+        name: "Molten Collapse"
+      },
+      {
+        amount: 1,
+        name: "Mount Doom"
+      },
+      {
+        amount: 2,
+        name: "Not Dead After All"
+      },
+      {
+        amount: 4,
+        name: "Orcish Bowmasters"
+      },
+      {
+        amount: 1,
+        name: "Persist"
+      },
+      {
+        amount: 4,
+        name: "Ragavan, Nimble Pilferer"
+      },
+      {
+        amount: 2,
+        name: "Seasoned Pyromancer"
+      },
+      {
+        amount: 2,
+        name: "Sheoldred, the Apocalypse"
+      },
+      {
+        amount: 3,
+        name: "Swamp"
+      },
+      {
+        amount: 1,
+        name: "Takenuma, Abandoned Mire"
+      },
+      {
+        amount: 2,
+        name: "Terminate"
+      },
+      {
+        amount: 4,
+        name: "Thoughtseize"
+      },
+      {
+        amount: 2,
+        name: "Undying Evil"
+      },
+      {
+        amount: 2,
+        name: "Verdant Catacombs"
+      }
+    ],
+    side: [
+      {
+        amount: 2,
+        name: "Blood Moon"
+      },
+      {
+        amount: 2,
+        name: "Brotherhood's End"
+      },
+      {
+        amount: 2,
+        name: "Chalice of the Void"
+      },
+      {
+        amount: 2,
+        name: "Cursed Totem"
+      },
+      {
+        amount: 2,
+        name: "Engineered Explosives"
+      },
+      {
+        amount: 1,
+        name: "Hidetsugu Consumes All"
+      },
+      {
+        amount: 1,
+        name: "Kolaghan's Command"
+      },
+      {
+        amount: 3,
+        name: "Leyline of the Void"
+      }
+    ]
+  },
+  "2023-12-15-Golgari-Yawgmoth-Kaia-Hamilton": {
+    format: "modern",
+    slug: "2023-12-15-Golgari-Yawgmoth-Kaia-Hamilton",
+    pilotSlug: "Kaia-Hamilton",
+    archetype: "Golgari Yawgmoth",
+    archetypeSlug: "Golgari-Yawgmoth",
+    event: "2023-12-15-FNM-with-Style",
+    main: [
+      {
+        amount: 4,
+        name: "Grist, the Hunger Tide"
+      },
+      {
+        amount: 1,
+        name: "Walking Ballista"
+      },
+      {
+        amount: 4,
+        name: "Delighted Halfling"
+      },
+      {
+        amount: 1,
+        name: "Haywire Mite"
+      },
+      {
+        amount: 1,
+        name: "Ignoble Hierarch"
+      },
+      {
+        amount: 4,
+        name: "Young Wolf"
+      },
+      {
+        amount: 1,
+        name: "Blood Artist"
+      },
+      {
+        amount: 1,
+        name: "Hapatra, Vizier of Poisons"
+      },
+      {
+        amount: 4,
+        name: "Orcish Bowmasters"
+      },
+      {
+        amount: 1,
+        name: "Strangleroot Geist"
+      },
+      {
+        amount: 4,
+        name: "Wall of Roots"
+      },
+      {
+        amount: 1,
+        name: "Endurance"
+      },
+      {
+        amount: 1,
+        name: "Sheoldred, the Apocalypse"
+      },
+      {
+        amount: 4,
+        name: "Yawgmoth, Thran Physician"
+      },
+      {
+        amount: 3,
+        name: "Agatha's Soul Cauldron"
+      },
+      {
+        amount: 4,
+        name: "Chord of Calling"
+      },
+      {
+        amount: 3,
+        name: "Blooming Marsh"
+      },
+      {
+        amount: 2,
+        name: "Boseiju, Who Endures"
+      },
+      {
+        amount: 2,
+        name: "Forest"
+      },
+      {
+        amount: 1,
+        name: "Khalni Garden"
+      },
+      {
+        amount: 1,
+        name: "Misty Rainforest"
+      },
+      {
+        amount: 1,
+        name: "Nurturing Peatland"
+      },
+      {
+        amount: 2,
+        name: "Overgrown Tomb"
+      },
+      {
+        amount: 1,
+        name: "Pendelhaven"
+      },
+      {
+        amount: 1,
+        name: "Swamp"
+      },
+      {
+        amount: 1,
+        name: "Takenuma, Abandoned Mire"
+      },
+      {
+        amount: 2,
+        name: "Twilight Mire"
+      },
+      {
+        amount: 4,
+        name: "Verdant Catacombs"
+      }
+    ],
+    side: [
+      {
+        amount: 2,
+        name: "Chalice of the Void"
+      },
+      {
+        amount: 1,
+        name: "Fatal Push"
+      },
+      {
+        amount: 2,
+        name: "Thoughtseize"
+      },
+      {
+        amount: 1,
+        name: "Legion's End"
+      },
+      {
+        amount: 1,
+        name: "Soulless Jailer"
+      },
+      {
+        amount: 1,
+        name: "Tear Asunder"
+      },
+      {
+        amount: 1,
+        name: "Endurance"
+      },
+      {
+        amount: 1,
+        name: "Fulminator Mage"
+      },
+      {
+        amount: 1,
+        name: "Reclamation Sage"
+      },
+      {
+        amount: 2,
+        name: "Force of Vigor"
+      },
+      {
+        amount: 2,
+        name: "The One Ring"
+      }
+    ]
+  },
+  "2023-12-15-Time-Travel-Eldrazi-Alex-Humphreys": {
+    format: "modern",
+    slug: "2023-12-15-Time-Travel-Eldrazi-Alex-Humphreys",
+    pilotSlug: "Alex-Humphreys",
+    archetype: "Time Travel Eldrazi",
+    archetypeSlug: "Time-Travel-Eldrazi",
+    event: "2023-12-15-FNM-with-Style",
+    main: [
+      {
+        amount: 3,
+        name: "Bonecrusher Giant"
+      },
+      {
+        amount: 4,
+        name: "Delay"
+      },
+      {
+        amount: 4,
+        name: "Eldrazi Obligator"
+      },
+      {
+        amount: 4,
+        name: "Eldrazi Temple"
+      },
+      {
+        amount: 1,
+        name: "Fiery Islet"
+      },
+      {
+        amount: 3,
+        name: "Island"
+      },
+      {
+        amount: 4,
+        name: "Lightning Bolt"
+      },
+      {
+        amount: 3,
+        name: "March of Swirling Mist"
+      },
+      {
+        amount: 2,
+        name: "Misty Rainforest"
+      },
+      {
+        amount: 4,
+        name: "Ragavan, Nimble Pilferer"
+      },
+      {
+        amount: 4,
+        name: "Reality Smasher"
+      },
+      {
+        amount: 4,
+        name: "Scalding Tarn"
+      },
+      {
+        amount: 4,
+        name: "Shivan Reef"
+      },
+      {
+        amount: 3,
+        name: "Steam Vents"
+      },
+      {
+        amount: 4,
+        name: "Subtlety"
+      },
+      {
+        amount: 4,
+        name: "Suspend"
+      },
+      {
+        amount: 4,
+        name: "Tishana's Tidebinder"
+      },
+      {
+        amount: 1,
+        name: "Void Mirror"
+      }
+    ],
+    side: [
+      {
+        amount: 3,
+        name: "Alpine Moon"
+      },
+      {
+        amount: 2,
+        name: "Cursed Totem"
+      },
+      {
+        amount: 2,
+        name: "Hurkyl's Recall"
+      },
+      {
+        amount: 3,
+        name: "Mystical Dispute"
+      },
+      {
+        amount: 2,
+        name: "Nix"
+      },
+      {
+        amount: 2,
+        name: "Talisman of Creativity"
+      },
+      {
+        amount: 1,
+        name: "Void Mirror"
+      }
+    ]
   }
 };
